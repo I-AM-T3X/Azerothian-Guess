@@ -141,6 +141,16 @@ body {
     text-align: center; /* Center text in paragraphs */
 }
 
+.modal-content button {
+    display: block;
+    margin: 20px auto 0 auto; /* Center the button */
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: #f0f0f0;
+}
+
 .close-button {
     color: #aaa;
     float: right;
