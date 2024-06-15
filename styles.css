@@ -134,8 +134,11 @@ body {
     border: 1px solid #888;
     width: 80%;
     max-width: 600px;
-    text-align: left;
-    text-align: justify;
+    text-align: center; /* Center text */
+}
+
+.modal-content p {
+    text-align: center; /* Center text in paragraphs */
 }
 
 .close-button {
