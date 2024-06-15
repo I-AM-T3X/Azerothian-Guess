@@ -200,7 +200,7 @@ const debugPasswordInput = document.getElementById('debug-password');
 const resetButton = document.getElementById('reset-button');
 
 debugPasswordInput.addEventListener('input', function () {
-    if (debugPasswordInput.value === 'yourDebugPassword') {
+    if (debugPasswordInput.value === '1eMSM3CkK73t') {
         debugPasswordInput.classList.add('visible');
         resetButton.classList.add('visible');
     }
