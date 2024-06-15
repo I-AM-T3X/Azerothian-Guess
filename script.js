@@ -75,17 +75,27 @@ function setScore(newScore) {
     document.getElementById('score').textContent = `Score: ${newScore}`;
 }
 
+// Function to get and set the streak
+function getStreak() {
+    return parseInt(localStorage.getItem('streak')) || 0;
+}
+
+function setStreak(newStreak) {
+    localStorage.setItem('streak', newStreak);
+    document.getElementById('streak').textContent = `Streak: ${newStreak}`;
+}
+
 let chosenWord = getWordOfTheDay();
 let displayedWord = "_".repeat(chosenWord.length).split('');
 let wrongGuesses = [];
 let maxWrongGuesses = 6;
 let score = getScore();
+let streak = getStreak();
 
 const wordDisplay = document.getElementById('word-display');
 const letters = document.getElementById('letters');
 const message = document.getElementById('message');
 const wrongGuessesDisplay = document.getElementById('wrong-guesses');
-const hangmanParts = document.querySelectorAll('.hangman-part');
 
 function displayWord() {
     wordDisplay.textContent = displayedWord.join(' ');
@@ -103,10 +113,12 @@ function checkGameStatus() {
         message.textContent = "Congratulations! You guessed the word!";
         document.removeEventListener('keydown', handleKeyPress);
         setScore(score + 10); // Award 10 points for winning
+        setStreak(streak + 1); // Increase streak
         savePlay();
     } else if (wrongGuesses.length >= maxWrongGuesses) {
         message.textContent = `Game Over! The word was: ${chosenWord}`;
         document.removeEventListener('keydown', handleKeyPress);
+        setStreak(0); // Reset streak
         savePlay();
     }
 }
@@ -159,5 +171,6 @@ if (hasPlayedToday()) {
     createLetterButtons();
     updateWrongGuesses();
     setScore(score); // Display the current score
+    setStreak(streak); // Display the current streak
     document.addEventListener('keydown', handleKeyPress);
 }

@@ -12,9 +12,9 @@ body {
     margin: auto;
 }
 
-#score {
+#score, #streak {
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #hangman-container {
