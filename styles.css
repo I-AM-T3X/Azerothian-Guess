@@ -137,8 +137,16 @@ body {
     text-align: center; /* Center text */
 }
 
-.modal-content p {
-    text-align: center; /* Center text in paragraphs */
+.modal-content ul {
+    list-style-type: none; /* Remove bullets from the list */
+    padding-left: 0; /* Remove default padding */
+    text-align: left; /* Align text left within the list */
+    display: inline-block; /* Center the list container */
+}
+
+.modal-content li {
+    text-align: left; /* Ensure individual list items are left-aligned */
+    margin-bottom: 10px; /* Add some spacing between list items */
 }
 
 .modal-content button {
