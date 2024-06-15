@@ -96,6 +96,7 @@ const wordDisplay = document.getElementById('word-display');
 const letters = document.getElementById('letters');
 const message = document.getElementById('message');
 const wrongGuessesDisplay = document.getElementById('wrong-guesses');
+const hangmanParts = document.querySelectorAll('.hangman-part');
 
 function displayWord() {
     wordDisplay.textContent = displayedWord.join(' ');
@@ -164,13 +165,32 @@ function createLetterButtons() {
     });
 }
 
-if (hasPlayedToday()) {
-    message.textContent = "You have already played today! Come back tomorrow.";
-} else {
-    displayWord();
-    createLetterButtons();
-    updateWrongGuesses();
-    setScore(score); // Display the current score
-    setStreak(streak); // Display the current streak
-    document.addEventListener('keydown', handleKeyPress);
+// Modal logic
+const instructionsModal = document.getElementById('instructions-modal');
+const closeButton = document.querySelector('.close-button');
+const startGameButton = document.getElementById('start-game');
+
+function openModal() {
+    instructionsModal.style.display = 'block';
 }
+
+function closeModal() {
+    instructionsModal.style.display = 'none';
+}
+
+closeButton.onclick = closeModal;
+startGameButton.onclick = () => {
+    closeModal();
+    if (!hasPlayedToday()) {
+        displayWord();
+        createLetterButtons();
+        updateWrongGuesses();
+        setScore(score); // Display the current score
+        setStreak(streak); // Display the current streak
+        document.addEventListener('keydown', handleKeyPress);
+    } else {
+        message.textContent = "You have already played today! Come back tomorrow.";
+    }
+};
+
+window.onload = openModal;
