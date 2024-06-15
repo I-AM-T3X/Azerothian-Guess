@@ -194,27 +194,3 @@ startGameButton.onclick = () => {
 };
 
 window.onload = openModal;
-
-// Debug mode logic
-const debugPasswordInput = document.getElementById('debug-password');
-const resetButton = document.getElementById('reset-button');
-
-debugPasswordInput.addEventListener('input', function () {
-    if (debugPasswordInput.value === '1eMSM3CkK73t') {
-        debugPasswordInput.classList.add('visible');
-        resetButton.classList.add('visible');
-    }
-});
-
-resetButton.addEventListener('click', function () {
-    localStorage.removeItem('lastPlayedDate');
-    setScore(0);
-    setStreak(0);
-    location.reload();
-});
-
-document.addEventListener('keydown', function (event) {
-    if (event.ctrlKey && event.altKey && event.key === 'D') {
-        debugPasswordInput.classList.toggle('visible');
-    }
-});
