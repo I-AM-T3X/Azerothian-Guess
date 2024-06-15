@@ -134,12 +134,13 @@ body {
     border: 1px solid #888;
     width: 80%;
     max-width: 600px;
-    text-align: center; /* Center text */
+    text-align: center;
+    white-space: nowrap; /* Prevent word wrapping */
 }
 
 .modal-content ul {
-    list-style-type: none; /* Remove bullets from the list */
-    padding-left: 0; /* Remove default padding */
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 40px; /* Add some padding for the bullets */
     text-align: left; /* Align text left within the list */
     display: inline-block; /* Center the list container */
 }
