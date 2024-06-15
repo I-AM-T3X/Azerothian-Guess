@@ -138,11 +138,6 @@ body {
     text-align: justify;
 }
 
-.modal-content ul {
-    list-style-type: none; /* Remove bullets from the list */
-    padding-left: 0; /* Remove default padding */
-}
-
 .close-button {
     color: #aaa;
     float: right;
