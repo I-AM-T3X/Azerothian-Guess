@@ -214,8 +214,6 @@ const startGameButton = document.getElementById('start-game');
 const endGameModal = document.getElementById('end-game-modal');
 const endGameCloseButton = document.getElementById('end-game-close-button');
 const endGameMessage = document.getElementById('end-game-message');
-const endGameScore = document.getElementById('end-game-score');
-const endGameStreak = document.getElementById('end-game-streak');
 const endGameCopyPasta = document.getElementById('end-game-copy-pasta');
 const copyToClipboardButton = document.getElementById('copy-to-clipboard');
 
@@ -250,8 +248,6 @@ copyToClipboardButton.onclick = () => {
 
 function showEndGameModal(won) {
     endGameMessage.textContent = won ? "Congratulations! You guessed the word!" : `Game Over! The word was: ${chosenWord}`;
-    endGameScore.textContent = `Score: ${score}`;
-    endGameStreak.textContent = `Streak: ${streak}`;
     endGameCopyPasta.value = generateCopyPasta(won);
     openModal(endGameModal);
 }
@@ -259,7 +255,7 @@ function showEndGameModal(won) {
 function generateCopyPasta(won) {
     const result = guesses.map(letter => (chosenWord.includes(letter) ? '✅' : '❌')).join(' ');
     const link = "https://i-am-t3x.github.io/Azerothian-Guess/";
-    return `Azerothian Guess: ${won ? "Won" : "Lost"}\n${result}\nScore: ${score}\nStreak: ${streak}\nPlay the game: ${link}`;
+    return `Azerothian Guess: ${won ? "Won" : "Lost"}\n${result}\nPlay the game: ${link}`;
 }
 
 window.onload = () => openModal(instructionsModal);
