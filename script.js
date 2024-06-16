@@ -81,7 +81,6 @@ function decodeWords(encodedWords) {
 
 const words = decodeWords(encodedWords);
 
-// Function to get the word for today
 function getWordOfTheDay() {
     const startDate = new Date("2024-01-01"); // Starting date of your word list
     const today = new Date();
@@ -90,36 +89,32 @@ function getWordOfTheDay() {
     return words[diffDays % words.length].toUpperCase();
 }
 
-// Function to check if the user has already played today
 function hasPlayedToday() {
-    const lastPlayedDate = localStorage.getItem('lastPlayedDate');
+    const lastPlayedDate = getCookie('lastPlayedDate');
     const today = new Date().toLocaleDateString();
     return lastPlayedDate === today;
 }
 
-// Function to save today's play
 function savePlay() {
     const today = new Date().toLocaleDateString();
-    localStorage.setItem('lastPlayedDate', today);
+    setCookie('lastPlayedDate', today, 1);
 }
 
-// Function to get and set the score
 function getScore() {
-    return parseInt(localStorage.getItem('score')) || 0;
+    return parseInt(getCookie('score')) || 0;
 }
 
 function setScore(newScore) {
-    localStorage.setItem('score', newScore);
+    setCookie('score', newScore, 365);
     document.getElementById('score').textContent = `Score: ${newScore}`;
 }
 
-// Function to get and set the streak
 function getStreak() {
-    return parseInt(localStorage.getItem('streak')) || 0;
+    return parseInt(getCookie('streak')) || 0;
 }
 
 function setStreak(newStreak) {
-    localStorage.setItem('streak', newStreak);
+    setCookie('streak', newStreak, 365);
     document.getElementById('streak').textContent = `Streak: ${newStreak}`;
 }
 
