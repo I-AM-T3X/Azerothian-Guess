@@ -129,6 +129,7 @@ let wrongGuesses = [];
 let maxWrongGuesses = 6;
 let score = getScore();
 let streak = getStreak();
+let guesses = [];
 
 const wordDisplay = document.getElementById('word-display');
 const letters = document.getElementById('letters');
@@ -154,15 +155,18 @@ function checkGameStatus() {
         setScore(score + 10); // Award 10 points for winning
         setStreak(streak + 1); // Increase streak
         savePlay();
+        showEndGameModal(true);
     } else if (wrongGuesses.length >= maxWrongGuesses) {
         message.textContent = `Game Over! The word was: ${chosenWord}`;
         document.removeEventListener('keydown', handleKeyPress);
         setStreak(0); // Reset streak
         savePlay();
+        showEndGameModal(false);
     }
 }
 
 function handleGuess(letter) {
+    guesses.push(letter);
     if (chosenWord.includes(letter)) {
         for (let i = 0; i < chosenWord.length; i++) {
             if (chosenWord[i] === letter) {
@@ -207,18 +211,25 @@ function createLetterButtons() {
 const instructionsModal = document.getElementById('instructions-modal');
 const closeButton = document.querySelector('.close-button');
 const startGameButton = document.getElementById('start-game');
+const endGameModal = document.getElementById('end-game-modal');
+const endGameCloseButton = document.getElementById('end-game-close-button');
+const endGameMessage = document.getElementById('end-game-message');
+const endGameScore = document.getElementById('end-game-score');
+const endGameStreak = document.getElementById('end-game-streak');
+const endGameCopyPasta = document.getElementById('end-game-copy-pasta');
+const copyToClipboardButton = document.getElementById('copy-to-clipboard');
 
-function openModal() {
-    instructionsModal.style.display = 'block';
+function openModal(modal) {
+    modal.style.display = 'block';
 }
 
-function closeModal() {
-    instructionsModal.style.display = 'none';
+function closeModal(modal) {
+    modal.style.display = 'none';
 }
 
-closeButton.onclick = closeModal;
+closeButton.onclick = () => closeModal(instructionsModal);
 startGameButton.onclick = () => {
-    closeModal();
+    closeModal(instructionsModal);
     if (!hasPlayedToday()) {
         displayWord();
         createLetterButtons();
@@ -231,4 +242,23 @@ startGameButton.onclick = () => {
     }
 };
 
-window.onload = openModal;
+endGameCloseButton.onclick = () => closeModal(endGameModal);
+copyToClipboardButton.onclick = () => {
+    endGameCopyPasta.select();
+    document.execCommand('copy');
+};
+
+function showEndGameModal(won) {
+    endGameMessage.textContent = won ? "Congratulations! You guessed the word!" : `Game Over! The word was: ${chosenWord}`;
+    endGameScore.textContent = `Score: ${score}`;
+    endGameStreak.textContent = `Streak: ${streak}`;
+    endGameCopyPasta.value = generateCopyPasta(won);
+    openModal(endGameModal);
+}
+
+function generateCopyPasta(won) {
+    const result = guesses.map(letter => (chosenWord.includes(letter) ? '✅' : '❌')).join(' ');
+    return `Azerothian Guess: ${won ? "Won" : "Lost"}\n${result}\nWord: ${chosenWord}\nScore: ${score}\nStreak: ${streak}`;
+}
+
+window.onload = () => openModal(instructionsModal);
