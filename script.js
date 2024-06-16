@@ -258,7 +258,8 @@ function showEndGameModal(won) {
 
 function generateCopyPasta(won) {
     const result = guesses.map(letter => (chosenWord.includes(letter) ? '✅' : '❌')).join(' ');
-    return `Azerothian Guess: ${won ? "Won" : "Lost"}\n${result}\nWord: ${chosenWord}\nScore: ${score}\nStreak: ${streak}`;
+    const link = "https://your-game-link.com"; // Replace with your actual game link
+    return `Azerothian Guess: ${won ? "Won" : "Lost"}\n${result}\nWord: ${chosenWord}\nScore: ${score}\nStreak: ${streak}\nPlay the game: ${link}`;
 }
 
 window.onload = () => openModal(instructionsModal);
