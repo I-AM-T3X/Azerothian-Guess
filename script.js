@@ -32,7 +32,7 @@ const encodedWords = [
     "U2VhcmluZw==", "R29yZ2U=", "QnVybmluZw==", "U3RlcHBlcw==", "Qmxhc3RlZA==", 
     "TGFuZHM=", "VW5ncm8=", "Q3JhdGVy", "U2lsaXRodXM=", "RmVsd29vZA==", 
     "RmVyYWxhcw==", "RGVzb2xhY2U=", "VGhvdXNhbmQ=", "TmVlZGxlcw==", "VGFuYXJpcw==", 
-    "RHVzdHdhbGxvdy==", "TWFyc2g=", "QmFycmVucw==", "U3Rvb3JldGFsb24=", 
+    "RHVzdHdhbGxvdy==", "TWFyc2g=", "QmFycmVucw==", "U3Rvcm13aW5k",
     "TW91bnRhaW5z", "QXNoZW52YWxl", "RGFya3Nob3Jl", "QXpzaGFyYQ==", "V2ludGVyc3ByaW5n", 
     "TW9vbmdsYWRl", "R2hvc3RsYW5kcw==", "RXZlcnNvbmc=", "V29vZHM=", "SGVsbGZpcmU=", 
     "UGVuaW5zdWxh", "WmFuZ2FybWFyc2g=", "VGVyb2trYXI=", "TmV0aGVyc3BhY2U=", 
@@ -75,201 +75,318 @@ const encodedWords = [
     "TWltaXJvbg==", "RnJleWE=", "SG9kaXI="
 ];
 
-function decodeWords(encodedWords) {
-    return encodedWords.map(word => atob(word));
+function decodeWords(encoded) {
+  return encoded.map(w => atob(w));
 }
-
 const words = decodeWords(encodedWords);
 
-// Helper functions to handle cookies
+// ── Cookie helpers ──────────────────────────────────────────
 function setCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days*24*60*60*1000));
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  const d = new Date();
+  d.setTime(d.getTime() + days * 864e5);
+  document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/`;
 }
-
 function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
+  const eq = name + '=';
+  for (let c of document.cookie.split(';')) {
+    c = c.trim();
+    if (c.startsWith(eq)) return c.slice(eq.length);
+  }
+  return null;
 }
 
+// ── Game state ──────────────────────────────────────────────
 function getWordOfTheDay() {
-    const startDate = new Date("2024-01-01"); // Starting date of your word list
-    const today = new Date();
-    const diffTime = Math.abs(today - startDate);
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-    return words[diffDays % words.length].toUpperCase();
+  const start   = new Date('2024-01-01');
+  const today   = new Date();
+  const diffDays = Math.floor(Math.abs(today - start) / 864e5);
+  return words[diffDays % words.length].toUpperCase();
 }
 
 function hasPlayedToday() {
-    const lastPlayedDate = getCookie('lastPlayedDate');
-    const today = new Date().toLocaleDateString();
-    return lastPlayedDate === today;
+  return getCookie('lastPlayedDate') === new Date().toLocaleDateString();
 }
-
 function savePlay() {
-    const today = new Date().toLocaleDateString();
-    setCookie('lastPlayedDate', today, 1);
+  setCookie('lastPlayedDate', new Date().toLocaleDateString(), 1);
 }
 
-function getScore() {
-    return parseInt(getCookie('score')) || 0;
+let score  = parseInt(getCookie('score'))  || 0;
+let streak = parseInt(getCookie('streak')) || 0;
+
+function saveScore(n)  { score = n;  setCookie('score',  n, 365); updateStatDisplay(); }
+function saveStreak(n) { streak = n; setCookie('streak', n, 365); updateStatDisplay(); }
+
+function updateStatDisplay() {
+  document.getElementById('score-val').textContent  = score;
+  document.getElementById('streak-val').textContent = streak;
 }
 
-function setScore(newScore) {
-    setCookie('score', newScore, 365);
-    document.getElementById('score').textContent = `Score: ${newScore}`;
+const chosenWord   = getWordOfTheDay();
+let displayedWord  = Array(chosenWord.length).fill('_');
+let wrongGuesses   = [];
+let guessedLetters = [];
+const MAX_WRONG    = 6;
+let gameOver       = false;
+
+// ── SVG hangman parts ───────────────────────────────────────
+const svgParts = [
+  document.getElementById('svg-rope'),
+  document.getElementById('svg-head'),
+  document.getElementById('svg-body'),
+  document.getElementById('svg-left-arm'),
+  document.getElementById('svg-right-arm'),
+  document.getElementById('svg-left-leg'),
+  document.getElementById('svg-right-leg'),
+];
+
+function updateHangman() {
+  svgParts.forEach((el, i) => {
+    if (!el) return;
+    el.style.display = i < wrongGuesses.length ? '' : 'none';
+    if (i < wrongGuesses.length && el.style.display !== 'none') {
+      el.style.opacity = '0';
+      el.style.transition = 'opacity 0.4s ease';
+      requestAnimationFrame(() => { el.style.opacity = '1'; });
+    }
+  });
+  // Show X eyes only when game lost
+  const eyes = document.getElementById('svg-eyes');
+  if (eyes) eyes.style.display = wrongGuesses.length >= MAX_WRONG ? '' : 'none';
 }
 
-function getStreak() {
-    return parseInt(getCookie('streak')) || 0;
+// ── Word display ────────────────────────────────────────────
+function renderWord(revealIdx = null) {
+  const container = document.getElementById('word-display');
+  container.innerHTML = '';
+  displayedWord.forEach((char, i) => {
+    const slot = document.createElement('div');
+    slot.className = 'letter-slot';
+
+    const charEl = document.createElement('div');
+    charEl.className = 'letter-char';
+    charEl.textContent = char !== '_' ? char : '';
+    if (i === revealIdx || (revealIdx === 'all' && char !== '_')) {
+      charEl.classList.add('reveal');
+    }
+
+    const line = document.createElement('div');
+    line.className = 'letter-line';
+
+    slot.appendChild(charEl);
+    slot.appendChild(line);
+    container.appendChild(slot);
+  });
 }
 
-function setStreak(newStreak) {
-    setCookie('streak', newStreak, 365);
-    document.getElementById('streak').textContent = `Streak: ${newStreak}`;
+// ── Wrong guesses display ───────────────────────────────────
+function renderWrongLetters() {
+  const container = document.getElementById('wrong-letters');
+  container.innerHTML = '';
+  wrongGuesses.forEach(letter => {
+    const span = document.createElement('span');
+    span.className = 'wrong-letter';
+    span.textContent = letter;
+    container.appendChild(span);
+  });
 }
 
-let chosenWord = getWordOfTheDay();
-let displayedWord = "_".repeat(chosenWord.length).split('');
-let wrongGuesses = [];
-let maxWrongGuesses = 6;
-let score = getScore();
-let streak = getStreak();
-let guesses = [];
+// ── Keyboard ────────────────────────────────────────────────
+const keyRefs = {};
 
-const wordDisplay = document.getElementById('word-display');
-const letters = document.getElementById('letters');
-const message = document.getElementById('message');
-const wrongGuessesDisplay = document.getElementById('wrong-guesses');
-const hangmanParts = document.querySelectorAll('.hangman-part');
-
-function displayWord() {
-    wordDisplay.textContent = displayedWord.join(' ');
-}
-
-function updateWrongGuesses() {
-    wrongGuessesDisplay.textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
-    hangmanParts.forEach((part, index) => {
-        part.style.display = index < wrongGuesses.length ? 'block' : 'none';
+function createKeyboard() {
+  const rows = [
+    { id: 'row1', keys: 'QWERTYUIOP' },
+    { id: 'row2', keys: 'ASDFGHJKL' },
+    { id: 'row3', keys: 'ZXCVBNM' },
+  ];
+  rows.forEach(({ id, keys }) => {
+    const rowEl = document.getElementById(id);
+    [...keys].forEach(key => {
+      const btn = document.createElement('button');
+      btn.textContent = key;
+      btn.className = 'key-btn';
+      btn.dataset.key = key;
+      btn.onclick = () => handleGuess(key);
+      rowEl.appendChild(btn);
+      keyRefs[key] = btn;
     });
+  });
 }
+
+function markKey(letter, correct) {
+  const btn = keyRefs[letter];
+  if (!btn) return;
+  btn.classList.add(correct ? 'correct' : 'wrong');
+  btn.disabled = true;
+}
+
+// ── Guess logic ─────────────────────────────────────────────
+function handleGuess(letter) {
+  if (gameOver || guessedLetters.includes(letter)) return;
+  guessedLetters.push(letter);
+
+  if (chosenWord.includes(letter)) {
+    const revealedIndices = [];
+    for (let i = 0; i < chosenWord.length; i++) {
+      if (chosenWord[i] === letter) {
+        displayedWord[i] = letter;
+        revealedIndices.push(i);
+      }
+    }
+    saveScore(score + revealedIndices.length);
+    renderWord(null); // render all; animate individually below
+    revealedIndices.forEach((idx, delay) => {
+      setTimeout(() => {
+        const slots = document.getElementById('word-display').children;
+        if (slots[idx]) {
+          slots[idx].querySelector('.letter-char').classList.add('reveal');
+        }
+      }, delay * 80);
+    });
+    markKey(letter, true);
+  } else {
+    wrongGuesses.push(letter);
+    markKey(letter, false);
+    updateHangman();
+    renderWrongLetters();
+    // Shake the hangman section on wrong guess
+    const section = document.getElementById('hangman-section');
+    section.style.animation = 'none';
+    section.offsetHeight; // reflow
+    section.style.animation = 'shake 0.3s ease';
+  }
+
+  checkGameStatus();
+}
+
+// Add shake animation dynamically
+const shakeStyle = document.createElement('style');
+shakeStyle.textContent = `
+  @keyframes shake {
+    0%,100% { transform: translateX(0); }
+    25%      { transform: translateX(-5px); }
+    75%      { transform: translateX(5px); }
+  }
+`;
+document.head.appendChild(shakeStyle);
 
 function checkGameStatus() {
-    if (!displayedWord.includes('_')) {
-        message.textContent = "Congratulations! You guessed the word!";
-        document.removeEventListener('keydown', handleKeyPress);
-        setScore(score + 10); // Award 10 points for winning
-        setStreak(streak + 1); // Increase streak
-        savePlay();
-        showEndGameModal(true);
-    } else if (wrongGuesses.length >= maxWrongGuesses) {
-        message.textContent = `Game Over! The word was: ${chosenWord}`;
-        document.removeEventListener('keydown', handleKeyPress);
-        setStreak(0); // Reset streak
-        savePlay();
-        showEndGameModal(false);
-    }
+  const msgEl = document.getElementById('message');
+
+  if (!displayedWord.includes('_')) {
+    gameOver = true;
+    msgEl.textContent = '✦ The word has been revealed! ✦';
+    msgEl.className = 'win';
+    saveScore(score + 10);
+    saveStreak(streak + 1);
+    savePlay();
+    disableAllKeys();
+    document.removeEventListener('keydown', handleKeyPress);
+    setTimeout(() => showEndModal(true), 900);
+  } else if (wrongGuesses.length >= MAX_WRONG) {
+    gameOver = true;
+    // Reveal full word with animation
+    displayedWord = [...chosenWord];
+    renderWord('all');
+    msgEl.textContent = `The word was: ${chosenWord}`;
+    msgEl.className = 'lose';
+    saveStreak(0);
+    savePlay();
+    disableAllKeys();
+    document.removeEventListener('keydown', handleKeyPress);
+    setTimeout(() => showEndModal(false), 1200);
+  }
 }
 
-function handleGuess(letter) {
-    guesses.push(letter);
-    if (chosenWord.includes(letter)) {
-        for (let i = 0; i < chosenWord.length; i++) {
-            if (chosenWord[i] === letter) {
-                displayedWord[i] = letter;
-            }
-        }
-        setScore(score + 1); // Award 1 point for each correct letter
-    } else {
-        wrongGuesses.push(letter);
-    }
-    displayWord();
-    updateWrongGuesses();
-    checkGameStatus();
+function disableAllKeys() {
+  Object.values(keyRefs).forEach(btn => { btn.disabled = true; });
 }
 
-function handleKeyPress(event) {
-    const letter = event.key.toUpperCase();
-    if (/^[A-Z]$/.test(letter) && !message.textContent) {
-        handleGuess(letter);
-    }
+// ── Keyboard input ──────────────────────────────────────────
+function handleKeyPress(e) {
+  const letter = e.key.toUpperCase();
+  if (/^[A-Z]$/.test(letter)) handleGuess(letter);
 }
 
-function createLetterButtons() {
-    const rows = [
-        { id: 'row1', keys: 'QWERTYUIOP'.split('') },
-        { id: 'row2', keys: 'ASDFGHJKL'.split('') },
-        { id: 'row3', keys: 'ZXCVBNM'.split('') }
-    ];
-
-    rows.forEach(row => {
-        const rowDiv = document.getElementById(row.id);
-        row.keys.forEach(key => {
-            let button = document.createElement('button');
-            button.textContent = key;
-            button.onclick = () => handleGuess(key);
-            rowDiv.appendChild(button);
-        });
-    });
+// ── Modals ──────────────────────────────────────────────────
+function openModal(id) {
+  const el = document.getElementById(id);
+  el.classList.add('open');
+  el.style.display = 'flex'; // fallback
+}
+function closeModal(id) {
+  const el = document.getElementById(id);
+  el.classList.remove('open');
+  el.style.display = 'none';
 }
 
-// Modal logic
-const instructionsModal = document.getElementById('instructions-modal');
-const closeButton = document.querySelector('.close-button');
-const startGameButton = document.getElementById('start-game');
-const endGameModal = document.getElementById('end-game-modal');
-const endGameCloseButton = document.getElementById('end-game-close-button');
-const endGameMessage = document.getElementById('end-game-message');
-const endGameCopyPasta = document.getElementById('end-game-copy-pasta');
-const copyToClipboardButton = document.getElementById('copy-to-clipboard');
+function showEndModal(won) {
+  const banner  = document.getElementById('result-banner');
+  const title   = document.getElementById('end-game-title');
+  const msg     = document.getElementById('end-game-message');
+  const pasta   = document.getElementById('end-game-copy-pasta');
 
-function openModal(modal) {
-    modal.style.display = 'block';
+  banner.textContent  = won ? '🏆' : '💀';
+  title.textContent   = won ? 'Victory!' : 'Defeated';
+  msg.textContent     = won
+    ? `You uncovered "${chosenWord}" and earned your place in Azerothian legend!`
+    : `The shadows consumed you. The word was "${chosenWord}".`;
+  pasta.value = generateShareText(won);
+  openModal('end-game-modal');
 }
 
-function closeModal(modal) {
-    modal.style.display = 'none';
+function generateShareText(won) {
+  const result = guessedLetters
+    .map(l => (chosenWord.includes(l) ? '🟩' : '🟥'))
+    .join('');
+  const wrongCount = wrongGuesses.length;
+  const link = 'https://i-am-t3x.github.io/Azerothian-Guess/';
+  return `⚔️ Azerothian Guess — ${won ? 'Victory' : 'Defeated'}\n${result}\nWrong guesses: ${wrongCount}/${MAX_WRONG}\nStreak: ${streak} 🔥\nPlay: ${link}`;
 }
 
-closeButton.onclick = () => closeModal(instructionsModal);
-startGameButton.onclick = () => {
-    closeModal(instructionsModal);
-    if (!hasPlayedToday()) {
-        displayWord();
-        createLetterButtons();
-        updateWrongGuesses();
-        setScore(score); // Display the current score
-        setStreak(streak); // Display the current streak
-        document.addEventListener('keydown', handleKeyPress);
-    } else {
-        message.textContent = "You have already played today! Come back tomorrow.";
-    }
-};
+// ── Init ────────────────────────────────────────────────────
+function startGame() {
+  closeModal('instructions-modal');
 
-endGameCloseButton.onclick = () => closeModal(endGameModal);
-copyToClipboardButton.onclick = () => {
-    endGameCopyPasta.select();
+  if (hasPlayedToday()) {
+    const msgEl = document.getElementById('message');
+    msgEl.textContent = 'You have already ventured today. Return at dawn.';
+    msgEl.className = '';
+    disableAllKeys();
+    return;
+  }
+
+  renderWord();
+  updateHangman();
+  updateStatDisplay();
+  document.addEventListener('keydown', handleKeyPress);
+}
+
+// Wire up buttons
+document.getElementById('inst-close').onclick    = () => closeModal('instructions-modal');
+document.getElementById('start-game').onclick    = startGame;
+document.getElementById('end-game-close').onclick  = () => closeModal('end-game-modal');
+document.getElementById('end-game-close2').onclick = () => closeModal('end-game-modal');
+
+document.getElementById('copy-to-clipboard').onclick = () => {
+  const pasta = document.getElementById('end-game-copy-pasta');
+  pasta.select();
+  try {
+    navigator.clipboard.writeText(pasta.value).catch(() => document.execCommand('copy'));
+  } catch {
     document.execCommand('copy');
+  }
+  document.getElementById('copy-to-clipboard').textContent = 'Copied!';
+  setTimeout(() => {
+    document.getElementById('copy-to-clipboard').textContent = 'Copy Result';
+  }, 2000);
 };
 
-function showEndGameModal(won) {
-    endGameMessage.textContent = won ? "Congratulations! You guessed the word!" : `Game Over! The word was: ${chosenWord}`;
-    endGameCopyPasta.value = generateCopyPasta(won);
-    openModal(endGameModal);
-}
+// Create keyboard on load
+createKeyboard();
+updateStatDisplay();
 
-function generateCopyPasta(won) {
-    const result = guesses.map(letter => (chosenWord.includes(letter) ? '✅' : '❌')).join(' ');
-    const link = "https://i-am-t3x.github.io/Azerothian-Guess/";
-    return `Azerothian Guess: ${won ? "Won" : "Lost"}\n${result}\nPlay the game: ${link}`;
-}
-
-window.onload = () => openModal(instructionsModal);
+// Show instructions on load
+window.onload = () => {
+  openModal('instructions-modal');
+};

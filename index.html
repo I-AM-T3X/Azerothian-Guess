@@ -1,65 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azerothian Guess</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azerothian Guess</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Floating rune ambiance -->
+  <div class="rune-particle" style="left:8%;top:60%;animation-delay:0s;animation-duration:9s">᚛</div>
+  <div class="rune-particle" style="left:18%;top:80%;animation-delay:2s;animation-duration:11s">ᚐ</div>
+  <div class="rune-particle" style="left:85%;top:70%;animation-delay:1s;animation-duration:8s">᚜</div>
+  <div class="rune-particle" style="left:92%;top:50%;animation-delay:3.5s;animation-duration:10s">ᚑ</div>
+  <div class="rune-particle" style="left:5%;top:30%;animation-delay:5s;animation-duration:12s">ᚒ</div>
+
+  <header id="site-header">
+    <div class="header-emblem">⚔️</div>
     <h1>Azerothian Guess</h1>
-    <div id="game-container">
-        <div id="score">Score: 0</div>
-        <div id="streak">Streak: 0</div>
-        <div id="hangman-container">
-            <div class="hangman-part" id="gallows"></div>
-            <div class="hangman-part" id="head"></div>
-            <div class="hangman-part" id="body"></div>
-            <div class="hangman-part" id="left-arm"></div>
-            <div class="hangman-part" id="right-arm"></div>
-            <div class="hangman-part" id="left-leg"></div>
-            <div class="hangman-part" id="right-leg"></div>
-        </div>
+    <div class="header-divider"><span>✦</span></div>
+  </header>
+
+  <div id="game-container">
+
+    <!-- Stats -->
+    <div id="stats-bar">
+      <div class="stat-card">
+        <span class="stat-label">Score</span>
+        <span class="stat-value" id="score-val">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Streak</span>
+        <span class="stat-value" id="streak-val">0</span>
+      </div>
+    </div>
+
+    <!-- Main game panel -->
+    <div id="main-panel">
+
+      <!-- SVG Hangman -->
+      <div id="hangman-section">
+        <svg id="hangman-svg" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Gallows - always visible -->
+          <line x1="20" y1="170" x2="180" y2="170" stroke="#3a3020" stroke-width="4" stroke-linecap="round"/>
+          <line x1="60" y1="170" x2="60" y2="10"  stroke="#3a3020" stroke-width="4" stroke-linecap="round"/>
+          <line x1="60" y1="10"  x2="130" y2="10" stroke="#3a3020" stroke-width="4" stroke-linecap="round"/>
+          <line x1="130" y1="10" x2="130" y2="30" stroke="#3a3020" stroke-width="3" stroke-linecap="round" stroke-dasharray="4,3" opacity="0.5"/>
+
+          <!-- Rope -->
+          <line id="svg-rope" x1="130" y1="10" x2="130" y2="35"
+                stroke="#8a6020" stroke-width="2" stroke-linecap="round"
+                style="display:none"/>
+
+          <!-- Head -->
+          <circle id="svg-head" cx="130" cy="48" r="13"
+                  fill="none" stroke="#c89050" stroke-width="2.5"
+                  style="display:none"/>
+          <!-- Eyes on head (show when losing) -->
+          <g id="svg-eyes" style="display:none">
+            <line x1="125" y1="44" x2="128" y2="47" stroke="#c89050" stroke-width="1.5"/>
+            <line x1="128" y1="44" x2="125" y2="47" stroke="#c89050" stroke-width="1.5"/>
+            <line x1="132" y1="44" x2="135" y2="47" stroke="#c89050" stroke-width="1.5"/>
+            <line x1="135" y1="44" x2="132" y2="47" stroke="#c89050" stroke-width="1.5"/>
+          </g>
+
+          <!-- Body -->
+          <line id="svg-body" x1="130" y1="61" x2="130" y2="110"
+                stroke="#c89050" stroke-width="2.5" stroke-linecap="round"
+                style="display:none"/>
+
+          <!-- Left arm -->
+          <line id="svg-left-arm" x1="130" y1="75" x2="108" y2="95"
+                stroke="#c89050" stroke-width="2.5" stroke-linecap="round"
+                style="display:none"/>
+
+          <!-- Right arm -->
+          <line id="svg-right-arm" x1="130" y1="75" x2="152" y2="95"
+                stroke="#c89050" stroke-width="2.5" stroke-linecap="round"
+                style="display:none"/>
+
+          <!-- Left leg -->
+          <line id="svg-left-leg" x1="130" y1="110" x2="110" y2="138"
+                stroke="#c89050" stroke-width="2.5" stroke-linecap="round"
+                style="display:none"/>
+
+          <!-- Right leg -->
+          <line id="svg-right-leg" x1="130" y1="110" x2="150" y2="138"
+                stroke="#c89050" stroke-width="2.5" stroke-linecap="round"
+                style="display:none"/>
+        </svg>
+      </div>
+
+      <!-- Word display -->
+      <div id="word-section">
         <div id="word-display"></div>
-        <div id="message"></div>
-        <div id="letters">
-            <div class="keyboard-row" id="row1"></div>
-            <div class="keyboard-row" id="row2"></div>
-            <div class="keyboard-row" id="row3"></div>
-        </div>
-        <div id="wrong-guesses"></div>
-    </div>
+      </div>
 
-    <!-- Instructions Modal -->
-    <div id="instructions-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>How to Play Azerothian Guess</h2>
-            <p>Welcome to Azerothian Guess! Here are the instructions:</p>
-            <ul>
-                <li>This is not Wordle™, this is a hangman-style game.</li>
-                <li>Each day, a new word from the World of Warcraft universe is selected.</li>
-                <li>Guess the word by selecting letters or typing them on your keyboard.</li>
-                <li>Each letter you pick is a guess. You can get 6 letters wrong before you lose.</li>
-                <li>Earn points for each correct guess and extra points for guessing the whole word.</li>
-                <li>Your score and streak are saved in your browser and persist across sessions.</li>
-                <li>If you guess incorrectly too many times, you lose the game for the day.</li>
-            </ul>
-            <button id="start-game">Start Game</button>
-        </div>
-    </div>
+      <!-- Message -->
+      <div id="message"></div>
 
-    <!-- End Game Modal -->
-    <div id="end-game-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" id="end-game-close-button">&times;</span>
-            <h2>Game Over</h2>
-            <p id="end-game-message"></p>
-            <textarea id="end-game-copy-pasta" readonly></textarea>
-            <button id="copy-to-clipboard">Copy to Clipboard</button>
-        </div>
-    </div>
+      <!-- Wrong guesses -->
+      <div id="wrong-section">
+        <span class="wrong-label">Misses:</span>
+        <div id="wrong-letters"></div>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Keyboard -->
+      <div id="keyboard-section">
+        <div class="keyboard-row" id="row1"></div>
+        <div class="keyboard-row" id="row2"></div>
+        <div class="keyboard-row" id="row3"></div>
+      </div>
+
+      <div id="hint-bar">⌨ You may also type letters on your keyboard</div>
+    </div>
+  </div>
+
+  <!-- Instructions Modal -->
+  <div id="instructions-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-button" id="inst-close">&times;</button>
+      <h2>Azerothian Guess</h2>
+      <p>A daily word challenge from the World of Warcraft universe.</p>
+      <ul>
+        <li>This is a hangman-style game, not Wordle™.</li>
+        <li>Each day a new WoW word or name is chosen — guess it letter by letter.</li>
+        <li>Use the on-screen keys or your physical keyboard.</li>
+        <li>6 wrong guesses and the poor adventurer meets their end.</li>
+        <li>Earn 1 point per correct letter, 10 points for guessing the full word.</li>
+        <li>Your score and streak are saved in your browser.</li>
+        <li>One game per day — the word resets at midnight.</li>
+      </ul>
+      <button class="btn-primary" id="start-game">Enter Azeroth</button>
+    </div>
+  </div>
+
+  <!-- End Game Modal -->
+  <div id="end-game-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-button" id="end-game-close">&times;</button>
+      <div class="result-banner" id="result-banner"></div>
+      <h2 id="end-game-title">Game Over</h2>
+      <p id="end-game-message"></p>
+      <textarea id="end-game-copy-pasta" readonly></textarea>
+      <br>
+      <button class="btn-primary"   id="copy-to-clipboard">Copy Result</button>
+      <button class="btn-secondary" id="end-game-close2">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
