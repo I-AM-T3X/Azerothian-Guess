@@ -1,237 +1,220 @@
 /* ============================================================
    Azerothian Guess — script.js
+   Modes: Daily (one word/day, persisted) + Endless (unlimited)
+   Hints: unlocked after 3 wrong guesses
    ============================================================ */
 
-// ──────────────────────────────────────────────────────────────
-// Word list: proper WoW nouns only — full zone/character names
-// Base64-encoded to keep them hidden until played
-// ──────────────────────────────────────────────────────────────
-const ENCODED_WORDS = [
-  "QWJlcnJ1cw==","QWdncmFtYXI=","QWxleHN0cmFzemE=","QWxsZXJpYQ==","QWxsaWFuY2U=",
-  "QW1hbidUaHVs","QW1pcmRyYXNzaWw=","QW5kdWlu","QW50b3J1cw==","QXJhdGhp",
-  "QXJjaGltb25kZQ==","QXJkZW53ZWFsZA==","QXJndXM=","QXJ0aGFz","QXNoYnJpbmdlcg==",
-  "QXNoZW52YWxl","QXNodmFuZQ==","QXViZXJkaW5l","QXplcml0ZQ==","QXplcm90aA==",
-  "QXpzaGFyYQ==","QXpzdW5h","QmFkbGFuZHM=","QmFycmVucw==","QmFzdGlvbg==",
-  "QmF0dGxlIG9mIERhemFyJ2Fsb3I=","QmxhY2tmYXRob20gRGVlcHM=","QmxhY2tyb2Nr",
-  "QmxhY2t3aW5nIERlc2NlbnQ=","QmxhY2t3aW5nIExhaXI=","QmxhZGUncyBFZGdl",
-  "Qmxvb2Rob29m","Qm9sdmFy","Qm9vdHkgQmF5","Qm9yZWFu","QnJvbnplYmVhcmQ=",
-  "QnVybmluZyBMZWdpb24=","QndvbnNhbWRp","Q2FzdGxlIE5hdGhyaWE=","Q2hyb21hdHVz",
-  "Q2hyb21pZQ==","Q3J1Y2libGUgb2YgU3Rvcm1z","Q3J5c3RhbHNvbmc=","RGFsYXJhbg==",
-  "RGFya3Nob3Jl","RGFybmFzc3Vz","RGVhZG1pbmVz","RGVhZHdpbmQ=","RGVhdGh3aW5n",
-  "RGVlcGhvbG0=","RGVmaWFzIEJyb3RoZXJob29k","RGVuYXRocml1cw==","RGVzb2xhY2U=",
-  "RGltZW5zaXVz","RGlyZSBNYXVs","RG9vbWhhbW1lcg==","RHJhZW5laQ==","RHJhZW5vcg==",
-  "RHJhZ29uIFNvdWw=","RHJhZ29uYmxpZ2h0","RHJlYWQgV2FzdGVz","RHJ1c3Q=","RHJ1c3R2YXI=",
-  "RHVyb3Rhcg==","RHVza3dvb2Q=","RHVzdHdhbGxvdw==","RWx3eW5u","RW9uYXI=",
-  "RXRlcm5hbCBQYWxhY2U=","RXZlcnNvbmc=","RXhvZGFy","RmFsc3RhZA==","RmVsd29vZA==",
-  "RmVyYWxhcw==","RmlyZWxhbmRz","Rm9yZHJhZ29u","Rm9yc2FrZW4=","RnJlZWhvbGQ=",
-  "RnJleWE=","RnJvc3Rib2x0","RnJvc3RmaXJl","RnJvc3Rtb3VybmU=","R2FkZ2V0emFu",
-  "R2FsbHl3aXg=","R2Fycm9zaA==","R2hvc3RsYW5kcw==","R2lsbmVhcw==","R25vbWVyZWdhbg==",
-  "R29yZ3JvbmQ=","R3JleW1hbmU=","R3JpenpseSBIaWxscw==","R3J1dWwncyBMYWly","R3VsJ2Rhbg==",
-  "SGFra2Fy","SGFtbWVyZmFsbA==","SGVhcnQgb2YgRmVhcg==","SGVsbGZpcmU=",
-  "SGVsbGZpcmUgQ2l0YWRlbA==","SGVsbHNjcmVhbQ==","SGVseWE=","SGlnaG1hdWw=",
-  "SGlnaG1vdW50YWlu","SGlsbHNicmFk","SG9kaXI=","SG9yZGU=","SG93bGluZyBGam9yZA==",
-  "SHlqYWw=","SWNlY3Jvd24=","SWNlY3Jvd24gQ2l0YWRlbA==","SWwnZ3lub3Ro","SWxsaWRhbg==",
-  "SXJvbmZvcmdl","SXJvbnNwaXJl","SmFkZSBGb3Jlc3Q=","SmFpbmE=","S2FsZWNnb3M=",
-  "S2FsaW1kb3I=","S2FyYWJvcg==","S2FyYXpoYW4=","S2hhZGdhcg==","S2hheidnb3JvdGg=",
-  "S2lsJ2phZWRlbg==","S29ydGhpYQ==","S3Jhc2FyYW5n","S3VsIFRpcmFu","S3VuLUxhaQ==",
-  "S3ZhbGRpcg==","TGlmZWJsb29t","TGlnaHQncyBIb3Bl","TGlnaHRmb3JnZWQ=","TG9yJ3RoZW1hcg==",
-  "TWFnbmk=","TWFsZHJheHh1cw==","TWFsZnVyaW9u","TWFseWdvcw==","TWFubm9yb3Ro",
-  "TWFudGlk","TWFyYXVkb24=","TWVjaGFnbm9tZQ==","TWVjaGFnb24=","TWVkaXZo",
-  "TWVra2F0b3JxdWU=","TWVuZXRoaWw=","TWltaXJvbg==","TW9sdGVuIENvcmU=","TW9vbmdsYWRl",
-  "TW9yb2do","TXVsZ29yZQ==","TXVyYWRpbg==","TmFhcnU=","TmFncmFuZA==","TmF0aGFub3M=",
-  "TmF4eHJhbWFz","TmF6amF0YXI=","TmF6bWly","TmVmYXJpYW4=","TmVsdGhhcmlvbg==",
-  "TmVyJ3podWw=","TmVydWJpYW5z","TmV0aGVyZ2FyZGU=","TmV0aGVyc3Rvcm0=",
-  "TmlnaHRib3JuZQ==","TmlnaHRob2xk","Tm9yZ2Fubm9u","Tm9ydGhyZW5k","Tm96ZG9ybXU=",
-  "TnknYWxvdGhh","T2R5bg==","T255eGlh","T3JncmltbWFy","T3V0bGFuZA==","UGFuZGFyZW4=",
-  "UGFuZGFyaWE=","UGxhZ3VlbGFuZHM=","UHJvdWRtb29yZQ==","UHlyb2JsYXN0",
-  "UmFnZWZpcmUgQ2hhc20=","UmFnbmFyb3M=","UmFzdGFraGFu","UmF0Y2hldA==",
-  "UmF6b3JmZW4gS3JhdWw=","UmVkcmlkZ2U=","UmVqdXZlbmF0aW9u","UmV2ZW5kcmV0aA==",
-  "UmV6YW4=","U2FuY3R1bSBvZiBEb21pbmF0aW9u","U2FyZ2VyYXM=","U2F1cmZhbmc=",
-  "U2NhcmxldCBNb25hc3Rlcnk=","U2Nob2xvbWFuY2U=","U2NvdXJnZQ==","U2VwdWxjaGVy",
-  "U2VycGVudHNocmluZQ==","U2V0aHJhaw==","U2hhZG93ZmFuZyBLZWVw","U2hhZG93bGFuZHM=",
-  "U2hhZG93bWVsZA==","U2hhZG93bW9vbg==","U2hhbGFtYXluZQ==","U2hhdHRyYXRo",
-  "U2hvbGF6YXI=","U2llZ2Ugb2YgT3JncmltbWFy","U2lsaXRodXM=","U2lsdmVybW9vbg==",
-  "U2lsdmVycGluZQ==","U291dGhzaG9yZQ==","U3BpcmVzIG9mIEFyYWs=","U3RhcmZhbGw=",
-  "U3RvcmUgUGVha3M=","U3Rvcm1oZWlt","U3Rvcm1yYWdl","U3Rvcm1zb25n","U3Rvcm13aW5k",
-  "U3RyYW5nbGV0aG9ybg==","U3RyYXRob2xtZQ==","U3Vua2VuIFRlbXBsZQ==","U3Vud2VsbA==",
-  "U3VyYW1hcg==","U3lsdmFuYXM=","VGFsYWRvcg==","VGFsYW5qaQ==","VGFuYWFu","VGFuYXJpcw==",
-  "VGFycmVuIE1pbGw=","VGVsZHJhc3NpbA==","VGVtcGVzdCBLZWVw","VGVyb2trYXI=",
-  "VGhlcmFtb3Jl","VGhlcm9u","VGhyYWxs","VGhyb25lIG9mIFRodW5kZXI=",
-  "VGhyb25lIG9mIHRoZSBGb3VyIFdpbmRz","VGlyYWdhcmRl","VGlyaXNmYWw=",
-  "VG9tYiBvZiBTYXJnZXJhcw==","VG9ydG9sbGFu","VG93bmxvbmc=","VHVyYWx5b24=",
-  "VHdpbGlnaHQgSGlnaGxhbmRz","VHlyJ3MgSGFuZA==","VHlyYW5kZQ==","VWxkYW1hbg==",
-  "VWxkaXI=","VWxkdWFy","VWxkdW0=","VW5kZXJjaXR5","VmFsJ3NoYXJhaA==",
-  "VmFsZSBvZiBFdGVybmFsIEJsb3Nzb21z","VmFzaGppcg==","VmVsZW4=","VmVyZWVzYQ==",
-  "Vm9sZHVu","VnJ5a3Vs","VnVscGVyYQ==","V2FpbGluZyBDYXZlcm5z","V2VzdGZhbGw=",
-  "V2V0bGFuZHM=","V2hpc3BlcndpbmQ=","V2luZGZ1cnk=","V2luZHJ1bm5lcg==","V2ludGVyc3ByaW5n",
-  "V29yZ2Vu","V3JhdGhpb24=","V3J5bm4=","WGFsJ2F0YXRo","WGF2aXVz","WWF1bmdvbA==",
-  "WW9nZy1TYXJvbg==","WXNlcmE=","WmFuZGFsYXI=","WmFuZGFsYXJp","WmFuZ2FybWFyc2g=",
-  "WmVyZXRoIE1vcnRpcw==","Wm92YWFs","WnVsJ0FtYW4=","WnVsJ0ZhcnJhaw==","WnVsJ0d1cnVi",
-  "WnVsZGF6YXI="
-];
+// ── Word Data ───────────────────────────────────────────────
+// Loaded from words.js (must be included before this script).
+// See words.js to add, remove, or edit entries.
 
-// ──────────────────────────────────────────────────────────────
-// Decode
-// ──────────────────────────────────────────────────────────────
-const WORDS = ENCODED_WORDS.map(w => atob(w));
+// ── Decode ──────────────────────────────────────────────────
+const WORDS = WORD_DATA.map(entry => ({
+  word:     atob(entry.w).toUpperCase(),
+  category: entry.c,
+  hint:     entry.h
+}));
 
-// ──────────────────────────────────────────────────────────────
-// Cookie helpers
-// ──────────────────────────────────────────────────────────────
-function setCookie(name, value, days) {
-  const d = new Date();
-  d.setTime(d.getTime() + days * 86400000);
-  document.cookie = `${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/`;
-}
-
-function getCookie(name) {
-  const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
-  return match ? decodeURIComponent(match[1]) : null;
-}
-
-// ──────────────────────────────────────────────────────────────
-// Game state
-// ──────────────────────────────────────────────────────────────
-const MAX_WRONG = 6;
+// ── Constants ───────────────────────────────────────────────
+const MAX_WRONG  = 6;
 const BODY_PARTS = ['part-head','part-body','part-larm','part-rarm','part-lleg','part-rleg'];
-
-let chosenWord    = '';
-let guessedLetters = new Set();
-let wrongGuesses  = [];
-let gameOver      = false;
-let score         = 0;
-let streak        = 0;
-
-// ──────────────────────────────────────────────────────────────
-// Word of the day
-// ──────────────────────────────────────────────────────────────
-function getWordOfDay() {
-  const start  = new Date('2024-01-01');
-  const today  = new Date();
-  const diff   = Math.floor((today - start) / 86400000);
-  return WORDS[diff % WORDS.length].toUpperCase();
-}
-
-function todayString() {
-  return new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD
-}
-
-function hasPlayedToday() {
-  return getCookie('lastPlayed') === todayString();
-}
-
-function markPlayedToday() {
-  setCookie('lastPlayed', todayString(), 1);
-}
-
-// ──────────────────────────────────────────────────────────────
-// Score & streak
-// ──────────────────────────────────────────────────────────────
-function loadStats() {
-  score  = parseInt(getCookie('score'),  10) || 0;
-  streak = parseInt(getCookie('streak'), 10) || 0;
-}
-
-function saveStats() {
-  setCookie('score',  score,  365);
-  setCookie('streak', streak, 365);
-}
-
-function renderStats() {
-  document.getElementById('score-value').textContent  = score;
-  document.getElementById('streak-value').textContent = streak;
-}
-
-// ──────────────────────────────────────────────────────────────
-// Word display
-// ──────────────────────────────────────────────────────────────
-function renderWord() {
-  const container = document.getElementById('word-display');
-  container.innerHTML = '';
-
-  // Split on actual spaces for multi-word answers
-  const wordParts = chosenWord.split(' ');
-
-  wordParts.forEach((part, wi) => {
-    [...part].forEach(ch => {
-      const slot = document.createElement('div');
-      slot.classList.add('letter-slot');
-
-      const char = document.createElement('div');
-      char.classList.add('letter-char');
-
-      // Show apostrophes, hyphens and other non-alpha chars always
-      const isAlpha = /[A-Z]/.test(ch);
-      if (!isAlpha || guessedLetters.has(ch)) {
-        char.textContent = ch;
-        if (isAlpha) slot.classList.add('revealed');
-      } else {
-        char.textContent = '';
-      }
-
-      const underline = document.createElement('div');
-      underline.classList.add('letter-underline');
-      if (!isAlpha) underline.style.visibility = 'hidden';
-
-      slot.appendChild(char);
-      slot.appendChild(underline);
-      container.appendChild(slot);
-    });
-
-    // Space between words
-    if (wi < wordParts.length - 1) {
-      const sp = document.createElement('div');
-      sp.classList.add('word-space');
-      container.appendChild(sp);
-    }
-  });
-}
-
-// ──────────────────────────────────────────────────────────────
-// Gallows
-// ──────────────────────────────────────────────────────────────
-function renderGallows() {
-  const isDead = wrongGuesses.length >= MAX_WRONG;
-  BODY_PARTS.forEach((id, i) => {
-    const el = document.getElementById(id);
-    if (i < wrongGuesses.length) {
-      el.classList.add('visible');
-      if (isDead) el.classList.add('dead');
-    } else {
-      el.classList.remove('visible', 'dead');
-    }
-  });
-  document.getElementById('wrong-num').textContent = wrongGuesses.length;
-}
-
-// ──────────────────────────────────────────────────────────────
-// Wrong letters display
-// ──────────────────────────────────────────────────────────────
-function renderWrong() {
-  const el = document.getElementById('wrong-letters');
-  el.textContent = wrongGuesses.length
-    ? 'Wrong: ' + wrongGuesses.join(' · ')
-    : '';
-}
-
-// ──────────────────────────────────────────────────────────────
-// Keyboard
-// ──────────────────────────────────────────────────────────────
 const ROWS = [
   { id: 'row1', keys: 'QWERTYUIOP'.split('') },
   { id: 'row2', keys: 'ASDFGHJKL'.split('')  },
   { id: 'row3', keys: 'ZXCVBNM'.split('')    }
 ];
 
+// ── Game State ───────────────────────────────────────────────
+let mode          = 'daily';   // 'daily' | 'endless'
+let currentEntry  = null;      // { word, category, hint }
+let guessedLetters = new Set();
+let wrongGuesses  = [];
+let gameOver      = false;
+let hintUsed      = false;
+// Scores are completely separate per mode — never shared
+let dailyScore    = 0;
+let endlessScore  = 0;
+let streak        = 0;   // daily win streak
+let endlessStreak = 0;   // endless run streak
+
+// ── Storage helpers (localStorage — no cookies, no consent needed) ──
+// All data is stored locally on the user's own device only.
+// Nothing is sent to any server. GDPR strictly requires consent only
+// for cookies/tracking that leave the device — localStorage does not.
+function lsGet(key) {
+  try { return localStorage.getItem('ag_' + key); } catch(e) { return null; }
+}
+function lsSet(key, value) {
+  try { localStorage.setItem('ag_' + key, value); } catch(e) {}
+}
+
+// ── Date helpers ─────────────────────────────────────────────
+function todayStr() {
+  return new Date().toLocaleDateString('en-CA');
+}
+function hasPlayedToday() {
+  return lsGet('lastPlayed') === todayStr();
+}
+function markPlayedToday() {
+  lsSet('lastPlayed', todayStr());
+}
+
+// ── Word selection ───────────────────────────────────────────
+function getDailyEntry() {
+  const start = new Date('2024-01-01');
+  const today = new Date();
+  const diff  = Math.floor((today - start) / 86400000);
+  return WORDS[diff % WORDS.length];
+}
+
+function getRandomEntry(excludeWord) {
+  let entry;
+  do {
+    entry = WORDS[Math.floor(Math.random() * WORDS.length)];
+  } while (entry.word === excludeWord);
+  return entry;
+}
+
+// ── Load / Save stats ────────────────────────────────────────
+function loadStats() {
+  dailyScore    = parseInt(lsGet('dailyScore'),    10) || 0;
+  endlessScore  = parseInt(lsGet('endlessScore'),  10) || 0;
+  streak        = parseInt(lsGet('streak'),        10) || 0;
+  endlessStreak = parseInt(lsGet('endlessStreak'), 10) || 0;
+}
+function saveStats() {
+  lsSet('dailyScore',    dailyScore);
+  lsSet('endlessScore',  endlessScore);
+  lsSet('streak',        streak);
+  lsSet('endlessStreak', endlessStreak);
+}
+function renderStats() {
+  if (mode === 'daily') {
+    document.getElementById('score-value').textContent  = dailyScore;
+    document.getElementById('streak-value').textContent = streak;
+  } else {
+    document.getElementById('score-value').textContent  = endlessScore;
+    document.getElementById('streak-value').textContent = endlessStreak;
+  }
+}
+
+// ── Mode UI ──────────────────────────────────────────────────
+function setMode(m) {
+  mode = m;
+  document.getElementById('btn-mode-daily').classList.toggle('active', m === 'daily');
+  document.getElementById('btn-mode-endless').classList.toggle('active', m === 'endless');
+  document.getElementById('streak-label').textContent = m === 'endless' ? 'Run' : 'Streak';
+}
+
+// ── Dynamic font size for word display ───────────────────────
+// Returns the largest font size (px) where the longest single word
+// in the phrase fits on one line within the container width.
+function calcLetterFontSize(word) {
+  const gc = document.getElementById('game-container');
+  const availW = gc ? gc.clientWidth - 32 : window.innerWidth - 32;
+  const gap = Math.min(Math.max(3, window.innerWidth * 0.008), 12);
+
+  // Find the longest word (most characters) — that's the constraint
+  const parts = word.split(' ');
+  const maxLen = Math.max(...parts.map(p => p.length));
+
+  // Each letter slot: fontSize * 1.1em wide + gap px between slots
+  // maxLen slots + (maxLen-1) gaps <= availW
+  // fontSize * 1.1 * maxLen + gap * (maxLen - 1) <= availW
+  // fontSize <= (availW - gap*(maxLen-1)) / (1.1 * maxLen)
+  const maxPx = (availW - gap * (maxLen - 1)) / (1.1 * maxLen);
+  const ceiling = Math.min(window.innerWidth * 0.032, 46);
+  return Math.max(12, Math.min(ceiling, maxPx));
+}
+
+// ── Render word ──────────────────────────────────────────────
+function renderWord() {
+  const container = document.getElementById('word-display');
+  container.innerHTML = '';
+  const parts = currentEntry.word.split(' ');
+
+  // Set font size so the longest single word fits on one line.
+  // Wrapping happens between whole words, never mid-word.
+  const fontSize = calcLetterFontSize(currentEntry.word);
+  container.style.setProperty('--letter-fs', fontSize + 'px');
+
+  parts.forEach((part) => {
+    // Each word gets its own no-wrap group
+    const group = document.createElement('div');
+    group.classList.add('word-group');
+
+    [...part].forEach(ch => {
+      const slot = document.createElement('div');
+      slot.classList.add('letter-slot');
+
+      const char = document.createElement('div');
+      char.classList.add('letter-char');
+      const isAlpha = /[A-Z]/.test(ch);
+
+      if (!isAlpha || guessedLetters.has(ch)) {
+        char.textContent = ch;
+        if (isAlpha) slot.classList.add('revealed');
+      }
+
+      const line = document.createElement('div');
+      line.classList.add('letter-underline');
+      if (!isAlpha) line.style.visibility = 'hidden';
+
+      slot.appendChild(char);
+      slot.appendChild(line);
+      group.appendChild(slot);
+    });
+
+    container.appendChild(group);
+  });
+}
+
+// ── Gallows ──────────────────────────────────────────────────
+function renderGallows() {
+  const dead = wrongGuesses.length >= MAX_WRONG;
+  BODY_PARTS.forEach((id, i) => {
+    const el = document.getElementById(id);
+    el.classList.toggle('visible', i < wrongGuesses.length);
+    el.classList.toggle('dead',    dead && i < wrongGuesses.length);
+  });
+  document.getElementById('wrong-num').textContent = wrongGuesses.length;
+}
+
+// ── Wrong letters ────────────────────────────────────────────
+function renderWrong() {
+  const el = document.getElementById('wrong-letters');
+  el.textContent = wrongGuesses.length ? 'Wrong: ' + wrongGuesses.join(' · ') : '';
+}
+
+// ── Hint button ──────────────────────────────────────────────
+function updateHintButton() {
+  const btn = document.getElementById('btn-hint');
+  if (hintUsed) {
+    btn.textContent = `💡 ${currentEntry.category} — ${currentEntry.hint}`;
+    btn.classList.add('used');
+    btn.disabled = true;
+    btn.style.display = 'block';
+  } else if (wrongGuesses.length >= 3 && !gameOver) {
+    btn.style.display = 'block';
+    btn.disabled = false;
+    btn.classList.remove('used');
+    btn.textContent = '💡 Reveal Hint (-5 pts)';
+  } else {
+    btn.style.display = 'none';
+  }
+}
+
+// ── Keyboard ─────────────────────────────────────────────────
 function buildKeyboard() {
   ROWS.forEach(({ id, keys }) => {
     const row = document.getElementById(id);
+    row.innerHTML = '';
     keys.forEach(k => {
       const btn = document.createElement('button');
-      btn.textContent   = k;
-      btn.dataset.key   = k;
-      btn.className     = 'kb-key';
-      btn.onclick       = () => guess(k);
+      btn.textContent = k;
+      btn.dataset.key = k;
+      btn.className   = 'kb-key';
+      btn.onclick     = () => guess(k);
       row.appendChild(btn);
     });
   });
@@ -242,26 +225,24 @@ function updateKeyboard() {
     const k = btn.dataset.key;
     if (guessedLetters.has(k)) {
       btn.disabled = true;
-      // Determine if it was correct or wrong
-      const isCorrect = chosenWord.replace(/[^A-Z]/g,'').includes(k);
-      btn.classList.toggle('correct', isCorrect);
-      btn.classList.toggle('wrong',   !isCorrect);
+      const correct = new Set(currentEntry.word.replace(/[^A-Z]/g, '').split('')).has(k);
+      btn.classList.toggle('correct', correct);
+      btn.classList.toggle('wrong',  !correct);
+    } else {
+      btn.disabled = gameOver;
+      btn.classList.remove('correct', 'wrong');
     }
   });
 }
 
-// ──────────────────────────────────────────────────────────────
-// Core guess logic
-// ──────────────────────────────────────────────────────────────
+// ── Guess logic ──────────────────────────────────────────────
 function guess(letter) {
   if (gameOver || guessedLetters.has(letter)) return;
   guessedLetters.add(letter);
 
-  const wordLetters = new Set(chosenWord.replace(/[^A-Z]/g, '').split(''));
-  const isCorrect   = wordLetters.has(letter);
-
-  if (isCorrect) {
-    score += 1;
+  const wordSet = new Set(currentEntry.word.replace(/[^A-Z]/g, '').split(''));
+  if (wordSet.has(letter)) {
+    if (mode === 'daily') { dailyScore += 1; } else { endlessScore += 1; }
   } else {
     wrongGuesses.push(letter);
   }
@@ -270,134 +251,217 @@ function guess(letter) {
   renderGallows();
   renderWrong();
   updateKeyboard();
+  updateHintButton();
   saveStats();
   renderStats();
-  checkEndCondition();
+  checkEnd();
 }
 
-function checkEndCondition() {
-  const allRevealed = [...chosenWord].every(ch => !/[A-Z]/.test(ch) || guessedLetters.has(ch));
-  const tooManyWrong = wrongGuesses.length >= MAX_WRONG;
+function checkEnd() {
+  const allRevealed = [...currentEntry.word].every(ch => !/[A-Z]/.test(ch) || guessedLetters.has(ch));
+  const failed      = wrongGuesses.length >= MAX_WRONG;
 
   if (allRevealed) {
     gameOver = true;
-    score += 10;
-    streak += 1;
+    if (mode === 'daily') { dailyScore += 10; streak += 1; markPlayedToday(); }
+    else                  { endlessScore += 10; endlessStreak += 1; }
     saveStats();
     renderStats();
-    markPlayedToday();
-    document.getElementById('message').textContent = 'For the Alliance! (or Horde…)';
+    document.getElementById('message').textContent = mode === 'endless'
+      ? `Correct! +10 pts 🎉`
+      : `For the Alliance! (or Horde…)`;
     document.getElementById('game-container').classList.add('state-won');
     document.removeEventListener('keydown', onKeyDown);
-    setTimeout(() => showEndModal(true), 900);
-  } else if (tooManyWrong) {
+    updateHintButton();
+    setTimeout(() => showEndModal(true), mode === 'endless' ? 1200 : 900);
+  } else if (failed) {
     gameOver = true;
-    streak = 0;
+    if (mode === 'daily') { streak = 0; markPlayedToday(); }
+    else                  { endlessStreak = 0; }
     saveStats();
     renderStats();
-    markPlayedToday();
-    document.getElementById('message').textContent = `The hero has fallen! The word was "${chosenWord}"`;
+    document.getElementById('message').textContent = `The hero has fallen! The word was "${currentEntry.word}"`;
     document.getElementById('game-container').classList.add('state-lost');
     document.removeEventListener('keydown', onKeyDown);
+    updateHintButton();
     setTimeout(() => showEndModal(false), 900);
   }
 }
 
-// ──────────────────────────────────────────────────────────────
-// Physical keyboard
-// ──────────────────────────────────────────────────────────────
+// ── Keyboard handler ─────────────────────────────────────────
 function onKeyDown(e) {
   const letter = e.key.toUpperCase();
   if (/^[A-Z]$/.test(letter) && !gameOver) guess(letter);
 }
 
-// ──────────────────────────────────────────────────────────────
-// Modals
-// ──────────────────────────────────────────────────────────────
+// ── Init / Start game ────────────────────────────────────────
+function initGame(entry) {
+  currentEntry   = entry;
+  guessedLetters = new Set();
+  wrongGuesses   = [];
+  gameOver       = false;
+  hintUsed       = false;
+
+  document.getElementById('message').textContent = '';
+  document.getElementById('game-container').classList.remove('state-won', 'state-lost');
+
+  buildKeyboard();
+  renderWord();
+  renderGallows();
+  renderWrong();
+  updateHintButton();
+  renderStats();
+
+  document.removeEventListener('keydown', onKeyDown);
+  document.addEventListener('keydown', onKeyDown);
+}
+
+function startDaily() {
+  setMode('daily');
+  closeModal('modal-instructions');
+
+  if (hasPlayedToday()) {
+    // Show board but locked
+    initGame(getDailyEntry());
+    gameOver = true;
+    updateKeyboard();
+    document.getElementById('message').textContent = "You've already played today — come back at midnight!";
+    return;
+  }
+  initGame(getDailyEntry());
+}
+
+function startEndless() {
+  setMode('endless');
+  closeModal('modal-instructions');
+  initGame(getRandomEntry(''));
+}
+
+function nextEndless() {
+  closeModal('modal-endgame');
+  const prev = currentEntry ? currentEntry.word : '';
+  initGame(getRandomEntry(prev));
+}
+
+// ── Hint ────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('btn-hint').addEventListener('click', () => {
+    if (hintUsed || wrongGuesses.length < 3 || gameOver) return;
+    hintUsed = true;
+    if (mode === 'daily') { dailyScore = Math.max(0, dailyScore - 5); }
+    else                  { endlessScore = Math.max(0, endlessScore - 5); }
+    saveStats();
+    renderStats();
+    updateHintButton();
+  });
+});
+
+// ── Modals ───────────────────────────────────────────────────
 function openModal(id)  { document.getElementById(id).classList.add('open');    }
 function closeModal(id) { document.getElementById(id).classList.remove('open'); }
 
 function showEndModal(won) {
   const guessArr = [...guessedLetters];
-  const wordSet  = new Set(chosenWord.replace(/[^A-Z]/g, '').split(''));
+  const wordSet  = new Set(currentEntry.word.replace(/[^A-Z]/g, '').split(''));
+  const emoji    = guessArr.map(l => wordSet.has(l) ? '🟩' : '🟥').join('');
 
-  const emojiLine = guessArr.map(l => wordSet.has(l) ? '🟩' : '🟥').join('');
+  document.getElementById('end-title').textContent = won ? '⚔ Victory! ⚔' : '💀 Defeated 💀';
+  document.getElementById('end-rune').textContent  = won ? '✦' : '💀';
+  document.getElementById('end-rune2').textContent = won ? '✦' : '💀';
 
-  document.getElementById('end-title').textContent    = won ? '⚔ Victory! ⚔' : '💀 Defeated 💀';
-  document.getElementById('end-message').textContent  = won
-    ? `You uncovered "${chosenWord}" with ${wrongGuesses.length} wrong guess${wrongGuesses.length !== 1 ? 'es' : ''}!`
-    : `The word was "${chosenWord}". Better luck tomorrow, champion.`;
+  const hintLine = hintUsed ? `\nHint used: ${currentEntry.category} — ${currentEntry.hint}` : '';
+  document.getElementById('end-message').textContent = won
+    ? `You uncovered "${currentEntry.word}" with ${wrongGuesses.length} wrong guess${wrongGuesses.length !== 1 ? 'es' : ''}!`
+    : `The word was "${currentEntry.word}". Better luck next time!`;
 
-  document.getElementById('share-emoji').textContent = emojiLine;
+  document.getElementById('share-emoji').textContent = emoji;
 
-  const shareStr = [
-    `🗡 Azerothian Guess 🗡`,
-    `${won ? 'Won' : 'Lost'} · ${wrongGuesses.length}/${MAX_WRONG} wrong`,
-    emojiLine,
+  const modeLabel = mode === 'endless' ? 'Endless' : 'Daily';
+  document.getElementById('share-text').value = [
+    `🗡 Azerothian Guess (${modeLabel}) 🗡`,
+    `${won ? 'Won' : 'Lost'} · ${wrongGuesses.length}/${MAX_WRONG} wrong${hintLine}`,
+    emoji,
     `https://i-am-t3x.github.io/Azerothian-Guess/`
   ].join('\n');
 
-  document.getElementById('share-text').value = shareStr;
-
-  const rune = won ? '✦' : '💀';
-  document.getElementById('end-rune').textContent  = rune;
-  document.getElementById('end-rune2').textContent = rune;
+  // Show "Next Word" button only in endless mode
+  document.getElementById('btn-next-word').style.display = mode === 'endless' ? 'block' : 'none';
 
   openModal('modal-endgame');
 }
 
-// Copy to clipboard
-document.getElementById('btn-copy').addEventListener('click', async () => {
-  const text = document.getElementById('share-text').value;
-  const confirm = document.getElementById('copy-confirm');
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch {
-    // Fallback
-    const ta = document.getElementById('share-text');
-    ta.select();
-    document.execCommand('copy');
-  }
-  confirm.classList.add('show');
-  setTimeout(() => confirm.classList.remove('show'), 2000);
+// ── Copy ─────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('btn-copy').addEventListener('click', async () => {
+    const text    = document.getElementById('share-text').value;
+    const confirm = document.getElementById('copy-confirm');
+    try { await navigator.clipboard.writeText(text); }
+    catch { const ta = document.getElementById('share-text'); ta.select(); document.execCommand('copy'); }
+    confirm.classList.add('show');
+    setTimeout(() => confirm.classList.remove('show'), 2000);
+  });
+
+  document.getElementById('btn-next-word').addEventListener('click', nextEndless);
+  document.getElementById('btn-start-daily').addEventListener('click', startDaily);
+  document.getElementById('btn-start-endless').addEventListener('click', startEndless);
+
+  document.getElementById('btn-mode-daily').addEventListener('click', () => {
+    // Already in daily and game is in progress — do nothing
+    if (mode === 'daily' && !gameOver && currentEntry) return;
+    closeModal('modal-endgame');
+    closeModal('modal-instructions');
+    startDaily();
+  });
+  document.getElementById('btn-mode-endless').addEventListener('click', () => {
+    // Already in endless and game is in progress — do nothing
+    if (mode === 'endless' && !gameOver && currentEntry) return;
+    closeModal('modal-endgame');
+    closeModal('modal-instructions');
+    startEndless();
+  });
 });
 
-// ──────────────────────────────────────────────────────────────
-// Start game
-// ──────────────────────────────────────────────────────────────
-function startGame() {
-  closeModal('modal-instructions');
+// ── Privacy banner ──────────────────────────────────────────
+// Show once; dismissed state persisted in localStorage (no cookie needed)
+function initPrivacyBanner() {
+  if (lsGet('privacyDismissed') === '1') return;
+  const banner = document.getElementById('privacy-banner');
+  if (!banner) return;
+  banner.style.display = 'flex';
 
-  if (hasPlayedToday()) {
-    document.getElementById('message').textContent = "You've already played today — come back at midnight!";
-    gameOver = true;
-    // Still render so they can see the word board
-    renderWord();
-    renderGallows();
-    renderWrong();
-    updateKeyboard();
-    return;
-  }
+  document.getElementById('privacy-ok').addEventListener('click', () => {
+    lsSet('privacyDismissed', '1');
+    banner.style.display = 'none';
+  });
 
-  renderWord();
-  renderGallows();
-  renderWrong();
-  updateKeyboard();
-  document.addEventListener('keydown', onKeyDown);
+  document.getElementById('privacy-more').addEventListener('click', (e) => {
+    e.preventDefault();
+    alert(
+      'Azerothian Guess — Data & Privacy\n\n' +
+      'This game stores the following data ONLY on your device:\n' +
+      '  • Your daily and endless scores\n' +
+      '  • Your win streaks\n' +
+      '  • Whether you have already played today (daily mode)\n' +
+      '  • Whether you have dismissed this notice\n\n' +
+      'Storage method: window.localStorage\n' +
+      'Data never leaves your device. No server, no tracking,\n' +
+      'no analytics, no third-party scripts beyond Google Fonts.\n\n' +
+      'To delete all saved data: open your browser DevTools,\n' +
+      'go to Application → Local Storage and clear entries\n' +
+      'prefixed with "ag_".'
+    );
+  });
 }
 
-// ──────────────────────────────────────────────────────────────
-// Init
-// ──────────────────────────────────────────────────────────────
+// ── Boot ─────────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
-  chosenWord = getWordOfDay();
   loadStats();
   renderStats();
-  buildKeyboard();
-
-  // Wire up buttons
-  document.getElementById('btn-start').addEventListener('click', startGame);
-
-  // Show instructions on load
+  initPrivacyBanner();
   openModal('modal-instructions');
+});
+
+// Re-scale word on window resize (orientation change, window drag, etc.)
+window.addEventListener('resize', () => {
+  if (currentEntry) renderWord();
 });
