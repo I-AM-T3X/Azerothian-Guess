@@ -1,392 +1,403 @@
-const encodedWords = [
-    "QXplcm90aA==", "S2FsaW1kb3I=", "RWFzdGVybg==", "UGxhZ3VlbGFuZHM=", "UGFuZGFyaWE=", 
-    "RHJhZW5vcg==", "T3V0bGFuZA==", "Tm9ydGhyZW5k", "U2hhZG93bGFuZHM=", "VGVsZHJhc3NpbA==", 
-    "RGFybmFzc3Vz", "T3JncmltbWFy", "VGh1bmRlcg==", "Qmx1ZmY=", "U2lsdmVybW9vbg==", 
-    "VW5kZXJjaXR5", "U3Rvcm13aW5k", "SXJvbmZvcmdl", "R2lsbmVhcw==", "R25vbWVyZWdhbg==", 
-    "RXhvZGFy", "QWhuJ1FpcmFq", "VWxkdWFy", "S2FyYXpoYW4=", "QmxhY2tyb2Nr", 
-    "TW9sdGVu", "Q29yZQ==", "SWNlY3Jvd24=", "TmF4eHJhbWFz", "WnVsJ0d1cnVi", 
-    "WnVsJ0FtYW4=", "U3RyYXRob2xtZQ==", "U2Nob2xvbWFuY2U=", "RGlyZQ==", "TWF1bA==", 
-    "V2FpbGluZw==", "Q2F2ZXJucw==", "RGVhZG1pbmVz", "U2NhcmxldA==", "TW9uYXN0ZXJ5", 
-    "QmxhY2t3aW5n", "TGFpcg==", "U2VycGVudHNocmluZQ==", "Q2F2ZXJu", "VGVtcGVzdA==", 
-    "S2VlcA==", "R3J1dWwncw==", "TWFndGhlcmlkb24n", "U3Vud2VsbA==", "UGxhdGVhdQ==", 
-    "U2llZ2U=", "T3JncmltbWFy", "VGhyb25l", "VGh1bmRlcg==", "RmlyZWxhbmRz", "RHJhZ29u", 
-    "U291bA==", "SGVhcnQ=", "RmVhcg==", "VmFsZQ==", "RXRlcm5hbA==", "Qmxvc3NvbXM=", 
-    "U2hhdHRyYXRo", "RGFsYXJhbg==", "VWxkdW0=", "VmFzaicncg==", "SHlqYWw=", 
-    "RGVlcGhvbG0=", "VHdpbGlnaHQ=", "SGlnaGxhbmRz", "SmFkZQ==", "Rm9yZXN0", 
-    "VmFsbGV5", "Rm91cg==", "V2luZHM=", "S3Jhc2FyYW5n", "V2lsZHM=", "S3VuLUxhaQ==", 
-    "U3VtbWl0", "VG93bmxvbmc=", "U3RlcHBlcw==", "RHJlYWQ=", "V2FzdGVz", "RnJvc3RmaXJl", 
-    "UmlkZ2U=", "U2hhZG93bW9vbg==", "R29yZ3JvbmQ=", "VGFsYWRvcg==", "U3BpcmVz", 
-    "QXJhaw==", "TmFncmFuZA==", "VGFuYWFu", "SnVuZ2xl", "SGlnaG1vdW50YWlu", 
-    "U3Rvcm1oZWlt", "VmFsJ3NoYXJhaA==", "QXpzdW5h", "U3VyYW1hcg==", "QnJva2Vu", 
-    "U2hvcmU=", "QXJndXM=", "QW50b3J1cw==", "QnVybmluZw==", "VGhyb25l", "S3Vs", 
-    "VGlyYXM=", "WmFuZGFsYXI=", "TmF6amF0YXI=", "TWVjaGFnb24=", "QmFzdGlvbg==", 
-    "TWFsZHJheHh1cw==", "QXJkZW53ZWFsZA==", "UmV2ZW5kcmV0aA==", "S29ydGhpYQ==", 
-    "WmVyZXRo", "TW9ydGlz", "RHJhZ29uYmxpZ2h0", "R3JpenpseQ==", "SGlsbHM=", 
-    "SG93bGluZw==", "RmpvcmQ=", "U2hvbGF6YXI=", "QmFzaW4=", "Qm9yZWFu", 
-    "VHVuZHJh", "SWNlY3Jvd24=", "Q3J5c3RhbHNvbmcv", "Rm9yZXN0", "U3Rvcm0=", 
-    "UGVha3M=", "TXVsZ29yZQ==", "RWx3eW5u", "Rm9yZXN0", "RHVu", "TW9yb2do", 
-    "RHVyb3Rhcg==", "VGlyaXNmYWw=", "R2xhZGVz", "TG9jaA==", "TW9kYW4=", 
-    "V2VzdGZhbGw=", "UmVkcmVkZ2U=", "TW91bnRhaW5z", "U3RyYW5nbGV0aG9ybg==", 
-    "VmFsZQ==", "U2lsdmVycGluZQ==", "U3dhbXA=", "U29ycm93cw==", "V2V0bGFuZHM=", 
-    "SGlsbHNicmFk", "Rm9vdGhpbGxz", "QXJhdGhp", "SGlnaGxhbmRz", "QmFkbGFuZHM=", 
-    "U2VhcmluZw==", "R29yZ2U=", "QnVybmluZw==", "U3RlcHBlcw==", "Qmxhc3RlZA==", 
-    "TGFuZHM=", "VW5ncm8=", "Q3JhdGVy", "U2lsaXRodXM=", "RmVsd29vZA==", 
-    "RmVyYWxhcw==", "RGVzb2xhY2U=", "VGhvdXNhbmQ=", "TmVlZGxlcw==", "VGFuYXJpcw==", 
-    "RHVzdHdhbGxvdy==", "TWFyc2g=", "QmFycmVucw==", "U3Rvcm13aW5k",
-    "TW91bnRhaW5z", "QXNoZW52YWxl", "RGFya3Nob3Jl", "QXpzaGFyYQ==", "V2ludGVyc3ByaW5n", 
-    "TW9vbmdsYWRl", "R2hvc3RsYW5kcw==", "RXZlcnNvbmc=", "V29vZHM=", "SGVsbGZpcmU=", 
-    "UGVuaW5zdWxh", "WmFuZ2FybWFyc2g=", "VGVyb2trYXI=", "TmV0aGVyc3BhY2U=", 
-    "U3Vud2VsbA==", "U2lsdmVybW9vbg==", "Qmxvb2Q=", "RWxm", "TmlnaHQ=", 
-    "VGF1cmVu", "T3Jj", "VHJvbGw=", "Rm9yc2FrZW4=", "SHVtYW4=", "RHdhcmY=", 
-    "R25vbWU=", "RHJhZW5laQ==", "V29yZ2Vu", "R29ibGlu", "UGFuZGFyZW4=", 
-    "TGljaA==", "S2luZw==", "U3lsdmFuYXM=", "V2luZHJ1bm5lcg==", "SWxsaWRhbg==", 
-    "U3Rvcm1yYWdl", "SmFpbmE=", "UHJvdWRtb29yZQ==", "QW5kdWlu", "V3J5bm4=", 
-    "R2Vubg==", "R3JleW1hbmU=", "QmFpbmU=", "Qmxvb2Rob29m", "TG9yJ3RoZW1hcg==", 
-    "VGhlcm9u", "R2VsYmlu", "TWVra2F0b3JxdWU=", "VHlyYW5kZQ==", "V2hpc3BlcndpbmQ=", 
-    "TWFsZnVyaW9u", "U2F1cmZhbmc=", "VGhyYWxs", "Vm9sJ3ppbg==", "VGFsYW5qaQ==", 
-    "S2FlbCcn", "QXJ0aGFz", "TWVuZXRobw==", "R2Fycm9zaA==", "SGVsbHNjcmVhbQ==", 
-    "S2lsJ2phZWRlbg==", "QXJjaGltb25kZQ==", "U2FyZ2VyYXM=", "TWFubm9yb3Ro", 
-    "WGF2aXVz", "UmFnbmFyb3M=", "TmVmYXJpYW4=", "T255eGlh", "RGVhdGh3aW5n", 
-    "WXNlcmE=", "QWxleHN0cmFzemE=", "Tm96ZG9ybXU=", "TWFseWdvcw==", "TmVsdGhhcmlvbg==", 
-    "TWVkaXZo", "S2hhZGdhcg==", "R3VsJ2Rhbg==", "TmVyJ3podWw=", "VHVyYWx5b24=", 
-    "QWxsZXJpYQ==", "V2luZHJ1bm5lcg==", "VmVyZWVzYQ==", "VmVsZW4=", "V3JhdGhpb24=", 
-    "Q2hyb21pZQ==", "TWFnbmk=", "QnJvbnplYmVhcmQ=", "TXVyYWRpbg==", "RmFsc3RhZA==", 
-    "RmVucmlz", "S2FyZ2F0aA==", "QmxhZGVmaXN0", "S2lscm9nZw==", "RGVhZGV5ZQ==", 
-    "VGVyb24nZ29y", "R3JvbW1hc2g=", "SGVsbHNjcmVhbQ==", "UmV4eGFy", "Um9raGFu", 
-    "TGFkeQ==", "VmFzaGo=", "WmVraGFu", "R2FsbHl3aXg=", "UmV6YW4=", 
-    "QndvbnNhbWRp", "UmFzdGFraGFu", "QWt1bmRh", "SmFuaQ==", "U2V0aHJhbGlzcw==", 
-    "Vm9sJ3thYWw=", "WnVs", "RGF6YXI=", "TmF6bWly", "Vm9sZHVu", 
-    "WnVsZGF6YXI=", "RHJ1c3R2YXI=", "U3Rvcm1zb25n", "VGlyYWdhcmRl", 
-    "U291bmQ=", "S3VsIFRpcmFu", "WmFuZGFsYXJp", "Qmxvb2RzYWls", 
-    "QnVjY2FuZWVycw==", "QXNodmFuZQ==", "T3ZlcnNlZXI=", "RnJlZWhvbGQ=", 
-    "SmFpbGVy", "U3lsdmFuYXM=", "Qm9sdmFy", "Rm9yZHJhZ29u", "QW5kdWlu", 
-    "U2hhbGFtYXluZQ==", "TmF0aGFub3M=", "QmxpZ2h0Y2FsbGVy", "SGVseWE=", 
-    "T2R5bg==", "QXplcml0ZQ==", "QW5pbWE=", "SGVhcnQ=", "QXplcm90aA==", 
-    "RmFjdGlvbg==", "SG9yZGU=", "QWxsaw==", "U2NvdXJnZQ==", "QnVybmluZw==", 
-    "TGVnaW9u", "T2xk", "R29kcw==", "VGl0YW5z", "Rmlyc3Q=", "T25lcw==", 
-    "VnJ5a3Vs", "VG9sJ3Zpcg==", "RWFydGhlbg==", "QW51YidBUmFr", "TmVydWJpYW5z", 
-    "SGFycGllcw==", "TWFudGlk", "WWF1bmdvbA==", "SG96ZW4=", "SmlueQ==", 
-    "S3ZhbGRpcg==", "TW9ndQ==", "U2F1cm9r", "VGF1bmth", "VHVza2Fy", 
-    "U2V0aHJhaw==", "VG9ydG9sbGFu", "RHJ1c3Q=", "SXJvbnRpZGU=", "UGlyYXRlcw==", 
-    "QXplcm90aA==", "R3VhcmRpYW4=", "VGlyaXNmYWw=", "TmF0aHJleiZpbQ==", 
-    "RHJlYWRsb3Jk", "U2NvdXJnZQ==", "RGVmaWFz", "QnJvdGhlcmhvb2Q=", 
-    "U2FyZ2VyYXM=", "QWdncmFtYXI=", "RW9uYXI=", "QW1hbidUaHVs", "Tm9yZ2Fubm9u", 
-    "S2hhemcmZ290aA==", "SGVseWE=", "T2R5bg==", "VmFsa3ly", "VmFsJ3t5cg==", 
-    "TWltaXJvbg==", "RnJleWE=", "SG9kaXI="
+/* ============================================================
+   Azerothian Guess — script.js
+   ============================================================ */
+
+// ──────────────────────────────────────────────────────────────
+// Word list: proper WoW nouns only — full zone/character names
+// Base64-encoded to keep them hidden until played
+// ──────────────────────────────────────────────────────────────
+const ENCODED_WORDS = [
+  "QWJlcnJ1cw==","QWdncmFtYXI=","QWxleHN0cmFzemE=","QWxsZXJpYQ==","QWxsaWFuY2U=",
+  "QW1hbidUaHVs","QW1pcmRyYXNzaWw=","QW5kdWlu","QW50b3J1cw==","QXJhdGhp",
+  "QXJjaGltb25kZQ==","QXJkZW53ZWFsZA==","QXJndXM=","QXJ0aGFz","QXNoYnJpbmdlcg==",
+  "QXNoZW52YWxl","QXNodmFuZQ==","QXViZXJkaW5l","QXplcml0ZQ==","QXplcm90aA==",
+  "QXpzaGFyYQ==","QXpzdW5h","QmFkbGFuZHM=","QmFycmVucw==","QmFzdGlvbg==",
+  "QmF0dGxlIG9mIERhemFyJ2Fsb3I=","QmxhY2tmYXRob20gRGVlcHM=","QmxhY2tyb2Nr",
+  "QmxhY2t3aW5nIERlc2NlbnQ=","QmxhY2t3aW5nIExhaXI=","QmxhZGUncyBFZGdl",
+  "Qmxvb2Rob29m","Qm9sdmFy","Qm9vdHkgQmF5","Qm9yZWFu","QnJvbnplYmVhcmQ=",
+  "QnVybmluZyBMZWdpb24=","QndvbnNhbWRp","Q2FzdGxlIE5hdGhyaWE=","Q2hyb21hdHVz",
+  "Q2hyb21pZQ==","Q3J1Y2libGUgb2YgU3Rvcm1z","Q3J5c3RhbHNvbmc=","RGFsYXJhbg==",
+  "RGFya3Nob3Jl","RGFybmFzc3Vz","RGVhZG1pbmVz","RGVhZHdpbmQ=","RGVhdGh3aW5n",
+  "RGVlcGhvbG0=","RGVmaWFzIEJyb3RoZXJob29k","RGVuYXRocml1cw==","RGVzb2xhY2U=",
+  "RGltZW5zaXVz","RGlyZSBNYXVs","RG9vbWhhbW1lcg==","RHJhZW5laQ==","RHJhZW5vcg==",
+  "RHJhZ29uIFNvdWw=","RHJhZ29uYmxpZ2h0","RHJlYWQgV2FzdGVz","RHJ1c3Q=","RHJ1c3R2YXI=",
+  "RHVyb3Rhcg==","RHVza3dvb2Q=","RHVzdHdhbGxvdw==","RWx3eW5u","RW9uYXI=",
+  "RXRlcm5hbCBQYWxhY2U=","RXZlcnNvbmc=","RXhvZGFy","RmFsc3RhZA==","RmVsd29vZA==",
+  "RmVyYWxhcw==","RmlyZWxhbmRz","Rm9yZHJhZ29u","Rm9yc2FrZW4=","RnJlZWhvbGQ=",
+  "RnJleWE=","RnJvc3Rib2x0","RnJvc3RmaXJl","RnJvc3Rtb3VybmU=","R2FkZ2V0emFu",
+  "R2FsbHl3aXg=","R2Fycm9zaA==","R2hvc3RsYW5kcw==","R2lsbmVhcw==","R25vbWVyZWdhbg==",
+  "R29yZ3JvbmQ=","R3JleW1hbmU=","R3JpenpseSBIaWxscw==","R3J1dWwncyBMYWly","R3VsJ2Rhbg==",
+  "SGFra2Fy","SGFtbWVyZmFsbA==","SGVhcnQgb2YgRmVhcg==","SGVsbGZpcmU=",
+  "SGVsbGZpcmUgQ2l0YWRlbA==","SGVsbHNjcmVhbQ==","SGVseWE=","SGlnaG1hdWw=",
+  "SGlnaG1vdW50YWlu","SGlsbHNicmFk","SG9kaXI=","SG9yZGU=","SG93bGluZyBGam9yZA==",
+  "SHlqYWw=","SWNlY3Jvd24=","SWNlY3Jvd24gQ2l0YWRlbA==","SWwnZ3lub3Ro","SWxsaWRhbg==",
+  "SXJvbmZvcmdl","SXJvbnNwaXJl","SmFkZSBGb3Jlc3Q=","SmFpbmE=","S2FsZWNnb3M=",
+  "S2FsaW1kb3I=","S2FyYWJvcg==","S2FyYXpoYW4=","S2hhZGdhcg==","S2hheidnb3JvdGg=",
+  "S2lsJ2phZWRlbg==","S29ydGhpYQ==","S3Jhc2FyYW5n","S3VsIFRpcmFu","S3VuLUxhaQ==",
+  "S3ZhbGRpcg==","TGlmZWJsb29t","TGlnaHQncyBIb3Bl","TGlnaHRmb3JnZWQ=","TG9yJ3RoZW1hcg==",
+  "TWFnbmk=","TWFsZHJheHh1cw==","TWFsZnVyaW9u","TWFseWdvcw==","TWFubm9yb3Ro",
+  "TWFudGlk","TWFyYXVkb24=","TWVjaGFnbm9tZQ==","TWVjaGFnb24=","TWVkaXZo",
+  "TWVra2F0b3JxdWU=","TWVuZXRoaWw=","TWltaXJvbg==","TW9sdGVuIENvcmU=","TW9vbmdsYWRl",
+  "TW9yb2do","TXVsZ29yZQ==","TXVyYWRpbg==","TmFhcnU=","TmFncmFuZA==","TmF0aGFub3M=",
+  "TmF4eHJhbWFz","TmF6amF0YXI=","TmF6bWly","TmVmYXJpYW4=","TmVsdGhhcmlvbg==",
+  "TmVyJ3podWw=","TmVydWJpYW5z","TmV0aGVyZ2FyZGU=","TmV0aGVyc3Rvcm0=",
+  "TmlnaHRib3JuZQ==","TmlnaHRob2xk","Tm9yZ2Fubm9u","Tm9ydGhyZW5k","Tm96ZG9ybXU=",
+  "TnknYWxvdGhh","T2R5bg==","T255eGlh","T3JncmltbWFy","T3V0bGFuZA==","UGFuZGFyZW4=",
+  "UGFuZGFyaWE=","UGxhZ3VlbGFuZHM=","UHJvdWRtb29yZQ==","UHlyb2JsYXN0",
+  "UmFnZWZpcmUgQ2hhc20=","UmFnbmFyb3M=","UmFzdGFraGFu","UmF0Y2hldA==",
+  "UmF6b3JmZW4gS3JhdWw=","UmVkcmlkZ2U=","UmVqdXZlbmF0aW9u","UmV2ZW5kcmV0aA==",
+  "UmV6YW4=","U2FuY3R1bSBvZiBEb21pbmF0aW9u","U2FyZ2VyYXM=","U2F1cmZhbmc=",
+  "U2NhcmxldCBNb25hc3Rlcnk=","U2Nob2xvbWFuY2U=","U2NvdXJnZQ==","U2VwdWxjaGVy",
+  "U2VycGVudHNocmluZQ==","U2V0aHJhaw==","U2hhZG93ZmFuZyBLZWVw","U2hhZG93bGFuZHM=",
+  "U2hhZG93bWVsZA==","U2hhZG93bW9vbg==","U2hhbGFtYXluZQ==","U2hhdHRyYXRo",
+  "U2hvbGF6YXI=","U2llZ2Ugb2YgT3JncmltbWFy","U2lsaXRodXM=","U2lsdmVybW9vbg==",
+  "U2lsdmVycGluZQ==","U291dGhzaG9yZQ==","U3BpcmVzIG9mIEFyYWs=","U3RhcmZhbGw=",
+  "U3RvcmUgUGVha3M=","U3Rvcm1oZWlt","U3Rvcm1yYWdl","U3Rvcm1zb25n","U3Rvcm13aW5k",
+  "U3RyYW5nbGV0aG9ybg==","U3RyYXRob2xtZQ==","U3Vua2VuIFRlbXBsZQ==","U3Vud2VsbA==",
+  "U3VyYW1hcg==","U3lsdmFuYXM=","VGFsYWRvcg==","VGFsYW5qaQ==","VGFuYWFu","VGFuYXJpcw==",
+  "VGFycmVuIE1pbGw=","VGVsZHJhc3NpbA==","VGVtcGVzdCBLZWVw","VGVyb2trYXI=",
+  "VGhlcmFtb3Jl","VGhlcm9u","VGhyYWxs","VGhyb25lIG9mIFRodW5kZXI=",
+  "VGhyb25lIG9mIHRoZSBGb3VyIFdpbmRz","VGlyYWdhcmRl","VGlyaXNmYWw=",
+  "VG9tYiBvZiBTYXJnZXJhcw==","VG9ydG9sbGFu","VG93bmxvbmc=","VHVyYWx5b24=",
+  "VHdpbGlnaHQgSGlnaGxhbmRz","VHlyJ3MgSGFuZA==","VHlyYW5kZQ==","VWxkYW1hbg==",
+  "VWxkaXI=","VWxkdWFy","VWxkdW0=","VW5kZXJjaXR5","VmFsJ3NoYXJhaA==",
+  "VmFsZSBvZiBFdGVybmFsIEJsb3Nzb21z","VmFzaGppcg==","VmVsZW4=","VmVyZWVzYQ==",
+  "Vm9sZHVu","VnJ5a3Vs","VnVscGVyYQ==","V2FpbGluZyBDYXZlcm5z","V2VzdGZhbGw=",
+  "V2V0bGFuZHM=","V2hpc3BlcndpbmQ=","V2luZGZ1cnk=","V2luZHJ1bm5lcg==","V2ludGVyc3ByaW5n",
+  "V29yZ2Vu","V3JhdGhpb24=","V3J5bm4=","WGFsJ2F0YXRo","WGF2aXVz","WWF1bmdvbA==",
+  "WW9nZy1TYXJvbg==","WXNlcmE=","WmFuZGFsYXI=","WmFuZGFsYXJp","WmFuZ2FybWFyc2g=",
+  "WmVyZXRoIE1vcnRpcw==","Wm92YWFs","WnVsJ0FtYW4=","WnVsJ0ZhcnJhaw==","WnVsJ0d1cnVi",
+  "WnVsZGF6YXI="
 ];
 
-function decodeWords(encoded) {
-  return encoded.map(w => atob(w));
-}
-const words = decodeWords(encodedWords);
+// ──────────────────────────────────────────────────────────────
+// Decode
+// ──────────────────────────────────────────────────────────────
+const WORDS = ENCODED_WORDS.map(w => atob(w));
 
-// ── Cookie helpers ──────────────────────────────────────────
+// ──────────────────────────────────────────────────────────────
+// Cookie helpers
+// ──────────────────────────────────────────────────────────────
 function setCookie(name, value, days) {
   const d = new Date();
-  d.setTime(d.getTime() + days * 864e5);
-  document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/`;
-}
-function getCookie(name) {
-  const eq = name + '=';
-  for (let c of document.cookie.split(';')) {
-    c = c.trim();
-    if (c.startsWith(eq)) return c.slice(eq.length);
-  }
-  return null;
+  d.setTime(d.getTime() + days * 86400000);
+  document.cookie = `${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/`;
 }
 
-// ── Game state ──────────────────────────────────────────────
-function getWordOfTheDay() {
-  const start   = new Date('2024-01-01');
-  const today   = new Date();
-  const diffDays = Math.floor(Math.abs(today - start) / 864e5);
-  return words[diffDays % words.length].toUpperCase();
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+// ──────────────────────────────────────────────────────────────
+// Game state
+// ──────────────────────────────────────────────────────────────
+const MAX_WRONG = 6;
+const BODY_PARTS = ['part-head','part-body','part-larm','part-rarm','part-lleg','part-rleg'];
+
+let chosenWord    = '';
+let guessedLetters = new Set();
+let wrongGuesses  = [];
+let gameOver      = false;
+let score         = 0;
+let streak        = 0;
+
+// ──────────────────────────────────────────────────────────────
+// Word of the day
+// ──────────────────────────────────────────────────────────────
+function getWordOfDay() {
+  const start  = new Date('2024-01-01');
+  const today  = new Date();
+  const diff   = Math.floor((today - start) / 86400000);
+  return WORDS[diff % WORDS.length].toUpperCase();
+}
+
+function todayString() {
+  return new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD
 }
 
 function hasPlayedToday() {
-  return getCookie('lastPlayedDate') === new Date().toLocaleDateString();
-}
-function savePlay() {
-  setCookie('lastPlayedDate', new Date().toLocaleDateString(), 1);
+  return getCookie('lastPlayed') === todayString();
 }
 
-let score  = parseInt(getCookie('score'))  || 0;
-let streak = parseInt(getCookie('streak')) || 0;
-
-function saveScore(n)  { score = n;  setCookie('score',  n, 365); updateStatDisplay(); }
-function saveStreak(n) { streak = n; setCookie('streak', n, 365); updateStatDisplay(); }
-
-function updateStatDisplay() {
-  document.getElementById('score-val').textContent  = score;
-  document.getElementById('streak-val').textContent = streak;
+function markPlayedToday() {
+  setCookie('lastPlayed', todayString(), 1);
 }
 
-const chosenWord   = getWordOfTheDay();
-let displayedWord  = Array(chosenWord.length).fill('_');
-let wrongGuesses   = [];
-let guessedLetters = [];
-const MAX_WRONG    = 6;
-let gameOver       = false;
-
-// ── SVG hangman parts ───────────────────────────────────────
-const svgParts = [
-  document.getElementById('svg-rope'),
-  document.getElementById('svg-head'),
-  document.getElementById('svg-body'),
-  document.getElementById('svg-left-arm'),
-  document.getElementById('svg-right-arm'),
-  document.getElementById('svg-left-leg'),
-  document.getElementById('svg-right-leg'),
-];
-
-function updateHangman() {
-  svgParts.forEach((el, i) => {
-    if (!el) return;
-    el.style.display = i < wrongGuesses.length ? '' : 'none';
-    if (i < wrongGuesses.length && el.style.display !== 'none') {
-      el.style.opacity = '0';
-      el.style.transition = 'opacity 0.4s ease';
-      requestAnimationFrame(() => { el.style.opacity = '1'; });
-    }
-  });
-  // Show X eyes only when game lost
-  const eyes = document.getElementById('svg-eyes');
-  if (eyes) eyes.style.display = wrongGuesses.length >= MAX_WRONG ? '' : 'none';
+// ──────────────────────────────────────────────────────────────
+// Score & streak
+// ──────────────────────────────────────────────────────────────
+function loadStats() {
+  score  = parseInt(getCookie('score'),  10) || 0;
+  streak = parseInt(getCookie('streak'), 10) || 0;
 }
 
-// ── Word display ────────────────────────────────────────────
-function renderWord(revealIdx = null) {
+function saveStats() {
+  setCookie('score',  score,  365);
+  setCookie('streak', streak, 365);
+}
+
+function renderStats() {
+  document.getElementById('score-value').textContent  = score;
+  document.getElementById('streak-value').textContent = streak;
+}
+
+// ──────────────────────────────────────────────────────────────
+// Word display
+// ──────────────────────────────────────────────────────────────
+function renderWord() {
   const container = document.getElementById('word-display');
   container.innerHTML = '';
-  displayedWord.forEach((char, i) => {
-    const slot = document.createElement('div');
-    slot.className = 'letter-slot';
 
-    const charEl = document.createElement('div');
-    charEl.className = 'letter-char';
-    charEl.textContent = char !== '_' ? char : '';
-    if (i === revealIdx || (revealIdx === 'all' && char !== '_')) {
-      charEl.classList.add('reveal');
-    }
+  // Split on actual spaces for multi-word answers
+  const wordParts = chosenWord.split(' ');
 
-    const line = document.createElement('div');
-    line.className = 'letter-line';
+  wordParts.forEach((part, wi) => {
+    [...part].forEach(ch => {
+      const slot = document.createElement('div');
+      slot.classList.add('letter-slot');
 
-    slot.appendChild(charEl);
-    slot.appendChild(line);
-    container.appendChild(slot);
-  });
-}
+      const char = document.createElement('div');
+      char.classList.add('letter-char');
 
-// ── Wrong guesses display ───────────────────────────────────
-function renderWrongLetters() {
-  const container = document.getElementById('wrong-letters');
-  container.innerHTML = '';
-  wrongGuesses.forEach(letter => {
-    const span = document.createElement('span');
-    span.className = 'wrong-letter';
-    span.textContent = letter;
-    container.appendChild(span);
-  });
-}
-
-// ── Keyboard ────────────────────────────────────────────────
-const keyRefs = {};
-
-function createKeyboard() {
-  const rows = [
-    { id: 'row1', keys: 'QWERTYUIOP' },
-    { id: 'row2', keys: 'ASDFGHJKL' },
-    { id: 'row3', keys: 'ZXCVBNM' },
-  ];
-  rows.forEach(({ id, keys }) => {
-    const rowEl = document.getElementById(id);
-    [...keys].forEach(key => {
-      const btn = document.createElement('button');
-      btn.textContent = key;
-      btn.className = 'key-btn';
-      btn.dataset.key = key;
-      btn.onclick = () => handleGuess(key);
-      rowEl.appendChild(btn);
-      keyRefs[key] = btn;
-    });
-  });
-}
-
-function markKey(letter, correct) {
-  const btn = keyRefs[letter];
-  if (!btn) return;
-  btn.classList.add(correct ? 'correct' : 'wrong');
-  btn.disabled = true;
-}
-
-// ── Guess logic ─────────────────────────────────────────────
-function handleGuess(letter) {
-  if (gameOver || guessedLetters.includes(letter)) return;
-  guessedLetters.push(letter);
-
-  if (chosenWord.includes(letter)) {
-    const revealedIndices = [];
-    for (let i = 0; i < chosenWord.length; i++) {
-      if (chosenWord[i] === letter) {
-        displayedWord[i] = letter;
-        revealedIndices.push(i);
+      // Show apostrophes, hyphens and other non-alpha chars always
+      const isAlpha = /[A-Z]/.test(ch);
+      if (!isAlpha || guessedLetters.has(ch)) {
+        char.textContent = ch;
+        if (isAlpha) slot.classList.add('revealed');
+      } else {
+        char.textContent = '';
       }
-    }
-    saveScore(score + revealedIndices.length);
-    renderWord(null); // render all; animate individually below
-    revealedIndices.forEach((idx, delay) => {
-      setTimeout(() => {
-        const slots = document.getElementById('word-display').children;
-        if (slots[idx]) {
-          slots[idx].querySelector('.letter-char').classList.add('reveal');
-        }
-      }, delay * 80);
+
+      const underline = document.createElement('div');
+      underline.classList.add('letter-underline');
+      if (!isAlpha) underline.style.visibility = 'hidden';
+
+      slot.appendChild(char);
+      slot.appendChild(underline);
+      container.appendChild(slot);
     });
-    markKey(letter, true);
+
+    // Space between words
+    if (wi < wordParts.length - 1) {
+      const sp = document.createElement('div');
+      sp.classList.add('word-space');
+      container.appendChild(sp);
+    }
+  });
+}
+
+// ──────────────────────────────────────────────────────────────
+// Gallows
+// ──────────────────────────────────────────────────────────────
+function renderGallows() {
+  const isDead = wrongGuesses.length >= MAX_WRONG;
+  BODY_PARTS.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (i < wrongGuesses.length) {
+      el.classList.add('visible');
+      if (isDead) el.classList.add('dead');
+    } else {
+      el.classList.remove('visible', 'dead');
+    }
+  });
+  document.getElementById('wrong-num').textContent = wrongGuesses.length;
+}
+
+// ──────────────────────────────────────────────────────────────
+// Wrong letters display
+// ──────────────────────────────────────────────────────────────
+function renderWrong() {
+  const el = document.getElementById('wrong-letters');
+  el.textContent = wrongGuesses.length
+    ? 'Wrong: ' + wrongGuesses.join(' · ')
+    : '';
+}
+
+// ──────────────────────────────────────────────────────────────
+// Keyboard
+// ──────────────────────────────────────────────────────────────
+const ROWS = [
+  { id: 'row1', keys: 'QWERTYUIOP'.split('') },
+  { id: 'row2', keys: 'ASDFGHJKL'.split('')  },
+  { id: 'row3', keys: 'ZXCVBNM'.split('')    }
+];
+
+function buildKeyboard() {
+  ROWS.forEach(({ id, keys }) => {
+    const row = document.getElementById(id);
+    keys.forEach(k => {
+      const btn = document.createElement('button');
+      btn.textContent   = k;
+      btn.dataset.key   = k;
+      btn.className     = 'kb-key';
+      btn.onclick       = () => guess(k);
+      row.appendChild(btn);
+    });
+  });
+}
+
+function updateKeyboard() {
+  document.querySelectorAll('.kb-key').forEach(btn => {
+    const k = btn.dataset.key;
+    if (guessedLetters.has(k)) {
+      btn.disabled = true;
+      // Determine if it was correct or wrong
+      const isCorrect = chosenWord.replace(/[^A-Z]/g,'').includes(k);
+      btn.classList.toggle('correct', isCorrect);
+      btn.classList.toggle('wrong',   !isCorrect);
+    }
+  });
+}
+
+// ──────────────────────────────────────────────────────────────
+// Core guess logic
+// ──────────────────────────────────────────────────────────────
+function guess(letter) {
+  if (gameOver || guessedLetters.has(letter)) return;
+  guessedLetters.add(letter);
+
+  const wordLetters = new Set(chosenWord.replace(/[^A-Z]/g, '').split(''));
+  const isCorrect   = wordLetters.has(letter);
+
+  if (isCorrect) {
+    score += 1;
   } else {
     wrongGuesses.push(letter);
-    markKey(letter, false);
-    updateHangman();
-    renderWrongLetters();
-    // Shake the hangman section on wrong guess
-    const section = document.getElementById('hangman-section');
-    section.style.animation = 'none';
-    section.offsetHeight; // reflow
-    section.style.animation = 'shake 0.3s ease';
   }
 
-  checkGameStatus();
+  renderWord();
+  renderGallows();
+  renderWrong();
+  updateKeyboard();
+  saveStats();
+  renderStats();
+  checkEndCondition();
 }
 
-// Add shake animation dynamically
-const shakeStyle = document.createElement('style');
-shakeStyle.textContent = `
-  @keyframes shake {
-    0%,100% { transform: translateX(0); }
-    25%      { transform: translateX(-5px); }
-    75%      { transform: translateX(5px); }
-  }
-`;
-document.head.appendChild(shakeStyle);
+function checkEndCondition() {
+  const allRevealed = [...chosenWord].every(ch => !/[A-Z]/.test(ch) || guessedLetters.has(ch));
+  const tooManyWrong = wrongGuesses.length >= MAX_WRONG;
 
-function checkGameStatus() {
-  const msgEl = document.getElementById('message');
-
-  if (!displayedWord.includes('_')) {
+  if (allRevealed) {
     gameOver = true;
-    msgEl.textContent = '✦ The word has been revealed! ✦';
-    msgEl.className = 'win';
-    saveScore(score + 10);
-    saveStreak(streak + 1);
-    savePlay();
-    disableAllKeys();
-    document.removeEventListener('keydown', handleKeyPress);
+    score += 10;
+    streak += 1;
+    saveStats();
+    renderStats();
+    markPlayedToday();
+    document.getElementById('message').textContent = 'For the Alliance! (or Horde…)';
+    document.getElementById('game-container').classList.add('state-won');
+    document.removeEventListener('keydown', onKeyDown);
     setTimeout(() => showEndModal(true), 900);
-  } else if (wrongGuesses.length >= MAX_WRONG) {
+  } else if (tooManyWrong) {
     gameOver = true;
-    // Reveal full word with animation
-    displayedWord = [...chosenWord];
-    renderWord('all');
-    msgEl.textContent = `The word was: ${chosenWord}`;
-    msgEl.className = 'lose';
-    saveStreak(0);
-    savePlay();
-    disableAllKeys();
-    document.removeEventListener('keydown', handleKeyPress);
-    setTimeout(() => showEndModal(false), 1200);
+    streak = 0;
+    saveStats();
+    renderStats();
+    markPlayedToday();
+    document.getElementById('message').textContent = `The hero has fallen! The word was "${chosenWord}"`;
+    document.getElementById('game-container').classList.add('state-lost');
+    document.removeEventListener('keydown', onKeyDown);
+    setTimeout(() => showEndModal(false), 900);
   }
 }
 
-function disableAllKeys() {
-  Object.values(keyRefs).forEach(btn => { btn.disabled = true; });
-}
-
-// ── Keyboard input ──────────────────────────────────────────
-function handleKeyPress(e) {
+// ──────────────────────────────────────────────────────────────
+// Physical keyboard
+// ──────────────────────────────────────────────────────────────
+function onKeyDown(e) {
   const letter = e.key.toUpperCase();
-  if (/^[A-Z]$/.test(letter)) handleGuess(letter);
+  if (/^[A-Z]$/.test(letter) && !gameOver) guess(letter);
 }
 
-// ── Modals ──────────────────────────────────────────────────
-function openModal(id) {
-  const el = document.getElementById(id);
-  el.classList.add('open');
-  el.style.display = 'flex'; // fallback
-}
-function closeModal(id) {
-  const el = document.getElementById(id);
-  el.classList.remove('open');
-  el.style.display = 'none';
-}
+// ──────────────────────────────────────────────────────────────
+// Modals
+// ──────────────────────────────────────────────────────────────
+function openModal(id)  { document.getElementById(id).classList.add('open');    }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
 
 function showEndModal(won) {
-  const banner  = document.getElementById('result-banner');
-  const title   = document.getElementById('end-game-title');
-  const msg     = document.getElementById('end-game-message');
-  const pasta   = document.getElementById('end-game-copy-pasta');
+  const guessArr = [...guessedLetters];
+  const wordSet  = new Set(chosenWord.replace(/[^A-Z]/g, '').split(''));
 
-  banner.textContent  = won ? '🏆' : '💀';
-  title.textContent   = won ? 'Victory!' : 'Defeated';
-  msg.textContent     = won
-    ? `You uncovered "${chosenWord}" and earned your place in Azerothian legend!`
-    : `The shadows consumed you. The word was "${chosenWord}".`;
-  pasta.value = generateShareText(won);
-  openModal('end-game-modal');
+  const emojiLine = guessArr.map(l => wordSet.has(l) ? '🟩' : '🟥').join('');
+
+  document.getElementById('end-title').textContent    = won ? '⚔ Victory! ⚔' : '💀 Defeated 💀';
+  document.getElementById('end-message').textContent  = won
+    ? `You uncovered "${chosenWord}" with ${wrongGuesses.length} wrong guess${wrongGuesses.length !== 1 ? 'es' : ''}!`
+    : `The word was "${chosenWord}". Better luck tomorrow, champion.`;
+
+  document.getElementById('share-emoji').textContent = emojiLine;
+
+  const shareStr = [
+    `🗡 Azerothian Guess 🗡`,
+    `${won ? 'Won' : 'Lost'} · ${wrongGuesses.length}/${MAX_WRONG} wrong`,
+    emojiLine,
+    `https://i-am-t3x.github.io/Azerothian-Guess/`
+  ].join('\n');
+
+  document.getElementById('share-text').value = shareStr;
+
+  const rune = won ? '✦' : '💀';
+  document.getElementById('end-rune').textContent  = rune;
+  document.getElementById('end-rune2').textContent = rune;
+
+  openModal('modal-endgame');
 }
 
-function generateShareText(won) {
-  const result = guessedLetters
-    .map(l => (chosenWord.includes(l) ? '🟩' : '🟥'))
-    .join('');
-  const wrongCount = wrongGuesses.length;
-  const link = 'https://i-am-t3x.github.io/Azerothian-Guess/';
-  return `⚔️ Azerothian Guess — ${won ? 'Victory' : 'Defeated'}\n${result}\nWrong guesses: ${wrongCount}/${MAX_WRONG}\nStreak: ${streak} 🔥\nPlay: ${link}`;
-}
+// Copy to clipboard
+document.getElementById('btn-copy').addEventListener('click', async () => {
+  const text = document.getElementById('share-text').value;
+  const confirm = document.getElementById('copy-confirm');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    // Fallback
+    const ta = document.getElementById('share-text');
+    ta.select();
+    document.execCommand('copy');
+  }
+  confirm.classList.add('show');
+  setTimeout(() => confirm.classList.remove('show'), 2000);
+});
 
-// ── Init ────────────────────────────────────────────────────
+// ──────────────────────────────────────────────────────────────
+// Start game
+// ──────────────────────────────────────────────────────────────
 function startGame() {
-  closeModal('instructions-modal');
+  closeModal('modal-instructions');
 
   if (hasPlayedToday()) {
-    const msgEl = document.getElementById('message');
-    msgEl.textContent = 'You have already ventured today. Return at dawn.';
-    msgEl.className = '';
-    disableAllKeys();
+    document.getElementById('message').textContent = "You've already played today — come back at midnight!";
+    gameOver = true;
+    // Still render so they can see the word board
+    renderWord();
+    renderGallows();
+    renderWrong();
+    updateKeyboard();
     return;
   }
 
   renderWord();
-  updateHangman();
-  updateStatDisplay();
-  document.addEventListener('keydown', handleKeyPress);
+  renderGallows();
+  renderWrong();
+  updateKeyboard();
+  document.addEventListener('keydown', onKeyDown);
 }
 
-// Wire up buttons
-document.getElementById('inst-close').onclick    = () => closeModal('instructions-modal');
-document.getElementById('start-game').onclick    = startGame;
-document.getElementById('end-game-close').onclick  = () => closeModal('end-game-modal');
-document.getElementById('end-game-close2').onclick = () => closeModal('end-game-modal');
+// ──────────────────────────────────────────────────────────────
+// Init
+// ──────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  chosenWord = getWordOfDay();
+  loadStats();
+  renderStats();
+  buildKeyboard();
 
-document.getElementById('copy-to-clipboard').onclick = () => {
-  const pasta = document.getElementById('end-game-copy-pasta');
-  pasta.select();
-  try {
-    navigator.clipboard.writeText(pasta.value).catch(() => document.execCommand('copy'));
-  } catch {
-    document.execCommand('copy');
-  }
-  document.getElementById('copy-to-clipboard').textContent = 'Copied!';
-  setTimeout(() => {
-    document.getElementById('copy-to-clipboard').textContent = 'Copy Result';
-  }, 2000);
-};
+  // Wire up buttons
+  document.getElementById('btn-start').addEventListener('click', startGame);
 
-// Create keyboard on load
-createKeyboard();
-updateStatDisplay();
-
-// Show instructions on load
-window.onload = () => {
-  openModal('instructions-modal');
-};
+  // Show instructions on load
+  openModal('modal-instructions');
+});
