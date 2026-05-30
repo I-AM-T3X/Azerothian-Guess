@@ -1,0 +1,4772 @@
+{
+  "Zone": [
+    {
+      "word": "BBYSCwEaSC8OHCIGEQ==",
+      "hint": "Human and dwarven lands east of the Great Sea"
+    },
+    {
+      "word": "Fh8WBgkVBAU=",
+      "hint": "Undead and forsaken territory in the Eastern Kingdoms"
+    },
+    {
+      "word": "Ex8BAAYQDwxBIygACwcSW15B",
+      "hint": "Scarlet Crusade and plagued zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "BQ8WGRgbBw0=",
+      "hint": "Night elf and blood elf lands of the Eastern Kingdoms"
+    },
+    {
+      "word": "BR8EFhgdBg1BPiYGFg==",
+      "hint": "Classic contested territory in the Eastern Kingdoms"
+    },
+    {
+      "word": "Eg0EHx9UBw9BPSgHFxwEQQ==",
+      "hint": "Alliance-dominated zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "AxYEARsRDEktDykRFg==",
+      "hint": "Horde-contested zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "Eg4XEwETBAwVBigHC1MlU1xX",
+      "hint": "Human and dwarven lands east of the Great Sea"
+    },
+    {
+      "word": "AxsBHg4aDBo=",
+      "hint": "Undead and forsaken territory in the Eastern Kingdoms"
+    },
+    {
+      "word": "Eh8EAAYaD0kmATUSAA==",
+      "hint": "Scarlet Crusade and plagued zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "Aw8XHAYaD0kyGiIFFRYA",
+      "hint": "Night elf and blood elf lands of the Eastern Kingdoms"
+    },
+    {
+      "word": "Fh8RHg4aDBo=",
+      "hint": "Classic contested territory in the Eastern Kingdoms"
+    },
+    {
+      "word": "AAgEBgcdSCEICS8ZBB0XQQ==",
+      "hint": "Alliance-dominated zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "CRMJHhwWGggFTgEaCgcbW1xeRw==",
+      "hint": "Horde-contested zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "ABYRFx0VC0ksATIbERIaXEM=",
+      "hint": "Human and dwarven lands east of the Great Sea"
+    },
+    {
+      "word": "Fh8WBgoGBkkxAiYSEBYfU15WRw==",
+      "hint": "Undead and forsaken territory in the Eastern Kingdoms"
+    },
+    {
+      "word": "BBsWBgoGBkkxAiYSEBYfU15WRw==",
+      "hint": "Scarlet Crusade and plagued zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "FRMXGxwSCQVBKSsUARYA",
+      "hint": "Night elf and blood elf lands of the Eastern Kingdoms"
+    },
+    {
+      "word": "EhMJBAoGGAAPC2czCgEWQUQ=",
+      "hint": "Classic contested territory in the Eastern Kingdoms"
+    },
+    {
+      "word": "BhIKARsYCQcFHQ==",
+      "hint": "Alliance-dominated zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "BAwAABwbBg5BOSgaAQA=",
+      "hint": "Horde-contested zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "DRUGGk85Bw0AAA==",
+      "hint": "Human and dwarven lands east of the Great Sea"
+    },
+    {
+      "word": "BQ8LUiIbGgYGBg==",
+      "hint": "Undead and forsaken territory in the Eastern Kingdoms"
+    },
+    {
+      "word": "FQ0MHgYTAB1BJi4SDR8SXFRB",
+      "hint": "Scarlet Crusade and plagued zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "BhMJHAoVGw==",
+      "hint": "Night elf and blood elf lands of the Eastern Kingdoms"
+    },
+    {
+      "word": "CRMLBgoGBAgPCjQ=",
+      "hint": "Classic contested territory in the Eastern Kingdoms"
+    },
+    {
+      "word": "BQ8XHRsVGg==",
+      "hint": "Western continent zone in Kalimdor"
+    },
+    {
+      "word": "AxsXAAoaGw==",
+      "hint": "Night elf or tauren territory in Kalimdor"
+    },
+    {
+      "word": "DA8JFQAGDQ==",
+      "hint": "Horde-aligned zone in Kalimdor"
+    },
+    {
+      "word": "AAkNFwECCQUE",
+      "hint": "Desert or jungle zone in Kalimdor"
+    },
+    {
+      "word": "Eg4KHAoACQUOAGc4CgYdRlFbWjI=",
+      "hint": "Ancient or corrupted zone in Kalimdor"
+    },
+    {
+      "word": "BR8WHQMVCww=",
+      "hint": "Neutral or centaur zone in Kalimdor"
+    },
+    {
+      "word": "Bx8XEwMVGw==",
+      "hint": "Western continent zone in Kalimdor"
+    },
+    {
+      "word": "FRIKBxwVBg1BICIQAR8WQQ==",
+      "hint": "Night elf or tauren territory in Kalimdor"
+    },
+    {
+      "word": "FRsLEx0dGw==",
+      "hint": "Horde-aligned zone in Kalimdor"
+    },
+    {
+      "word": "FBQCHR0bSCoTDzMQFw==",
+      "hint": "Desert or jungle zone in Kalimdor"
+    },
+    {
+      "word": "EhMJGxscHRo=",
+      "hint": "Ancient or corrupted zone in Kalimdor"
+    },
+    {
+      "word": "FhMLBgoGGxkTBykS",
+      "hint": "Neutral or centaur zone in Kalimdor"
+    },
+    {
+      "word": "DBUKHAgYCQ0E",
+      "hint": "Western continent zone in Kalimdor"
+    },
+    {
+      "word": "AAAWGg4GCQ==",
+      "hint": "Night elf or tauren territory in Kalimdor"
+    },
+    {
+      "word": "BRsXGRwcBxsE",
+      "hint": "Horde-aligned zone in Kalimdor"
+    },
+    {
+      "word": "FR8JFh0VGxoIAg==",
+      "hint": "Desert or jungle zone in Kalimdor"
+    },
+    {
+      "word": "Bx8JBQAbDA==",
+      "hint": "Ancient or corrupted zone in Kalimdor"
+    },
+    {
+      "word": "BQ8WBhgVBAUOGWc4BAEAWg==",
+      "hint": "Neutral or centaur zone in Kalimdor"
+    },
+    {
+      "word": "CQMPEwM=",
+      "hint": "Western continent zone in Kalimdor"
+    },
+    {
+      "word": "FBYBBwI=",
+      "hint": "Night elf or tauren territory in Kalimdor"
+    },
+    {
+      "word": "CR8JHgkdGgxBPiIbDB0AR1xT",
+      "hint": "Burning Crusade — Outland"
+    },
+    {
+      "word": "GxsLFQ4GBQgTHS8=",
+      "hint": "Burning Crusade — Outland"
+    },
+    {
+      "word": "FR8XHQQfCRtBKCgHAAAH",
+      "hint": "Burning Crusade — Outland"
+    },
+    {
+      "word": "DxsCAA4aDA==",
+      "hint": "Burning Crusade — Outland"
+    },
+    {
+      "word": "AxYEFgpTG0kkCiAQRT4cR15GVSgUFg==",
+      "hint": "Burning Crusade — Outland"
+    },
+    {
+      "word": "Dx8RGgoGGx0OHCo=",
+      "hint": "Burning Crusade — Outland"
+    },
+    {
+      "word": "EhIEFgADBQYOAGcjBB8fV0k=",
+      "hint": "Burning Crusade — Outland"
+    },
+    {
+      "word": "AxUXFw4aSD0UACMHBA==",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "CRUSHgYaD0knBCgHAQ==",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "BQgEFQAaCgUICS8B",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "BggMCBUYEUkpBysZFg==",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "Gw8JVSsGCQI=",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "EhIKHg4OCRtBLCYGDB0=",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "Eg4KAAJUOAwABTQ=",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "CBkAER0bHwc=",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "AggcARsVBBoOACBVIxwBV0NG",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "CxsBF08yBxsEHTM=",
+      "hint": "Mists of Pandaria continent"
+    },
+    {
+      "word": "FxsJHgoNSAYHTjMdAFM1XUVAFBYTCxYc",
+      "hint": "Mists of Pandaria continent"
+    },
+    {
+      "word": "CggEAQ4GCQcGThAcCRcA",
+      "hint": "Mists of Pandaria continent"
+    },
+    {
+      "word": "Cg8LXyMVAUkyGyoYDAc=",
+      "hint": "Mists of Pandaria continent"
+    },
+    {
+      "word": "FRUSHAMbBg5BPTMQFQMWQQ==",
+      "hint": "Mists of Pandaria continent"
+    },
+    {
+      "word": "BQgAEwtUPwgSGiIG",
+      "hint": "Mists of Pandaria continent"
+    },
+    {
+      "word": "FxsJF08bDkkkGiIHCxIfEnJeWzIJCh8c",
+      "hint": "Mists of Pandaria continent"
+    },
+    {
+      "word": "FRMIFwMRGxpBJzQZAA==",
+      "hint": "Mists of Pandaria continent"
+    },
+    {
+      "word": "BwgKARsSARsEThUcARQW",
+      "hint": "Warlords of Draenor — alternate Draenor"
+    },
+    {
+      "word": "BhUXFR0bBg0=",
+      "hint": "Warlords of Draenor — alternate Draenor"
+    },
+    {
+      "word": "FRsJEwsbGg==",
+      "hint": "Warlords of Draenor — alternate Draenor"
+    },
+    {
+      "word": "EgoMAAoHSAYHTgYHBBg=",
+      "hint": "Warlords of Draenor — alternate Draenor"
+    },
+    {
+      "word": "FRsLEw4aSCMUACAZAA==",
+      "hint": "Warlords of Draenor — alternate Draenor"
+    },
+    {
+      "word": "AAAWBwEV",
+      "hint": "Legion expansion — Broken Isles"
+    },
+    {
+      "word": "FxsJVRwcCRsABg==",
+      "hint": "Legion expansion — Broken Isles"
+    },
+    {
+      "word": "CRMCGgIbHQcVDy4b",
+      "hint": "Legion expansion — Broken Isles"
+    },
+    {
+      "word": "Eg4KAAIcDQAM",
+      "hint": "Legion expansion — Broken Isles"
+    },
+    {
+      "word": "Eg8XEwIVGg==",
+      "hint": "Legion expansion — Broken Isles"
+    },
+    {
+      "word": "AwgKGQoaSDoJATUQ",
+      "hint": "Legion expansion — Broken Isles"
+    },
+    {
+      "word": "AAgCBxw=",
+      "hint": "Legion expansion — Broken Isles"
+    },
+    {
+      "word": "Gw8JFg4OCRs=",
+      "hint": "Battle for Azeroth — Zandalari continent"
+    },
+    {
+      "word": "DxsfHwYG",
+      "hint": "Battle for Azeroth — Zandalari continent"
+    },
+    {
+      "word": "FxUJVQsBBg==",
+      "hint": "Battle for Azeroth — Zandalari continent"
+    },
+    {
+      "word": "FRMXEwgVGg0EThQaEB0X",
+      "hint": "Battle for Azeroth — Kul Tiras"
+    },
+    {
+      "word": "BQgQARsCCRs=",
+      "hint": "Battle for Azeroth — Kul Tiras"
+    },
+    {
+      "word": "Eg4KAAIHBwcGThEUCR8WSw==",
+      "hint": "Battle for Azeroth — Kul Tiras"
+    },
+    {
+      "word": "DxsfGA4ACRs=",
+      "hint": "Battle for Azeroth patch 8.2 zone"
+    },
+    {
+      "word": "DB8GGg4TBwdBJzQZBB0X",
+      "hint": "Battle for Azeroth — Kul Tiras"
+    },
+    {
+      "word": "AxsWBgYbBg==",
+      "hint": "Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "DBsJFh0VEBEUHQ==",
+      "hint": "Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "AAgBFwEDDQgNCg==",
+      "hint": "Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "Ex8TFwEQGgwVBg==",
+      "hint": "Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "FRIAUiIVHw==",
+      "hint": "Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "Gx8XFxscSCQOHDMcFg==",
+      "hint": "Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "ChUXBgcdCQ==",
+      "hint": "Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "FhsOGwETSDoJATUQFg==",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "DhILVQ4cGggPThcZBBodQQ==",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "AAAQAApUOxkAAA==",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "FRIEHgsGCRobGzQ=",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "BxUXEAYQDAwPThUQBBAb",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "GxsXEwMRA0kiDzEQFx0=",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "ABcMAAsGCRoSBys=",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "FRIAUjgVAwAPCWcmDRwBV0M=",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "BBcAAA4YDEklHCIUCFMpXV5X",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "CAkJF08bDkklATUb",
+      "hint": "The War Within expansion"
+    },
+    {
+      "word": "FRIAUj0dBg4IACBVIRYWQkM=",
+      "hint": "The War Within expansion"
+    },
+    {
+      "word": "CRsJHgADDggNAg==",
+      "hint": "The War Within expansion"
+    },
+    {
+      "word": "AAAPXyQVAAwV",
+      "hint": "The War Within expansion"
+    },
+    {
+      "word": "ChIECE81BA4AHA==",
+      "hint": "The War Within expansion"
+    },
+    {
+      "word": "DxUXBgcRGgdBPTMHBB0UXlVGXC4ICw==",
+      "hint": "Alliance-dominated zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "AhsVF08bDkkyGjUUCxQfV0RaWzMU",
+      "hint": "Horde-contested zone in the Eastern Kingdoms"
+    },
+    {
+      "word": "FRIAUjwABxsMThcQBBgA",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "FhMLBgoGDxsAHTc=",
+      "hint": "Wrath of the Lich King — Northrend"
+    },
+    {
+      "word": "DBUQHBtUIBALDytVPxwdVw==",
+      "hint": "Horde-aligned zone in Kalimdor"
+    },
+    {
+      "word": "FxsWGgVTARs=",
+      "hint": "Desert or jungle zone in Kalimdor"
+    },
+    {
+      "word": "BR8AAgcbBAQ=",
+      "hint": "Cataclysm expansion — Azeroth reshaped"
+    },
+    {
+      "word": "DBsGVS4GDQw=",
+      "hint": "Legion patch 7.3 — Eredar homeworld"
+    },
+    {
+      "word": "ABQRHR0VBkk2DzQBAAA=",
+      "hint": "Legion patch 7.3 — Eredar homeworld"
+    },
+    {
+      "word": "CggKGRoBBg==",
+      "hint": "Legion patch 7.3 — Eredar homeworld"
+    },
+    {
+      "word": "FRsfExkRGwE=",
+      "hint": "Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "AAAQAAoZERoVTg4GCRY=",
+      "hint": "Alliance starting"
+    },
+    {
+      "word": "AxYKHQsZERoVTg4GCRY=",
+      "hint": "Alliance starting"
+    },
+    {
+      "word": "Ch8fEwE=",
+      "hint": "Goblin home island"
+    },
+    {
+      "word": "DRUWBk89GwUEHQ==",
+      "hint": "Goblin starting zone"
+    },
+    {
+      "word": "BBkNHU89GwUEHQ==",
+      "hint": "Darkspear home"
+    },
+    {
+      "word": "EA8AHkggAAgNDzQ=",
+      "hint": "Blood elf homeland"
+    },
+    {
+      "word": "CAkJF08bDkkwGyIZQjcSXFFB",
+      "hint": "Sunwell daily hub"
+    },
+    {
+      "word": "FQMXVRxUIAgPCg==",
+      "hint": "Eastern Kingdoms paladin bastion"
+    },
+    {
+      "word": "AxYEEQQGBwoKTgoaEB0HU1lc",
+      "hint": "Burning Steppes volcano"
+    },
+    {
+      "word": "FRIAUiEREBwS",
+      "hint": "Coldarra blue dragon lair"
+    },
+    {
+      "word": "CBkAER0bHwdBKSsUBhoWQA==",
+      "hint": "Northrend frozen north"
+    },
+    {
+      "word": "BRsJEx0VBkkiBzMM",
+      "hint": "Floating mage city"
+    },
+    {
+      "word": "Eg8LARsGAQ0EHGc8Fh8W",
+      "hint": "Blood elf starting zone"
+    },
+    {
+      "word": "ABcIFwFUPggNCw==",
+      "hint": "Draenei starting valley"
+    },
+    {
+      "word": "BR8EBgcfBgwNAg==",
+      "hint": "Undead starting zone"
+    },
+    {
+      "word": "EhIEFgADDwUEAA==",
+      "hint": "Night elf starting grove"
+    },
+    {
+      "word": "FxsJHgoNSAYHThMHDBIfQQ==",
+      "hint": "Orc starting zone"
+    },
+    {
+      "word": "AhsIAk86CRsADS8Q",
+      "hint": "Tauren starting camp"
+    },
+    {
+      "word": "AhUJFh0dDA4EThEUCR8WSw==",
+      "hint": "Dwarf starting valley"
+    },
+    {
+      "word": "DxUXBgcHAAATC2cjBB8fV0k=",
+      "hint": "Human starting zone"
+    }
+  ],
+  "City": [
+    {
+      "word": "Eg4KAAIDAQcF",
+      "hint": "Major Alliance capital city"
+    },
+    {
+      "word": "CAgKHAkbGg4E",
+      "hint": "Major Alliance capital city"
+    },
+    {
+      "word": "BRsXHA4HGxwS",
+      "hint": "Major Alliance capital city"
+    },
+    {
+      "word": "BhQKHwoGDQ4AAA==",
+      "hint": "Major Alliance capital city"
+    },
+    {
+      "word": "BAIKFg4G",
+      "hint": "Major Alliance capital city"
+    },
+    {
+      "word": "BhMJHAoVG0kiBzMM",
+      "hint": "Major Alliance capital city"
+    },
+    {
+      "word": "DggCAAYZBQgT",
+      "hint": "Major Horde capital city"
+    },
+    {
+      "word": "FBQBFx0XAR0Y",
+      "hint": "Major Horde capital city"
+    },
+    {
+      "word": "FRIQHAsRGkkjAjITAw==",
+      "hint": "Major Horde capital city"
+    },
+    {
+      "word": "EhMJBAoGBQYOAGc2DAcK",
+      "hint": "Major Horde capital city"
+    },
+    {
+      "word": "EhIEBhsGCR0JTgQcEQo=",
+      "hint": "City/hub — Burning Crusade — Outland"
+    },
+    {
+      "word": "BRsJEx0VBg==",
+      "hint": "Magical floating city"
+    },
+    {
+      "word": "AxUXEwMBGw==",
+      "hint": "City/hub — Battle for Azeroth — Kul Tiras"
+    },
+    {
+      "word": "BRsfEx1TCQUOHA==",
+      "hint": "City/hub — Battle for Azeroth — Zandalari continent"
+    },
+    {
+      "word": "FxsJFh0VAwIEAA==",
+      "hint": "City/hub — Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "DggMEAAH",
+      "hint": "City/hub — Shadowlands expansion — realm of death"
+    },
+    {
+      "word": "Eg8XEwIVGkkiBzMM",
+      "hint": "City/hub — Legion expansion — Broken Isles"
+    },
+    {
+      "word": "BhsBFQoAEggP",
+      "hint": "Neutral goblin city"
+    },
+    {
+      "word": "BAwAAAMbBwI=",
+      "hint": "Winterspring goblin city"
+    },
+    {
+      "word": "ExsREQcRHA==",
+      "hint": "Barrens port town"
+    },
+    {
+      "word": "AxUKBhZUKggY",
+      "hint": "Goblin pirate port"
+    },
+    {
+      "word": "EhIXGwERSAYHThMCClM+XV9cRw==",
+      "hint": "Pandaria Horde hub"
+    },
+    {
+      "word": "EhIXGwERSAYHThQQExYdEmNGVTMJ",
+      "hint": "Pandaria Alliance hub"
+    },
+    {
+      "word": "BhsXAAYHBwc=",
+      "hint": "City/hub — Warlords of Draenor expansion"
+    },
+    {
+      "word": "BRUXHAATCQU=",
+      "hint": "The War Within hub"
+    },
+    {
+      "word": "Dx8SUjsdBgIEHDMaEh0=",
+      "hint": "Gnome city"
+    }
+  ],
+  "Raid": [
+    {
+      "word": "DBUJBgoaSCoOHCI=",
+      "hint": "Classic WoW raid"
+    },
+    {
+      "word": "AxYEEQQDAQcGTgsUDAE=",
+      "hint": "Classic WoW raid"
+    },
+    {
+      "word": "Ew8MHBxUBw9BLy8bQiIaQFFY",
+      "hint": "Classic WoW raid"
+    },
+    {
+      "word": "FR8IAgMRSAYHTgYdC1QiW0JTXg==",
+      "hint": "Classic WoW raid"
+    },
+    {
+      "word": "DxsdCh0VBQgS",
+      "hint": "Classic / Wrath"
+    },
+    {
+      "word": "ChsXExUcCQc=",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "BggQBwNTG0ktDy4H",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "DBsCBgcRGgAFASlSFlM/U1lA",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "Eh8XAgoaHBoJHC4bAFMwU0ZXRi8=",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "FR8IAgoHHEkqCyIF",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "DBUQHBtUIBALDys=",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "AxYEEQRUPAwMHisQ",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "Eg8LBQoYBEkxAiYBABIG",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "DhgWGwsdCQdBPSYbBgcGXw==",
+      "hint": "Wrath of the Lich King raid"
+    },
+    {
+      "word": "BAMAUgASSCwVCzUbDAcK",
+      "hint": "Wrath of the Lich King raid"
+    },
+    {
+      "word": "FBYBBw4G",
+      "hint": "Wrath of the Lich King raid"
+    },
+    {
+      "word": "FQgMEwNUBw9BGi8QRTABR0NTUCQI",
+      "hint": "Wrath of the Lich King raid"
+    },
+    {
+      "word": "CBkAER0bHwdBLS4BBBcWXg==",
+      "hint": "Wrath of the Lich King raid"
+    },
+    {
+      "word": "Ew8HC08nCQcCGjIY",
+      "hint": "Wrath of the Lich King raid"
+    },
+    {
+      "word": "AxYEEQQDAQcGTgMQFhAWXEQ=",
+      "hint": "Cataclysm raid"
+    },
+    {
+      "word": "AxsWBgYbBkkOCGchEhofW1daQA==",
+      "hint": "Cataclysm raid"
+    },
+    {
+      "word": "FRIXHQERSAYHTjMdAFM1XUVAFBYTCxYc",
+      "hint": "Cataclysm raid"
+    },
+    {
+      "word": "BxMXFwMVBg0S",
+      "hint": "Cataclysm raid"
+    },
+    {
+      "word": "BQgEFQAaSDoOGys=",
+      "hint": "Cataclysm raid"
+    },
+    {
+      "word": "DBUCBxwcCQdBOCYACQcA",
+      "hint": "Mists of Pandaria raid"
+    },
+    {
+      "word": "CR8EABtUBw9BKCIUFw==",
+      "hint": "Mists of Pandaria raid"
+    },
+    {
+      "word": "FR8XAA4XDUkOCGcwCxcfV0NBFBIKFxsBEw==",
+      "hint": "Mists of Pandaria raid"
+    },
+    {
+      "word": "FRIXHQERSAYHThMdEB0XV0I=",
+      "hint": "Mists of Pandaria raid"
+    },
+    {
+      "word": "EhMAFQpUBw9BITUSFxoeX1FA",
+      "hint": "Mists of Pandaria raid"
+    },
+    {
+      "word": "CRMCGgIVHQU=",
+      "hint": "Warlords of Draenor raid"
+    },
+    {
+      "word": "AxYEEQQGBwoKTgEaEB0XQEk=",
+      "hint": "Warlords of Draenor raid"
+    },
+    {
+      "word": "CR8JHgkdGgxBLS4BBBcWXg==",
+      "hint": "Warlords of Draenor raid"
+    },
+    {
+      "word": "BBcAAA4YDEkvByAdER4SQFU=",
+      "hint": "Legion raid"
+    },
+    {
+      "word": "FQgMEwNUBw9BOCYZCgE=",
+      "hint": "Legion raid"
+    },
+    {
+      "word": "DxMCGhscBwUF",
+      "hint": "Legion raid"
+    },
+    {
+      "word": "FRUIEE8bDkkyDzUSAAESQQ==",
+      "hint": "Legion raid"
+    },
+    {
+      "word": "ABQRHR0BGw==",
+      "hint": "Legion raid"
+    },
+    {
+      "word": "FBYBGx0=",
+      "hint": "Battle for Azeroth raid"
+    },
+    {
+      "word": "AxsRBgMRSAYHTgMUHxIBFVFeWzM=",
+      "hint": "Battle for Azeroth raid"
+    },
+    {
+      "word": "AggQEQYWBAxBASFVNgccQF1B",
+      "hint": "Battle for Azeroth raid"
+    },
+    {
+      "word": "BA4AAAEVBEkxDysUBhY=",
+      "hint": "Battle for Azeroth raid"
+    },
+    {
+      "word": "DwNCEwMbHAEA",
+      "hint": "Battle for Azeroth raid"
+    },
+    {
+      "word": "AhsWBgMRSCcAGi8HDBI=",
+      "hint": "Shadowlands raid"
+    },
+    {
+      "word": "EhsLERsBBUkOCGcxCh4aXFFGXS4U",
+      "hint": "Shadowlands raid"
+    },
+    {
+      "word": "Eh8VBwMXAAwTTigTRQcbVxB0XTMJEVIgGg0a",
+      "hint": "Shadowlands raid"
+    },
+    {
+      "word": "FxsQHhtUBw9BGi8QRTodUVFAWiAOAAE=",
+      "hint": "Dragonflight raid"
+    },
+    {
+      "word": "ABgAAB0BGw==",
+      "hint": "Dragonflight raid"
+    },
+    {
+      "word": "DRMHFx0VHAAOAGcaA1MmXFRXRiwTCxc=",
+      "hint": "The War Within raid"
+    },
+    {
+      "word": "Dx8XBw1ZCRtBPiYZBBAW",
+      "hint": "The War Within raid"
+    },
+    {
+      "word": "DhQcCgYVTxpBIiYcFw==",
+      "hint": "Classic WoW raid"
+    },
+    {
+      "word": "Gw8JVSgBGhwD",
+      "hint": "Classic WoW raid"
+    },
+    {
+      "word": "Gw8JVS4ZCQc=",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "AxsRBgMRSA8OHGc4CgYdRhB6TSsbCQ==",
+      "hint": "Burning Crusade raid — Outland"
+    },
+    {
+      "word": "FxsQHhtUBw9BLzUWDRIFXV4=",
+      "hint": "Wrath of the Lich King raid"
+    },
+    {
+      "word": "AxsXEwsdBkkpASsR",
+      "hint": "Cataclysm raid"
+    }
+  ],
+  "Dungeon": [
+    {
+      "word": "ExsCFwkdGgxBLS8UFh4=",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "FhsMHgYaD0kiDzEQFx0A",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "BR8EFgIdBgwS",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "EhIEFgADDggPCWc+ABYD",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "AxYEEQQSCR0JASpVIRYWQkM=",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "Eg4KEQQVDAwS",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "ExsfHR0SDQdBJTUUEB8=",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "EhkEAAMRHEksASkUFgcWQEk=",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "ExsfHR0SDQdBKigCCwA=",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "FBYBEwIVBg==",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "Gw8JVSkVGhsABQ==",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "DBsXExoQBwc=",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "Eg8LGQoaSD0EAzcZAA==",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "AxYEEQQGBwoKTgMQFQcbQQ==",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "BRMXF085CRwN",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "Eg4XExscBwUMCw==",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "EhkNHQMbBQgPDSI=",
+      "hint": "Classic WoW dungeon"
+    },
+    {
+      "word": "CR8JHgkdGgxBPCYYFRIBRkM=",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "AxYKHQtULhwTACYWAA==",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "EhYEBApUOAwPHQ==",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "FBQBFx0WBw4=",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "DBsLE0IgBwQDHQ==",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "AA8GGgoaCQBBLTUMFQcA",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "Eh8RGgofA0kpDysZFg==",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "EhIEFgADSCUADD4HDB0HWg==",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "EhIEBhsRGgwFTg8UCR8A",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "Eg4AEwICCRwNGg==",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "AxUREwEdCwg=",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "DB8GGg4aCRs=",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "AAgGExsGCRM=",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "DBsCGxwADRsSSWchAAEBU1NX",
+      "hint": "Burning Crusade dungeon — Outland"
+    },
+    {
+      "word": "FA4CEx0QDUkqCyIF",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "Dx8dBxw=",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "AAAPHQNZJgwTGyU=",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "ABILVQQVAAwV",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "BQgEGUggAAgTASlVLhYWQg==",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "FxMKHgoASCEOAiM=",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "Bg8LFh0VAw==",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "CRsJHhxUBw9BPTMaCxY=",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "CRsJHhxUBw9BIi4SDQcdW15V",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "DhkQHhoH",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "FA4CEx0QDUkxBykbBBAfVw==",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "FQgMEwNUBw9BGi8QRTAbU11CXS4U",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "BxUXFQpUBw9BPSgACQA=",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "ERMRUgASSDoAHCgb",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "CRsJHhxUBw9BPCITCRYQRlldWg==",
+      "hint": "Wrath of the Lich King dungeon — Northrend"
+    },
+    {
+      "word": "FRIXHQERSAYHTjMdAFMnW1RXRw==",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "Eg4KHAoXBxsE",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "FxUXBgoMSDkIACkUBh8W",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "DRUWBk83AR0YTigTRSccXhdEXTM=",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "CRsJHhxUBw9BITUcAhodU0RbWy8=",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "BggMH082CR0OAg==",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "AxYEEQQGBwoKTgQUExYBXEM=",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "BBQBUjsdBQw=",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "Fh8JHk8bDkkkGiIHCxoHSw==",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "CRUQAE8bDkk1GS4ZDBQbRg==",
+      "hint": "Cataclysm dungeon"
+    },
+    {
+      "word": "FR8IAgMRSAYHTjMdAFM5U1RXFBIfFwIKGhw=",
+      "hint": "Mists of Pandaria dungeon"
+    },
+    {
+      "word": "Eg4KAAIHHAYUGmc3FxYEV0JL",
+      "hint": "Mists of Pandaria dungeon"
+    },
+    {
+      "word": "EhIEFgBZOAgPTgoaCxIARlVATQ==",
+      "hint": "Mists of Pandaria dungeon"
+    },
+    {
+      "word": "EhkEAAMRHEkpDysZFg==",
+      "hint": "Mists of Pandaria dungeon"
+    },
+    {
+      "word": "DBUCB0gHAAgPThcUCRIQVw==",
+      "hint": "Mists of Pandaria dungeon"
+    },
+    {
+      "word": "BhsRF08bDkkVBiJVNhYHRllcU2EpEBw=",
+      "hint": "Mists of Pandaria dungeon"
+    },
+    {
+      "word": "EhMAFQpUBw9BIC4AHxIcEmRXWTEWAA==",
+      "hint": "Mists of Pandaria dungeon"
+    },
+    {
+      "word": "BwgAFwcbBA0=",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "AA4EHkgwCRMAHA==",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "FhscER0RGx1BIyYbCgE=",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "EhIXGwERSAYHTjMdAFMgRl9AWQ==",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "FRUJUisVDwYT",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "ChMLFRxTSDsEHTM=",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "FBQBFx0GBx0=",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "FR8IAgMRSAYHThQQERsBU1xbRzI=",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "DB8GGg4TBwdBOSgHDgAbXUA=",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "DgoAAA4AAQYPTgoQBhsSVV9c",
+      "hint": "Battle for Azeroth dungeon"
+    },
+    {
+      "word": "CRsJHhxUBw9BLzMaCxYeV15G",
+      "hint": "Shadowlands dungeon"
+    },
+    {
+      "word": "DBMWBhxUBw9BOi4HCxJTYVNbQCkf",
+      "hint": "Shadowlands dungeon"
+    },
+    {
+      "word": "Dx8GAAAAAQpBOSYeAA==",
+      "hint": "Shadowlands dungeon"
+    },
+    {
+      "word": "ERYEFRoRDggNAg==",
+      "hint": "Shadowlands dungeon"
+    },
+    {
+      "word": "EhsLFRodBgxBKiIFERsA",
+      "hint": "Shadowlands dungeon"
+    },
+    {
+      "word": "EgoMAAoHSAYHTgYGBhYdQVldWg==",
+      "hint": "Shadowlands dungeon"
+    },
+    {
+      "word": "FRIAExsRGkkOCGclBBod",
+      "hint": "Shadowlands dungeon"
+    },
+    {
+      "word": "BR9FPRscDRtBPS4RAA==",
+      "hint": "Shadowlands dungeon"
+    },
+    {
+      "word": "Ew8HC084AQ8EThcaCh8A",
+      "hint": "Dragonflight dungeon"
+    },
+    {
+      "word": "FRIAUiEbAwEUCmc6AxUWXENbQiQ=",
+      "hint": "Dragonflight dungeon"
+    },
+    {
+      "word": "AAAQAApUPggUAjM=",
+      "hint": "Dragonflight dungeon"
+    },
+    {
+      "word": "ABYCFxscTwgTTgYWBBcWX0k=",
+      "hint": "Dragonflight dungeon"
+    },
+    {
+      "word": "Dx8JBgcVGhwS",
+      "hint": "Dragonflight dungeon"
+    },
+    {
+      "word": "AwgEEQQRBgEICiJVLRwfXl9F",
+      "hint": "Dragonflight dungeon"
+    },
+    {
+      "word": "CRsJHhxUBw9BJykTEAAaXV4=",
+      "hint": "Dragonflight dungeon"
+    },
+    {
+      "word": "FBYBEwIVBkktCyAUBgpTXVYSYDgI",
+      "hint": "Dragonflight dungeon"
+    },
+    {
+      "word": "AhMLFgoGChsEGWc4ABIXV0JL",
+      "hint": "The War Within dungeon"
+    },
+    {
+      "word": "BRsXGQkYCQQETgQZABUH",
+      "hint": "The War Within dungeon"
+    },
+    {
+      "word": "FRIAUjwABwcEGCYACQc=",
+      "hint": "The War Within dungeon"
+    },
+    {
+      "word": "EQgMHR0NSAYHTjMdAFMgU1NAUSVaIx4OGQ0=",
+      "hint": "The War Within dungeon"
+    },
+    {
+      "word": "FRIAUj0bBwIEHD4=",
+      "hint": "The War Within dungeon"
+    },
+    {
+      "word": "AAgEXyQVGgg=",
+      "hint": "The War Within dungeon"
+    },
+    {
+      "word": "AhMRC08bDkk1BjUQBBcA",
+      "hint": "The War Within dungeon"
+    },
+    {
+      "word": "BRsSHE8bDkkVBiJVLB0VW15bQCQ=",
+      "hint": "Dragonflight mega-dungeon"
+    },
+    {
+      "word": "AhUQABtUBw9BPTMUFwA=",
+      "hint": "Legion suramar dungeon"
+    },
+    {
+      "word": "FRIAUi4GCx4AFw==",
+      "hint": "Legion suramar dungeon"
+    },
+    {
+      "word": "FxsQHhtUBw9BGi8QRSQSQFRXWjI=",
+      "hint": "Legion warden dungeon"
+    },
+    {
+      "word": "Dx8JBgcVGgAOAGAGRT8SW0I=",
+      "hint": "Legion highmountain dungeon"
+    },
+    {
+      "word": "CRsJHhxUBw9BOCYZCgE=",
+      "hint": "Legion stormheim dungeon"
+    },
+    {
+      "word": "BAMAUgASSCgbHS8UFxI=",
+      "hint": "Legion azsuna dungeon"
+    },
+    {
+      "word": "AxYEEQRUOgYOBWc9Ch8X",
+      "hint": "Legion val'sharah dungeon"
+    },
+    {
+      "word": "BRsXGQcRCRsVThMdDBAYV0Q=",
+      "hint": "Legion val'sharah dungeon"
+    },
+    {
+      "word": "Ex8RBx0aSB0OTgwUFxIJWlFc",
+      "hint": "Legion mega-dungeon"
+    },
+    {
+      "word": "Eh8EBk8bDkkVBiJVMQEaR11EXTMbERc=",
+      "hint": "Legion Argus dungeon"
+    },
+    {
+      "word": "FRUXFQcVGx0=",
+      "hint": "Shadowlands roguelike tower"
+    }
+  ],
+  "Character": [
+    {
+      "word": "FRIXEwMY",
+      "hint": "Warchief of the Horde"
+    },
+    {
+      "word": "CxsMHA5UOBsOGyMYChwBVw==",
+      "hint": "Alliance mage"
+    },
+    {
+      "word": "EgMJBA4aCRpBOS4bAQEGXF5XRg==",
+      "hint": "Former Horde Warchief"
+    },
+    {
+      "word": "ABQBBwYaSD4TFykb",
+      "hint": "King of Stormwind"
+    },
+    {
+      "word": "DBsJFBoGAQYPThQBCgEeQFFVUQ==",
+      "hint": "First mortal druid; husband of Tyrande and twin of Illidan Stormrage"
+    },
+    {
+      "word": "FQMXEwEQDUk2Bi4GFRYBRVlcUA==",
+      "hint": "Night Elf High Priestess"
+    },
+    {
+      "word": "Fx8JFwE=",
+      "hint": "Prophet of the Draenei"
+    },
+    {
+      "word": "BggACwIVBgw=",
+      "hint": "King of Gilneas"
+    },
+    {
+      "word": "AxsMHApUKgUOASMdChwV",
+      "hint": "High Chieftain of the Tauren"
+    },
+    {
+      "word": "DRUXVRscDQQAHGchDRYBXV4=",
+      "hint": "Regent Lord of Quel'Thalas"
+    },
+    {
+      "word": "BhsJHhYDARE=",
+      "hint": "Trade Prince of the Goblins"
+    },
+    {
+      "word": "FxUJVQUdBg==",
+      "hint": "Former Warchief of the Horde"
+    },
+    {
+      "word": "BhsXAAAHAEkpCysZFhABV1Ff",
+      "hint": "Former Warchief of the Horde"
+    },
+    {
+      "word": "FQ8XEwMNBwc=",
+      "hint": "Alliance paladin"
+    },
+    {
+      "word": "ABYJFx0dCUk2BykRFwYdXFVA",
+      "hint": "Void elf ranger"
+    },
+    {
+      "word": "Fx8XFwoHCUk2BykRFwYdXFVA",
+      "hint": "Ranger General"
+    },
+    {
+      "word": "DB8OGQ4ABxsQGyI=",
+      "hint": "High Tinker of Gnomeregan"
+    },
+    {
+      "word": "DA8XEwsdBkkjHCgbHxYRV1FAUA==",
+      "hint": "Dwarf warrior"
+    },
+    {
+      "word": "DBsCHAZUKhsOAD0QBxYSQFQ=",
+      "hint": "Speaker for Azeroth"
+    },
+    {
+      "word": "BxsJARsVDEk2BysRDRIeX1VA",
+      "hint": "Wildhammer clan chief"
+    },
+    {
+      "word": "AxUJBA4GSC8OHCMHBBQcXA==",
+      "hint": "Former Lich King"
+    },
+    {
+      "word": "Bh8LHE8zGgwYAyYbAA==",
+      "hint": "King of Gilneas"
+    },
+    {
+      "word": "FggEBgcdBwc=",
+      "hint": "Black Prince"
+    },
+    {
+      "word": "ABYAChwAGggSFCY=",
+      "hint": "Aspect of the red dragonflight"
+    },
+    {
+      "word": "DxUfFgAGBRw=",
+      "hint": "Aspect of the bronze dragonflight"
+    },
+    {
+      "word": "GAkAAA4=",
+      "hint": "Aspect of the green dragonflight"
+    },
+    {
+      "word": "ChsJFwwTBxo=",
+      "hint": "Aspect of the blue dragonflight"
+    },
+    {
+      "word": "AhIXHQIdDQ==",
+      "hint": "Bronze dragon gnome"
+    },
+    {
+      "word": "ChIEFggVGg==",
+      "hint": "Archmage of the Kirin Tor"
+    },
+    {
+      "word": "DB8BGxkc",
+      "hint": "The Last Guardian"
+    },
+    {
+      "word": "FRsJEwEeAQ==",
+      "hint": "Queen of the Zandalari"
+    },
+    {
+      "word": "ExsWBg4fAAgP",
+      "hint": "King of Zandalar"
+    },
+    {
+      "word": "Aw0KHBwVBQ0I",
+      "hint": "Loa of the dead"
+    },
+    {
+      "word": "Ex8fEwE=",
+      "hint": "Loa of kings"
+    },
+    {
+      "word": "ExUOGg4a",
+      "hint": "Shadow Hunter of the Horde"
+    },
+    {
+      "word": "DxsRGg4aBxpBLCscAhsHUVFeWCQI",
+      "hint": "Champion of the Forsaken"
+    },
+    {
+      "word": "Dh4cHA==",
+      "hint": "Titan keeper"
+    },
+    {
+      "word": "CR8JCw4=",
+      "hint": "Ruler of Helheim"
+    },
+    {
+      "word": "BwgACw4=",
+      "hint": "Titan keeper"
+    },
+    {
+      "word": "CRUBGx0=",
+      "hint": "Titan keeper"
+    },
+    {
+      "word": "DBMIGx0bBg==",
+      "hint": "Titan keeper"
+    },
+    {
+      "word": "FRIKAAYZ",
+      "hint": "Titan keeper"
+    },
+    {
+      "word": "FQMX",
+      "hint": "Titan keeper"
+    },
+    {
+      "word": "DRUOFwE=",
+      "hint": "Corrupted titan keeper"
+    },
+    {
+      "word": "AAgRGg4HSCQEACIBDRof",
+      "hint": "The Lich King"
+    },
+    {
+      "word": "BR8EBgcDAQcG",
+      "hint": "Destroyer / Black Dragon Aspect"
+    },
+    {
+      "word": "CBYJGwsVBkkyGigHCAESVVU=",
+      "hint": "The Betrayer"
+    },
+    {
+      "word": "EhsXFQoGCRo=",
+      "hint": "Fallen titan; creator of the Burning Legion to purge the universe"
+    },
+    {
+      "word": "AAgGGgYZBwcFCw==",
+      "hint": "Eredar lord of the Burning Legion"
+    },
+    {
+      "word": "ChMJVQUVDQ0EAA==",
+      "hint": "Eredar lord of the Burning Legion"
+    },
+    {
+      "word": "DBsLHAAGBx0J",
+      "hint": "Pit lord of the Burning Legion"
+    },
+    {
+      "word": "Bg8JVQsVBg==",
+      "hint": "Orc warlock who bargained with demons and opened the Dark Portal"
+    },
+    {
+      "word": "Dx8XVRUcHQU=",
+      "hint": "Original Lich King"
+    },
+    {
+      "word": "ExsCHA4GBxo=",
+      "hint": "Elemental lord of fire"
+    },
+    {
+      "word": "Dx8DEx0dCQc=",
+      "hint": "Son of Deathwing"
+    },
+    {
+      "word": "DhQcCgYV",
+      "hint": "Daughter of Deathwing"
+    },
+    {
+      "word": "CRsOGQ4G",
+      "hint": "Soulflayer troll god"
+    },
+    {
+      "word": "GRsTGxoH",
+      "hint": "Lord of the Nightmare"
+    },
+    {
+      "word": "D10/HRsc",
+      "hint": "Old God of the deep"
+    },
+    {
+      "word": "GBUCFUInCRsOAA==",
+      "hint": "Old God of death"
+    },
+    {
+      "word": "Al0xGhoa",
+      "hint": "Old God of the south"
+    },
+    {
+      "word": "GxUTEw4Y",
+      "hint": "The Jailer; Shadowlands villain who sought to rewrite all reality"
+    },
+    {
+      "word": "BR8LExscGgAUHQ==",
+      "hint": "Master of Revendreth"
+    },
+    {
+      "word": "EgMJBA4aCRo=",
+      "hint": "Banshee Queen"
+    },
+    {
+      "word": "Dx8JBgcVGgAOAA==",
+      "hint": "Earth-Warder dragon"
+    },
+    {
+      "word": "DBsJCwgbGw==",
+      "hint": "Aspect of the blue dragonflight"
+    },
+    {
+      "word": "DA8XHRUbBg0=",
+      "hint": "Corrupted bronze dragon"
+    },
+    {
+      "word": "AhIKVQgVBAU=",
+      "hint": "Ogre mage warlord"
+    },
+    {
+      "word": "ABZCMwQdGg==",
+      "hint": "Elemental lord of air"
+    },
+    {
+      "word": "Dx8VBhoYBwc=",
+      "hint": "Elemental lord of water"
+    },
+    {
+      "word": "FRIAAA4OCQcE",
+      "hint": "Elemental lord of earth"
+    },
+    {
+      "word": "BhsXAAAHAA==",
+      "hint": "Warmongering orc warchief"
+    },
+    {
+      "word": "BggKHwIVGwFBJiIZCQAQQFVTWQ==",
+      "hint": "Orc warrior hero"
+    },
+    {
+      "word": "BQ8XHRsVBg==",
+      "hint": "Chieftain of the Frostwolf clan"
+    },
+    {
+      "word": "AxYEEQQcCQcF",
+      "hint": "Warchief of the Iron Horde"
+    },
+    {
+      "word": "ChsXFQ4AAEkjAiYRABUaQUQ=",
+      "hint": "Warchief of the Shattered Hand"
+    },
+    {
+      "word": "Ch8JVTscHRMACg==",
+      "hint": "Lich of Naxxramas"
+    },
+    {
+      "word": "ABQQEEgVGggK",
+      "hint": "Undead nerubian king"
+    },
+    {
+      "word": "EhsHFwMYAQgP",
+      "hint": "Black dragon heir"
+    },
+    {
+      "word": "BBgcARwdCQc=",
+      "hint": "Highmountain dragon"
+    },
+    {
+      "word": "DB8XGxscGgg=",
+      "hint": "Daughter of Ysera"
+    },
+    {
+      "word": "FwMXEwEbHAE=",
+      "hint": "Proto-dragon aspect"
+    },
+    {
+      "word": "CAgMFgYfGgYP",
+      "hint": "Primal incarnate earth"
+    },
+    {
+      "word": "BwMXEwQf",
+      "hint": "Primal incarnate fire"
+    },
+    {
+      "word": "ExsWCA4TDR0J",
+      "hint": "Primal incarnate storm"
+    },
+    {
+      "word": "AwgEHAFUKhsOAD0QBxYSQFQ=",
+      "hint": "Explorer hero"
+    },
+    {
+      "word": "DBUMAA5UPAEAGzUcFgASXA==",
+      "hint": "Dark Iron queen"
+    },
+    {
+      "word": "Cg8XFh0VBkk2BysRDRIeX1VA",
+      "hint": "Gryphon rider"
+    },
+    {
+      "word": "GAgAHg==",
+      "hint": "Draenor draenei paladin"
+    },
+    {
+      "word": "ABQBBwYaSCUOGi8UFw==",
+      "hint": "First Champion of the Alliance"
+    },
+    {
+      "word": "FA4NFx1UJAAGBjMXFxodVVVA",
+      "hint": "First of the Silver Hand"
+    },
+    {
+      "word": "FRMXGwAaSC8OHCMHDB0U",
+      "hint": "Champion of the Light"
+    },
+    {
+      "word": "CRMCGgMbGg1BIygSFxIaXFU=",
+      "hint": "Ashbringer wielder"
+    },
+    {
+      "word": "ABYACg4aDBsOHWc4ChQBU1lcUQ==",
+      "hint": "Original Ashbringer"
+    },
+    {
+      "word": "BRsXGwAaSCQOCTUUDB0W",
+      "hint": "Death knight leader"
+    },
+    {
+      "word": "FhIMBgoZCQcE",
+      "hint": "High Inquisitor"
+    },
+    {
+      "word": "EhsVAgcdGgYP",
+      "hint": "Frost wyrm of Naxxramas"
+    },
+    {
+      "word": "EhsXBgcVGgAOAA==",
+      "hint": "Black dragon obsidian boss"
+    },
+    {
+      "word": "ABYCEwMbBg==",
+      "hint": "Cosmic observer Ulduar"
+    },
+    {
+      "word": "ExsfHR0HCwgNCw==",
+      "hint": "Proto-dragon Ulduar boss"
+    },
+    {
+      "word": "BxYEHwpUJAwXByYBDRId",
+      "hint": "Ulduar siege engine"
+    },
+    {
+      "word": "CBkAGgADBA==",
+      "hint": "Trial of the Crusader beast"
+    },
+    {
+      "word": "BxsAAAMdBgg=",
+      "hint": "Grand Widow Naxxramas"
+    },
+    {
+      "word": "DBsAChcaCQ==",
+      "hint": "Naxxramas spider queen"
+    },
+    {
+      "word": "FRIEFgsdHRo=",
+      "hint": "Naxxramas super construct"
+    },
+    {
+      "word": "EhMLFh0VDwYSDw==",
+      "hint": "Arthas frost wyrm"
+    },
+    {
+      "word": "EQgKFAoHGwYTThcAEQEaUVlWUQ==",
+      "hint": "Icecrown plague master"
+    },
+    {
+      "word": "DRsBC08wDQgVBjAdDAADV0I=",
+      "hint": "Icecrown cultist"
+    },
+    {
+      "word": "CRsJGwAa",
+      "hint": "Twilight dragon boss"
+    },
+    {
+      "word": "DBsPHR0QBwQOThQBBBQbV1xf",
+      "hint": "Corrupted archdruid"
+    },
+    {
+      "word": "ABYcAR0VEgYT",
+      "hint": "Firelands fire hawk"
+    },
+    {
+      "word": "AxsJFx0bCw==",
+      "hint": "Firelands guardian"
+    },
+    {
+      "word": "EhIEHAEbEA==",
+      "hint": "Firelands hunter"
+    },
+    {
+      "word": "AA4XEwIRDAwS",
+      "hint": "Blind dragon"
+    },
+    {
+      "word": "AhIMHw4RGgYP",
+      "hint": "Blackwing Descent chimera"
+    },
+    {
+      "word": "FBYRAA4MAQYP",
+      "hint": "Twilight dragon Dragon Soul"
+    },
+    {
+      "word": "CggEFUgDCQ==",
+      "hint": "Loa of frogs"
+    },
+    {
+      "word": "ERtCGRo=",
+      "hint": "Loa of the Wind; Zandalari pterrordax riders worship her"
+    },
+    {
+      "word": "BhULGQ==",
+      "hint": "Loa of the Hunt; multi-form druidic loa with many animal aspects"
+    },
+    {
+      "word": "Bl0NBxoa",
+      "hint": "Blood Old God"
+    },
+    {
+      "word": "CBZCFRYaBx0J",
+      "hint": "Heart of Corruption"
+    },
+    {
+      "word": "FRMGGgAaDBsIGzQ=",
+      "hint": "Dreadlord of the Legion"
+    },
+    {
+      "word": "AxsJHA4OEggT",
+      "hint": "Dreadlord in disguise"
+    },
+    {
+      "word": "FxsXGwIVHAETDzQ=",
+      "hint": "Dreadlord of Undercity"
+    },
+    {
+      "word": "DBsJVSgVBgAS",
+      "hint": "Dreadlord of Stratholme"
+    },
+    {
+      "word": "ChsAHkgAAAgSThQACwAHQFlWUTM=",
+      "hint": "Blood elf prince"
+    },
+    {
+      "word": "DRsBC08iCRoJBA==",
+      "hint": "Serpentshrine naga queen"
+    },
+    {
+      "word": "ABEEHw4=",
+      "hint": "Broken draenei elder"
+    },
+    {
+      "word": "FR8XHQFULwYTCyEcAB0X",
+      "hint": "First death knight"
+    },
+    {
+      "word": "BRsXVSQcCQdBKjUUERsaQA==",
+      "hint": "Quel'Thalas traitor who let the Scourge through to Silvermoon"
+    },
+    {
+      "word": "ExUIHw4AAA==",
+      "hint": "Blood elf grand magister"
+    },
+    {
+      "word": "DRMEFh0dBg==",
+      "hint": "Blood elf matriarch"
+    },
+    {
+      "word": "Ah8LEx0dHRo=",
+      "hint": "Demigod of the forest"
+    },
+    {
+      "word": "DBsMFxlUOwEACigCFhwdVQ==",
+      "hint": "Night elf warden"
+    },
+    {
+      "word": "AhsJGw5UJQwPCzMdDB8=",
+      "hint": "Forsaken undead noble"
+    },
+    {
+      "word": "DRURGh0VEAAOAA==",
+      "hint": "Lightforged naaru champion"
+    },
+    {
+      "word": "BR8EBgcWGgAPCSIHRSASR0JUVS8d",
+      "hint": "Frostsworn orc"
+    },
+    {
+      "word": "ExURFA4XDQ==",
+      "hint": "Icecrown ooze boss"
+    },
+    {
+      "word": "Bx8WBgoGDxwV",
+      "hint": "Icecrown ooze boss"
+    },
+    {
+      "word": "FxsJGxscGgAATgMHABIeRVFeXyQI",
+      "hint": "Trapped green dragon"
+    },
+    {
+      "word": "ChsRGgoGAQcEThcHCgYXX19dRiQ=",
+      "hint": "Lord Admiral of Kul Tiras"
+    },
+    {
+      "word": "BR8XFwRUOBsOGyMYChwBVw==",
+      "hint": "Undead Kul Tiran admiral"
+    },
+    {
+      "word": "AAkNEwIVBgw=",
+      "hint": "Ancient feral cat spirit"
+    },
+    {
+      "word": "BhUJFh0dBgc=",
+      "hint": "Ancient wolf spirit"
+    },
+    {
+      "word": "AAwMEwEV",
+      "hint": "Goddess of birds"
+    },
+    {
+      "word": "DBsJHR0aDQ==",
+      "hint": "Great white stag spirit"
+    },
+    {
+      "word": "AB8RGg4HSDoUADUQBAUWQA==",
+      "hint": "Blood elf archmage"
+    },
+    {
+      "word": "DBMJHgcbHRoETgoUCxIARl9AWQ==",
+      "hint": "Gnome mage prisoner"
+    },
+    {
+      "word": "EhUXGwsbGgQI",
+      "hint": "Bronze dragon servant"
+    },
+    {
+      "word": "ABQEEQcGBwcOHQ==",
+      "hint": "Bronze dragon son of Nozdormu"
+    },
+    {
+      "word": "BAoKEQdUIBwPGiIH",
+      "hint": "Caverns of Time boss"
+    },
+    {
+      "word": "AAgRGg4H",
+      "hint": "Lich King as prince"
+    },
+    {
+      "word": "CxsMHA4=",
+      "hint": "Archmage of Kul Tiras"
+    },
+    {
+      "word": "AhsMAAERSCsNASgRDRwcVA==",
+      "hint": "Tauren high chieftain"
+    },
+    {
+      "word": "DBsLGR0dAw==",
+      "hint": "Orc berserker of Barrens"
+    },
+    {
+      "word": "AhIAHE8nHAYTAzQBCgYH",
+      "hint": "Pandaren wandering brewer"
+    },
+    {
+      "word": "DRNFPgZUOx0OHCoGERwGRg==",
+      "hint": "Young pandaren adventurer"
+    },
+    {
+      "word": "FRsXEwFUMgEU",
+      "hint": "Shado-Pan pandaren master"
+    },
+    {
+      "word": "GQ8AHA==",
+      "hint": "August Celestial white tiger"
+    },
+    {
+      "word": "AhIMXyUd",
+      "hint": "August Celestial red crane"
+    },
+    {
+      "word": "GA9CHgAa",
+      "hint": "August Celestial jade serpent"
+    },
+    {
+      "word": "DxMQCA4b",
+      "hint": "August Celestial black ox"
+    },
+    {
+      "word": "DggBHRw=",
+      "hint": "Fire spirit Timeless Isle"
+    },
+    {
+      "word": "ERsXEwgbBhpBASFVERsWEnteVTkCDA==",
+      "hint": "Mantid boss council"
+    },
+    {
+      "word": "BhsXE0geCQU=",
+      "hint": "Mogu'shan spirit binder boss"
+    },
+    {
+      "word": "CxsLVRcd",
+      "hint": "Mogu'shan stone guard boss"
+    },
+    {
+      "word": "EBMLXxcd",
+      "hint": "Mogu'shan stone guard boss"
+    },
+    {
+      "word": "Bx8LFU8AAAxBLyQWEAEAV1Q=",
+      "hint": "Mogu'shan boss"
+    },
+    {
+      "word": "FhMJHk8bDkkVBiJVIB4DV0JdRg==",
+      "hint": "Mogu'shan final boss"
+    },
+    {
+      "word": "BBYAFQAa",
+      "hint": "Mogu'shan celestial dragon"
+    },
+    {
+      "word": "DR8MUjwcAQ==",
+      "hint": "Terrace of Endless Spring"
+    },
+    {
+      "word": "EhIEUgASSC8EDzU=",
+      "hint": "Terrace of Endless Spring boss"
+    },
+    {
+      "word": "FQkQHgAaDw==",
+      "hint": "Terrace dragon boss"
+    },
+    {
+      "word": "DR8MUjwcDQc=",
+      "hint": "Thunder King boss"
+    },
+    {
+      "word": "ExtIFgoa",
+      "hint": "Lightning titan keeper"
+    },
+    {
+      "word": "DBsJGQAGBwI=",
+      "hint": "Siege of Orgrimmar boss"
+    },
+    {
+      "word": "FRIKGQ==",
+      "hint": "Siege of Orgrimmar beast boss"
+    },
+    {
+      "word": "ChYEChcdTx8EHTQ=",
+      "hint": "Siege of Orgrimmar boss"
+    },
+    {
+      "word": "CBcVFx0VHAYTTgoUF1QUXVs=",
+      "hint": "Highmaul ogre king"
+    },
+    {
+      "word": "ChMJAAATD0klCyYRAAoW",
+      "hint": "Hellfire Citadel warlord"
+    },
+    {
+      "word": "BhUXFwkdDQcF",
+      "hint": "Hellfire Citadel death knight boss"
+    },
+    {
+      "word": "EhIEFgADRSUOHCNVLAAYU0I=",
+      "hint": "Hellfire arakkoa boss"
+    },
+    {
+      "word": "EhUGAAoAAAgT",
+      "hint": "Soulbound construct Hellfire"
+    },
+    {
+      "word": "FQMXEwEASD8EAi8UFxo=",
+      "hint": "Eredar Hellfire boss"
+    },
+    {
+      "word": "GRIQHkgcBxsADQ==",
+      "hint": "Void infernal Hellfire boss"
+    },
+    {
+      "word": "GxsOBxoa",
+      "hint": "Hellfire Citadel eredar"
+    },
+    {
+      "word": "Bg8JVQsVBkk1ASoX",
+      "hint": "Nighthold ghost"
+    },
+    {
+      "word": "CggKARoH",
+      "hint": "Nighthold pit lord bridge"
+    },
+    {
+      "word": "FQgMHgMdCRE=",
+      "hint": "Nighthold robot boss"
+    },
+    {
+      "word": "EgoAHgMWBAgFC2c0CQYBW1Ve",
+      "hint": "Nighthold elf boss"
+    },
+    {
+      "word": "CRMCGk82Bx0AAC4GEVMnV1wVVTMU",
+      "hint": "Nighthold boss"
+    },
+    {
+      "word": "Eg4EAE81HQ4UHGcwEQESV0VB",
+      "hint": "Nighthold celestial boss"
+    },
+    {
+      "word": "BggEHAtUJQgGBzQBFxoLEnVeXTIbCxYK",
+      "hint": "Nighthold suramar ruler"
+    },
+    {
+      "word": "Bg8JVQsVBkkvByAdERscXlQ=",
+      "hint": "Nighthold final boss"
+    },
+    {
+      "word": "BhUXHRsc",
+      "hint": "Tomb of Sargeras boss"
+    },
+    {
+      "word": "BR8WHQMVHAxBJigGEQ==",
+      "hint": "Tomb of Sargeras boss"
+    },
+    {
+      "word": "DBsMFgoaSAYHThEcAhofU15RUQ==",
+      "hint": "Tomb of Sargeras boss"
+    },
+    {
+      "word": "BxsJHgoaSCgXDzMUFw==",
+      "hint": "Tomb of Sargeras boss"
+    },
+    {
+      "word": "BhsXHRscAUk2ATUZAREBV1FZUTM=",
+      "hint": "Antorus first boss"
+    },
+    {
+      "word": "CRsWEw0RBA==",
+      "hint": "Antorus boss"
+    },
+    {
+      "word": "CBcKHA4G",
+      "hint": "Antorus boss"
+    },
+    {
+      "word": "ChMLVQgVGgYVBg==",
+      "hint": "Antorus boss"
+    },
+    {
+      "word": "AhUTFwFUBw9BPS8cExIBQFE=",
+      "hint": "Antorus boss"
+    },
+    {
+      "word": "AAgCBxxUHAEEThIbCBIYV0I=",
+      "hint": "Antorus final boss"
+    },
+    {
+      "word": "FRsJHQw=",
+      "hint": "Uldir first boss"
+    },
+    {
+      "word": "DDUxOiom",
+      "hint": "Uldir titan construct"
+    },
+    {
+      "word": "Bx8RGwtULAwXATIHAAE=",
+      "hint": "Uldir blob boss"
+    },
+    {
+      "word": "Gx8OVRkbEg==",
+      "hint": "Uldir faceless one boss"
+    },
+    {
+      "word": "Fx8GBgYH",
+      "hint": "Uldir plague boss"
+    },
+    {
+      "word": "Gw8J",
+      "hint": "Uldir troll boss"
+    },
+    {
+      "word": "DAMRGh0VEA==",
+      "hint": "Uldir nerubian boss"
+    },
+    {
+      "word": "AhIEHx8dBwdBASFVERsWEnxbUykO",
+      "hint": "Battle of Dazar'alor boss"
+    },
+    {
+      "word": "CxsBFwkdGgxBIyYGERYBQQ==",
+      "hint": "Battle of Dazar'alor boss"
+    },
+    {
+      "word": "BggKHAg=",
+      "hint": "Battle of Dazar'alor monkey boss"
+    },
+    {
+      "word": "ChMLFU8mCRoVDywdBB0=",
+      "hint": "Battle of Dazar'alor final boss"
+    },
+    {
+      "word": "Eg4KAAIDCQUNTgUZChAYU1RX",
+      "hint": "Battle of Dazar'alor boss"
+    },
+    {
+      "word": "AhsHEwNUPBsIAC4BHA==",
+      "hint": "Crucible of Storms boss"
+    },
+    {
+      "word": "FA9CHA4A",
+      "hint": "Crucible of Storms boss"
+    },
+    {
+      "word": "ABgcARwVBEkiASoYBB0XV0ISZygMBAAO",
+      "hint": "Eternal Palace boss"
+    },
+    {
+      "word": "ExsBGw4aCwxBASFVJAkAWlFAVQ==",
+      "hint": "Eternal Palace boss"
+    },
+    {
+      "word": "DRsBC081GwEXDykQ",
+      "hint": "Eternal Palace boss"
+    },
+    {
+      "word": "DggCHRUbCQ==",
+      "hint": "Eternal Palace boss"
+    },
+    {
+      "word": "GxtCAxoY",
+      "hint": "Eternal Palace boss"
+    },
+    {
+      "word": "EA8AFwFUKRMSBiYHBA==",
+      "hint": "Eternal Palace final boss"
+    },
+    {
+      "word": "CQ8LBhwZCQdBLysBDB4cQA==",
+      "hint": "Castle Nathria boss"
+    },
+    {
+      "word": "Eg8LUiQdBg5GHWcmBB8FU0RbWy8=",
+      "hint": "Castle Nathria encounter"
+    },
+    {
+      "word": "AAgRGwkdCwwTTh8MQh4cSg==",
+      "hint": "Castle Nathria boss"
+    },
+    {
+      "word": "DRsBC089BgwTGCZVIRIBWUZXXS8=",
+      "hint": "Castle Nathria boss"
+    },
+    {
+      "word": "FRIAUiwbHQcCBytVChVTcFxdWyU=",
+      "hint": "Castle Nathria boss"
+    },
+    {
+      "word": "EhYQFggRDgASGg==",
+      "hint": "Castle Nathria boss"
+    },
+    {
+      "word": "Eg4KHApUJAwGBygbRTQWXFVAVS0J",
+      "hint": "Castle Nathria boss"
+    },
+    {
+      "word": "EhMXF08wDQcAGi8HDAYA",
+      "hint": "Castle Nathria final boss"
+    },
+    {
+      "word": "FRsXAA4TGhwE",
+      "hint": "Sanctum of Domination boss"
+    },
+    {
+      "word": "FRIAUioNDUkOCGcBDRZTeFFbWCQI",
+      "hint": "Sanctum of Domination boss"
+    },
+    {
+      "word": "FRIAUiEdBgw=",
+      "hint": "Sanctum of Domination val'kyr"
+    },
+    {
+      "word": "ERsMHBwZAR0JThUUHx0SXg==",
+      "hint": "Sanctum of Domination boss"
+    },
+    {
+      "word": "Bg8EAAsdCQdBASFVERsWEnZbRjIORT0BERs=",
+      "hint": "Sanctum boss"
+    },
+    {
+      "word": "BxsRFxwXGgADC2cnChteeVFeWw==",
+      "hint": "Sanctum of Domination boss"
+    },
+    {
+      "word": "EhEKHgoM",
+      "hint": "Sepulcher of the First Ones boss"
+    },
+    {
+      "word": "EQgKBgAAERkEThcUCwcbV19c",
+      "hint": "Sepulcher of the First Ones"
+    },
+    {
+      "word": "CRsJHQEQGhwS",
+      "hint": "Sepulcher machine boss"
+    },
+    {
+      "word": "DRUXFhxUBw9BKjUQBBc=",
+      "hint": "Sepulcher dreadlord bosses"
+    },
+    {
+      "word": "EwMCFwMbBg==",
+      "hint": "Sepulcher constellar boss"
+    },
+    {
+      "word": "CxsMHgoG",
+      "hint": "Sepulcher final boss Zovaal"
+    },
+    {
+      "word": "FQgEFgpUOBsIACQQRTQSXlxLQygC",
+      "hint": "Goblin Horde leader"
+    },
+    {
+      "word": "CxNFNAYGDRkAGQ==",
+      "hint": "Pandaren Horde monk"
+    },
+    {
+      "word": "AAMWE083BAYUCjQcCxQWQA==",
+      "hint": "Pandaren Alliance monk"
+    },
+    {
+      "word": "DggCAAYZSC0OASodBB4eV0I=",
+      "hint": "Second warchief of Horde"
+    },
+    {
+      "word": "BggKHwIVGwE=",
+      "hint": "Warsong chieftain"
+    },
+    {
+      "word": "FxsAHg4HHBsAHT0=",
+      "hint": "Red dragon corrupted BWL"
+    },
+    {
+      "word": "CRsOGQ4GSB0JC2cmCgYfVFxTTSQI",
+      "hint": "Zul'Gurub troll god"
+    },
+    {
+      "word": "CxMLVQsbSB0JC2cyChcRQFVTXyQI",
+      "hint": "Zul'Gurub boss"
+    },
+    {
+      "word": "CR8MFQ4aSB0JC2cgCxAfV1Fc",
+      "hint": "Naxxramas slime boss"
+    },
+    {
+      "word": "ERsREQcDDRsK",
+      "hint": "Naxxramas construct"
+    },
+    {
+      "word": "DRUEBgcRCg==",
+      "hint": "Naxxramas spore boss"
+    },
+    {
+      "word": "CBQWBh0BCx0OHGcnBAkGRFldQTI=",
+      "hint": "Naxxramas DK trainer"
+    },
+    {
+      "word": "DBsJEQcREggAHA==",
+      "hint": "Karazhan demon final boss"
+    },
+    {
+      "word": "DxMCGhsWCQcE",
+      "hint": "Karazhan drakonid boss"
+    },
+    {
+      "word": "Ag8XExsbGg==",
+      "hint": "Karazhan arcane guardian"
+    },
+    {
+      "word": "DgoAAA5ULR8EADM=",
+      "hint": "Karazhan theatrical encounter"
+    },
+    {
+      "word": "AA4RBwIRBkkVBiJVLRwBQVVfVS8=",
+      "hint": "Karazhan spectral rider"
+    },
+    {
+      "word": "DBUXHQoH",
+      "hint": "Karazhan ghostly steward"
+    },
+    {
+      "word": "AhIAARxULR8EADM=",
+      "hint": "Karazhan chess puzzle encounter"
+    },
+    {
+      "word": "EQgMHAwRSCQAAiQdAAkSU0I=",
+      "hint": "Karazhan demon final boss"
+    },
+    {
+      "word": "CBYJGgAbDg==",
+      "hint": "Karazhan demon boss"
+    },
+    {
+      "word": "EhIEFgpUBw9BLzUUCw==",
+      "hint": "Karazhan mage ghost"
+    },
+    {
+      "word": "FR8XFxwAAQgPTg4ZCRscXVY=",
+      "hint": "Karazhan satyr boss"
+    },
+    {
+      "word": "CRMCGk8/AQcGTgoUEB8UU0I=",
+      "hint": "Gruul's Lair first boss"
+    },
+    {
+      "word": "BggQBwNUHAEETgMHBBQcXFtbWC0fFw==",
+      "hint": "Gruul's Lair final boss"
+    },
+    {
+      "word": "DBsCBgcRGgAFASk=",
+      "hint": "Magtheridon's Lair boss"
+    },
+    {
+      "word": "DRsBC08nCQoTASsUFhs=",
+      "hint": "Sunwell Eredar Twin"
+    },
+    {
+      "word": "BggEHAtUPwgTAigWDlMyXklGXCQJFg==",
+      "hint": "Sunwell Eredar Twin"
+    },
+    {
+      "word": "AwgQBg4YBBwS",
+      "hint": "Sunwell pit lord boss"
+    },
+    {
+      "word": "Bx8JHxYHHA==",
+      "hint": "Sunwell corrupted dragon"
+    },
+    {
+      "word": "DA9CABo=",
+      "hint": "Sunwell naaru boss"
+    },
+    {
+      "word": "DBsLGR0dA04SThAcAxY=",
+      "hint": "Infamous Barrens quest NPC"
+    },
+    {
+      "word": "Eg4MBgwcDRo=",
+      "hint": "Duskwood abomination roamer"
+    },
+    {
+      "word": "CRUCFQoG",
+      "hint": "Infamous gnoll boss"
+    },
+    {
+      "word": "BB4SGwFUPggPLSsQABU=",
+      "hint": "Defias Brotherhood leader"
+    },
+    {
+      "word": "AhUKGQYR",
+      "hint": "Deadmines murloc cook"
+    },
+    {
+      "word": "Ex8LFk82BAgCBS8UCxc=",
+      "hint": "UBRS dragon rider boss"
+    },
+    {
+      "word": "EQMXHQgBCRsFTgIYBxYBQVVXRg==",
+      "hint": "UBRS fire boss"
+    },
+    {
+      "word": "BgMRGg==",
+      "hint": "UBRS raptor boss"
+    },
+    {
+      "word": "DRUXFk8iAQoVATVVKxYVU0JbQTI=",
+      "hint": "Blackwing Lair start boss"
+    },
+    {
+      "word": "ExsfHR0TBxsE",
+      "hint": "BWL first boss egg room"
+    },
+    {
+      "word": "AwgKHQsYBxsFTgsUFhsfU0lXRg==",
+      "hint": "BWL dragonkin boss"
+    },
+    {
+      "word": "BxMXFwIVHw==",
+      "hint": "BWL black dragon wing boss"
+    },
+    {
+      "word": "BBgKHB0bCw==",
+      "hint": "BWL black dragon boss"
+    },
+    {
+      "word": "BxYEHwoTBxs=",
+      "hint": "BWL black dragon boss"
+    },
+    {
+      "word": "AhIXHQIVDw4UHQ==",
+      "hint": "BWL chromatic dragon boss"
+    },
+    {
+      "word": "Bh8LFx0VBEklHCYeDhoAU0Ra",
+      "hint": "UBRS half-dragon boss"
+    },
+    {
+      "word": "DQ8GGwkGBwc=",
+      "hint": "Molten Core imp overseer"
+    },
+    {
+      "word": "DBsCHw4QCRs=",
+      "hint": "Molten Core core hound boss"
+    },
+    {
+      "word": "Bh8NFwEaCRo=",
+      "hint": "Molten Core flame boss"
+    },
+    {
+      "word": "BhsXAA==",
+      "hint": "Molten Core earth elemental"
+    },
+    {
+      "word": "EhIECBUGCQE=",
+      "hint": "Molten Core arcane imp boss"
+    },
+    {
+      "word": "Eg8JFBoGBwdBJiYHBxodVVVA",
+      "hint": "Molten Core fire champion"
+    },
+    {
+      "word": "BhUJFwIVDw4=",
+      "hint": "Molten Core core rager boss"
+    },
+    {
+      "word": "BAIAERoAHRo=",
+      "hint": "Molten Core gargoyle boss"
+    },
+    {
+      "word": "DgkWGx0dCQc=",
+      "hint": "Ruins of Ahn'Qiraj boss"
+    },
+    {
+      "word": "EQgKAgcRHEkyBSIHBB4=",
+      "hint": "Temple of Ahn'Qiraj boss"
+    },
+    {
+      "word": "FQ0MHE8xBRkEHCgHFg==",
+      "hint": "Ahn'Qiraj final pair boss"
+    },
+    {
+      "word": "FxMWEQYQHRo=",
+      "hint": "AQ40 frost vulnerability boss"
+    },
+    {
+      "word": "EQgMHAwRGxpBJjIdEAESXA==",
+      "hint": "AQ40 wasp boss"
+    },
+    {
+      "word": "BxsLGR0dGxo=",
+      "hint": "AQ40 nerubid boss"
+    },
+    {
+      "word": "DRUXFk8/GgA=",
+      "hint": "AQ20 silithid boss"
+    },
+    {
+      "word": "Aw8XBw==",
+      "hint": "AQ20 egg boss"
+    },
+    {
+      "word": "DBUEHw==",
+      "hint": "AQ20 stone boss"
+    },
+    {
+      "word": "AAMEHwYHGw==",
+      "hint": "AQ20 wasp queen boss"
+    },
+    {
+      "word": "Bh8LFx0VBEkzDy0UHQs=",
+      "hint": "AQ20 kalimdor general"
+    },
+    {
+      "word": "Cg8XGwEaCREZ",
+      "hint": "AQ20 scorpid boss"
+    }
+  ],
+  "Race": [
+    {
+      "word": "CQ8IEwE=",
+      "hint": "Alliance race — bonus reputation and Every Man for Himself racial"
+    },
+    {
+      "word": "BQ0EAAk=",
+      "hint": "Alliance race — Stoneform removes debuffs"
+    },
+    {
+      "word": "DxMCGhtULQUH",
+      "hint": "Alliance race — Shadowmeld and Quickness passives"
+    },
+    {
+      "word": "BhQKHwo=",
+      "hint": "Alliance race — Escape Artist racial, smallest playable"
+    },
+    {
+      "word": "BQgEFwERAQ==",
+      "hint": "Alliance race — Gift of the Naaru self-heal racial"
+    },
+    {
+      "word": "FhUXFQoa",
+      "hint": "Alliance race — Darkflight sprint; Two Forms racial"
+    },
+    {
+      "word": "DggG",
+      "hint": "Horde race — Hardiness stun resist; Blood Fury cooldown"
+    },
+    {
+      "word": "FBQBFw4Q",
+      "hint": "Horde race — Will of the Forsaken; removes fear/charm/sleep"
+    },
+    {
+      "word": "FRsQAAoa",
+      "hint": "Horde race — Endurance base health bonus; War Stomp stun"
+    },
+    {
+      "word": "FQgKHgM=",
+      "hint": "Horde race — Berserking haste cooldown; regeneration bonus"
+    },
+    {
+      "word": "AxYKHQtULQUH",
+      "hint": "Horde race — Arcane Torrent drains mana; magical addiction lore"
+    },
+    {
+      "word": "BhUHHgYa",
+      "hint": "Horde race — Rocket Jump mobility; bonus haste passive"
+    },
+    {
+      "word": "ERsLFg4GDQc=",
+      "hint": "Neutral race choosing faction at level 10; doubled food buff"
+    },
+    {
+      "word": "DxMCGhsWBxsPCw==",
+      "hint": "Horde allied race — ancient Suramar elves; Arcane Pulse racial"
+    },
+    {
+      "word": "CRMCGgIbHQcVDy4bRScSR0JXWg==",
+      "hint": "Horde allied race — three-horned tauren; Bull Rush racial"
+    },
+    {
+      "word": "GxsLFg4YCRsIThMHCh8f",
+      "hint": "Horde allied race — Zandalar trolls; Loa blessing racials"
+    },
+    {
+      "word": "DBsCVQcVGkkuHCQ=",
+      "hint": "Horde allied race — uncorrupted brown orcs from alternate Draenor"
+    },
+    {
+      "word": "FxUMFk8xBA8=",
+      "hint": "Alliance allied race — blood elves who embraced void energy"
+    },
+    {
+      "word": "DRMCGhsSBxsGCyNVIQESV15XXQ==",
+      "hint": "Alliance allied race — draenei purified by millennia of fighting the Legion"
+    },
+    {
+      "word": "BRsXGU89GgYPTgMCBAEV",
+      "hint": "Alliance allied race — fire-forged dwarves from Blackrock Mountain"
+    },
+    {
+      "word": "Cg8JUjsdGggP",
+      "hint": "Alliance allied race — seafaring humans with runic druidic magic"
+    },
+    {
+      "word": "DB8GGg4TBgYMCw==",
+      "hint": "Alliance allied race — cybernetically enhanced Mechagon gnomes"
+    },
+    {
+      "word": "Fw8JAgoGCQ==",
+      "hint": "Horde allied race — fox nomads of Vol'dun; Bag of Tricks racial"
+    },
+    {
+      "word": "BQgEERscERs=",
+      "hint": "Neutral dragon-humanoid race; playable only as Evoker"
+    },
+    {
+      "word": "BBsXBgcRBg==",
+      "hint": "Ancient titan-forged stone dwarves; playable in The War Within"
+    },
+    {
+      "word": "AAgEGQQbCQ==",
+      "hint": "Bird people of Outland"
+    },
+    {
+      "word": "BA4NFx0RCQU=",
+      "hint": "Energy bandaged beings"
+    },
+    {
+      "word": "DxsRGh0REgAM",
+      "hint": "Dreadlord demon spies"
+    },
+    {
+      "word": "DxsEABo=",
+      "hint": "Holy beings of pure Light"
+    },
+    {
+      "word": "BxsGFwMRGxpBISkQFg==",
+      "hint": "Old God servants"
+    },
+    {
+      "word": "EhMJGxscAQ0=",
+      "hint": "Old God insect swarm"
+    },
+    {
+      "word": "FwgcGRoY",
+      "hint": "Northrend giant proto-humans"
+    },
+    {
+      "word": "FQ8WGQ4GGg==",
+      "hint": "Walrus folk of Northrend"
+    },
+    {
+      "word": "DBsCHA4ACRwT",
+      "hint": "Giant centaur Northrend"
+    },
+    {
+      "word": "DA8XHgAX",
+      "hint": "Coastal amphibious critters"
+    },
+    {
+      "word": "Ah8LBg4BGg==",
+      "hint": "Kalimdor half-horse warriors"
+    },
+    {
+      "word": "EA8MHg0bCRs=",
+      "hint": "Kalimdor boar people"
+    },
+    {
+      "word": "EhsRCx0=",
+      "hint": "Corrupted night elf demons"
+    },
+    {
+      "word": "Dh0XFw==",
+      "hint": "Stupid but strong brutes"
+    },
+    {
+      "word": "Bw8XEAAYDw==",
+      "hint": "Bear folk of the forests"
+    },
+    {
+      "word": "DxsCEw==",
+      "hint": "Serpent sea elf race"
+    },
+    {
+      "word": "Dx8XBw0dCQcS",
+      "hint": "Spider race of Azjol-Nerub"
+    },
+    {
+      "word": "EBMXEwUd",
+      "hint": "Ahn'Qiraj insectoids"
+    },
+    {
+      "word": "CxMLCxo=",
+      "hint": "Pandaria fish people"
+    },
+    {
+      "word": "CRUfFwE=",
+      "hint": "Pandaria monkey people"
+    },
+    {
+      "word": "DBsLBgYQ",
+      "hint": "Pandaria insect empire"
+    },
+    {
+      "word": "DBUCBw==",
+      "hint": "Pandaria stone giant oppressors"
+    },
+    {
+      "word": "DBsLVQ4GAQ==",
+      "hint": "Corrupted eredar demon form"
+    },
+    {
+      "word": "FRsQHAQV",
+      "hint": "Northrend tauren"
+    },
+    {
+      "word": "GBsQHAgbBA==",
+      "hint": "Pandaria tauren"
+    }
+  ],
+  "Artifact": [
+    {
+      "word": "AAkNEB0dBg4EHA==",
+      "hint": "Legendary paladin sword"
+    },
+    {
+      "word": "BwgKARsZBxwTACI=",
+      "hint": "Runeblade of the Lich King"
+    },
+    {
+      "word": "BRUKHwcVBQQEHA==",
+      "hint": "Legendary shaman weapon"
+    },
+    {
+      "word": "EhIEHg4ZCRAPCw==",
+      "hint": "Sword of Anduin Wrynn"
+    },
+    {
+      "word": "FRIEAUgQBxsABg==",
+      "hint": "Bow of Alleria Windrunner"
+    },
+    {
+      "word": "EhEQHgNUBw9BKTIZQhcSXA==",
+      "hint": "Demonic artifact"
+    },
+    {
+      "word": "BAMAUgASSCgMDylSMRsGXg==",
+      "hint": "Titan artifact"
+    },
+    {
+      "word": "GRsJVQ4ACR0J",
+      "hint": "Shadow priest dagger"
+    },
+    {
+      "word": "ABYQHAoAAA==",
+      "hint": "Arcane mage staff"
+    },
+    {
+      "word": "FRMREwEHHBsIBSI=",
+      "hint": "Hunter artifact gun"
+    },
+    {
+      "word": "Eg4XHQJTAwgT",
+      "hint": "Warrior artifact sword"
+    },
+    {
+      "word": "FRIQHAsRGg8UHD4=",
+      "hint": "Blessed Blade of the Windseeker"
+    },
+    {
+      "word": "Eg8JFBoGCRo=",
+      "hint": "Hand of Ragnaros legendary"
+    },
+    {
+      "word": "AA4MFxwc",
+      "hint": "Staff of the Guardian Medivh"
+    },
+    {
+      "word": "FhsXFQMVAR8EHWcaA1MySEpbWi4ODQ==",
+      "hint": "Illidan rogue glaives"
+    },
+    {
+      "word": "FRIKAAZTDAgN",
+      "hint": "Stars Fury legendary bow"
+    },
+    {
+      "word": "FxsJVQ4aERs=",
+      "hint": "Hammer of Ancient Kings"
+    },
+    {
+      "word": "EhIEFgADBQYUHCkQ",
+      "hint": "Shadow axe of Arthas era"
+    },
+    {
+      "word": "BQgEFQAaHxsAGi8=",
+      "hint": "Legendary mage staff Firelands"
+    },
+    {
+      "word": "BxsLFRxUBw9BGi8QRTUSRlhXRg==",
+      "hint": "Rogue legendary daggers"
+    },
+    {
+      "word": "CRsLFk8bDkkzDyAbBAEcQQ==",
+      "hint": "Legendary fire mace"
+    },
+    {
+      "word": "Eg8JFBoGBwdBJiYYCBYB",
+      "hint": "Molten Core crafted weapon"
+    },
+    {
+      "word": "EA8AHkgwDQUAHA==",
+      "hint": "Legendary elven sword ICC"
+    },
+    {
+      "word": "Bg8XBgcVBAgK",
+      "hint": "Voice of the Deeps tentacle sword"
+    },
+    {
+      "word": "AhYKEwRUBw9BOC4HEQYW",
+      "hint": "Legendary cloak Pandaria"
+    },
+    {
+      "word": "ExMLFU8bDkkVBiJVLhoBW14SYC4I",
+      "hint": "Dalaran teleport ring"
+    },
+    {
+      "word": "FBYRGg4YDRoJ",
+      "hint": "Affliction warlock scythe artifact"
+    },
+    {
+      "word": "BBgKHAwcAQUN",
+      "hint": "Frost mage staff artifact"
+    },
+    {
+      "word": "AxYEFgoHSAYHTjMdAFM1U1xeUS9aNQAGGgsM",
+      "hint": "Frost DK artifact"
+    },
+    {
+      "word": "AAoKEQ4YERkSCw==",
+      "hint": "Unholy DK sword artifact"
+    },
+    {
+      "word": "FQgQBgcTHQgTCg==",
+      "hint": "Prot paladin shield artifact"
+    },
+    {
+      "word": "DRMCGhtTG0k2HCYBDQ==",
+      "hint": "Shadow priest holy artifact staff"
+    },
+    {
+      "word": "Bw9FKA4a",
+      "hint": "Brewmaster monk staff artifact"
+    }
+  ],
+  "Faction": [
+    {
+      "word": "Aw8XHAYaD0ktCyAcCh0=",
+      "hint": "Demonic army of Sargeras"
+    },
+    {
+      "word": "EhkKBx0TDQ==",
+      "hint": "Undead army of the Lich King"
+    },
+    {
+      "word": "FQ0MHgYTAB1BJiYYCBYB",
+      "hint": "Old God cult"
+    },
+    {
+      "word": "BR8DGw4HSCsTATMdAAEbXV9W",
+      "hint": "Outlaw rogues of Westfall"
+    },
+    {
+      "word": "ChMXGwFUPAYT",
+      "hint": "Mages of Dalaran"
+    },
+    {
+      "word": "AAgCFwEASCoTGzQUARY=",
+      "hint": "Anti-Scourge crusade"
+    },
+    {
+      "word": "ChQMFQcAG0kOCGcBDRZTd1JdWmE4CRMLEQ==",
+      "hint": "Death knight order"
+    },
+    {
+      "word": "EhMJBAoGSCEAACM=",
+      "hint": "Paladin order"
+    },
+    {
+      "word": "Ah8LEx0dBwdBLS4HBh8W",
+      "hint": "Druid organization"
+    },
+    {
+      "word": "BBsXBgcRBkkzBykS",
+      "hint": "Shaman organization"
+    },
+    {
+      "word": "CBYJGwsVGgA=",
+      "hint": "Demon hunters of Illidan"
+    },
+    {
+      "word": "BBgKHE82BAgFCw==",
+      "hint": "Death knight order — Knights of the Ebon Blade; led by Darion Mograine"
+    },
+    {
+      "word": "FRUXBgAYBAgPThQQABgWQEM=",
+      "hint": "Ancient turtle scholars"
+    },
+    {
+      "word": "FxsJFh0VAwIEAGc0BhAcQFQ=",
+      "hint": "Dragon Isles faction"
+    },
+    {
+      "word": "EQgMHw4YARoVHQ==",
+      "hint": "Dragon Isles villains"
+    },
+    {
+      "word": "BQgEFQAaGwoAAiJVIAsDV1RbQCgVCw==",
+      "hint": "Dragon Isles explorers"
+    },
+    {
+      "word": "CAkOEw4GCUk1GzQeBAEB",
+      "hint": "Dragon Isles tuskarr tribe"
+    },
+    {
+      "word": "DhgWGwsdCQdBOSYHARYBQQ==",
+      "hint": "Dragonflight expansion — Dragon Isles"
+    },
+    {
+      "word": "DBsXBxofSCoEADMUEAE=",
+      "hint": "Dragon Isles centaur"
+    },
+    {
+      "word": "FgMXHx0RGx1BLyQWCgEX",
+      "hint": "Dragon flight alliance"
+    },
+    {
+      "word": "AhULEQMVHgxBASFVERsWEmdbWiU=",
+      "hint": "Shaman air elemental faction"
+    },
+    {
+      "word": "AhUQABtUBw9BKCYHCh0XW0M=",
+      "hint": "Azsuna night elf ghosts"
+    },
+    {
+      "word": "CRMCGgIbHQcVDy4bRScBW1JX",
+      "hint": "Tauren mountain clan"
+    },
+    {
+      "word": "DxMCGhsSCQUNCyk=",
+      "hint": "Suramar withered elves"
+    },
+    {
+      "word": "AAgIC08bDkkVBiJVKRoUWkQ=",
+      "hint": "Lightforged draenei army"
+    },
+    {
+      "word": "AAgCBxwHAQgPThUQBBAb",
+      "hint": "Broken draenei faction"
+    },
+    {
+      "word": "AhIEHx8dBwcSTigTRTIJV0JdQCk=",
+      "hint": "BfA main faction"
+    },
+    {
+      "word": "dg4NUiMRDwAOAA==",
+      "hint": "Alliance shock troops"
+    },
+    {
+      "word": "CRULHR0WBxwPCg==",
+      "hint": "Horde elite soldiers"
+    },
+    {
+      "word": "Ew8WBg0bBB1BPCIGDAAHU15RUQ==",
+      "hint": "Mechagon rebels"
+    },
+    {
+      "word": "Fx8LEx0d",
+      "hint": "Ve'nari — Maw broker who trades with adventurers inside the Maw"
+    },
+    {
+      "word": "FhMJFk88HQcV",
+      "hint": "Ardenweald faction"
+    },
+    {
+      "word": "AAkGFwEQDQ0=",
+      "hint": "Bastion kyrian rulers"
+    },
+    {
+      "word": "CRsXAAAaARs=",
+      "hint": "Emerald Dream plant folk"
+    },
+    {
+      "word": "BQgAEwJUPwgTCiIbFg==",
+      "hint": "Dragonflight emerald faction"
+    },
+    {
+      "word": "DRUEHwJUJgAHCCIb",
+      "hint": "Zaralek Cavern moles"
+    },
+    {
+      "word": "AhUHEwMASCgSHSIYBx8K",
+      "hint": "Dragon Isles arcane faction"
+    },
+    {
+      "word": "Eg8LBQ4YAwwTHQ==",
+      "hint": "Tauren paladins"
+    },
+    {
+      "word": "Ex8JGx4BCRsY",
+      "hint": "Horde archaeology faction"
+    },
+    {
+      "word": "BAIVHgAGDRtGHWc5ABIUR1U=",
+      "hint": "Alliance archaeology faction"
+    },
+    {
+      "word": "Eg4AEwIDAAwECisQRTASQERXWA==",
+      "hint": "Goblin trade neutral faction"
+    },
+    {
+      "word": "AxMJFQoDCR0EHGc2BAEHV1w=",
+      "hint": "Goblin Horde faction"
+    }
+  ],
+  "Spell": [
+    {
+      "word": "EQMXHQ0YCRoV",
+      "hint": "Fire mage hard cast or Hot Streak proc; the big red ball of fire"
+    },
+    {
+      "word": "BwgKARsWBwUV",
+      "hint": "Frost mage core filler slowing the target and generating Winter's Chill"
+    },
+    {
+      "word": "DBUKHAkdGgw=",
+      "hint": "Balance druid instant DoT; procs Shooting Stars in boomkin form"
+    },
+    {
+      "word": "Eg4EAAkVBAU=",
+      "hint": "Balance druid AoE star shower hitting all enemies in range"
+    },
+    {
+      "word": "DRMDFw0YBwYM",
+      "hint": "Restoration druid stacking HoT that blooms a heal on expiry"
+    },
+    {
+      "word": "Ex8PBxkRBggVBygb",
+      "hint": "Restoration druid core HoT; the first healing spell most druids cast"
+    },
+    {
+      "word": "EhIEFgADBQwNCg==",
+      "hint": "Night elf racial"
+    },
+    {
+      "word": "FhMLFgkBGhA=",
+      "hint": "Shaman enhancement"
+    },
+    {
+      "word": "AhULAQoXGggVBygb",
+      "hint": "Paladin spell"
+    },
+    {
+      "word": "DRscUgAaSCEAACMG",
+      "hint": "Paladin heal"
+    },
+    {
+      "word": "EhIEFgADSCsOAjM=",
+      "hint": "Warlock spell"
+    },
+    {
+      "word": "AhIEHRxUKgYNGg==",
+      "hint": "Destruction warlock spell"
+    },
+    {
+      "word": "AAgGEwERSCQIHTQcCRYA",
+      "hint": "Arcane mage channeled volley proc; triggers from Clearcasting"
+    },
+    {
+      "word": "AxYMCBUVGg0=",
+      "hint": "Mage area spell"
+    },
+    {
+      "word": "AhIEGwFUJAAGBjMbDB0U",
+      "hint": "Shaman spell"
+    },
+    {
+      "word": "ChMBHAoNSDoJATM=",
+      "hint": "Rogue finisher"
+    },
+    {
+      "word": "DBUXBg4YSDoVHC4eAA==",
+      "hint": "Arms warrior ability"
+    },
+    {
+      "word": "BAIAERoADQ==",
+      "hint": "Warrior finishing blow"
+    },
+    {
+      "word": "CR8XHQYXSDoVHC4eAA==",
+      "hint": "Warrior ability"
+    },
+    {
+      "word": "AxsGGRwACQs=",
+      "hint": "Rogue ability"
+    },
+    {
+      "word": "BAwMAQwRGggVCw==",
+      "hint": "Rogue finisher"
+    },
+    {
+      "word": "FhMJFk8zGgYWGi8=",
+      "hint": "Druid aoe heal"
+    },
+    {
+      "word": "AgMGHgAaDQ==",
+      "hint": "Druid crowd control"
+    },
+    {
+      "word": "BBQREwETBAAPCWcnChwHQQ==",
+      "hint": "Druid root spell"
+    },
+    {
+      "word": "CQ8XAAYXCQcE",
+      "hint": "Druid aoe channel"
+    },
+    {
+      "word": "FRMCFx1TG0knGzUM",
+      "hint": "Feral druid cooldown"
+    },
+    {
+      "word": "Ex8HGx0AAA==",
+      "hint": "Druid combat rez"
+    },
+    {
+      "word": "CBQLFx0CCR0E",
+      "hint": "Druid mana cooldown"
+    },
+    {
+      "word": "Eg0MFBsZDQcF",
+      "hint": "Druid instant heal"
+    },
+    {
+      "word": "ERUSFx1UPwYTCmcmDRoWXlQ=",
+      "hint": "Priest absorb baseline"
+    },
+    {
+      "word": "ER8LEwEXDQ==",
+      "hint": "Discipline priest ability"
+    },
+    {
+      "word": "BxYEAQdUIAwAAg==",
+      "hint": "Priest fast heal"
+    },
+    {
+      "word": "DBMLFk82BAgSGg==",
+      "hint": "Shadow priest builder"
+    },
+    {
+      "word": "FxsIAgYGAQpBKyoXFxIQVw==",
+      "hint": "Shadow priest lifesteal"
+    },
+    {
+      "word": "BR8THRoGAQcGThcZBBQGVw==",
+      "hint": "Shadow priest dot"
+    },
+    {
+      "word": "FxUMFk8xGhwRGi4aCw==",
+      "hint": "Shadow priest cooldown"
+    },
+    {
+      "word": "DR8EAk8bDkknDy4BDQ==",
+      "hint": "Priest pull spell"
+    },
+    {
+      "word": "EQkcEQcdC0kyDTUQBB4=",
+      "hint": "Priest fear spell"
+    },
+    {
+      "word": "AA4KHAoZDQcV",
+      "hint": "Discipline priest passive"
+    },
+    {
+      "word": "BRMTGwERSCEYAyk=",
+      "hint": "Priest raid heal cooldown"
+    },
+    {
+      "word": "CRUJC08yARsE",
+      "hint": "Priest holy dot"
+    },
+    {
+      "word": "BxsBFw==",
+      "hint": "Priest threat drop"
+    },
+    {
+      "word": "DBsWAU8wARoRCys=",
+      "hint": "Priest aoe dispel"
+    },
+    {
+      "word": "ERsMHE8nHRkRHCIGFhocXA==",
+      "hint": "Discipline cooldown"
+    },
+    {
+      "word": "Bg8EAAsdCQdBPTccFxoH",
+      "hint": "Holy priest cooldown"
+    },
+    {
+      "word": "BR8EBgdUKwYIAg==",
+      "hint": "DK unholy ability"
+    },
+    {
+      "word": "BwgKARtUOx0TBywQ",
+      "hint": "Frost death knight finisher"
+    },
+    {
+      "word": "DhgJGxsRGggVCw==",
+      "hint": "DK unholy strike"
+    },
+    {
+      "word": "EhkKBx0TDUkyGjUcDhY=",
+      "hint": "Unholy DK strike"
+    },
+    {
+      "word": "BR8EBgdUCQcFTgMQBhIK",
+      "hint": "Death knight aoe ground"
+    },
+    {
+      "word": "AAgIC08bDkkVBiJVIRYSVg==",
+      "hint": "DK zombie cooldown"
+    },
+    {
+      "word": "DRMGGg0bGgcE",
+      "hint": "Death knight undead cooldown"
+    },
+    {
+      "word": "ABQRG0I5CQ4IDWcmDRYfXg==",
+      "hint": "DK magic immunity"
+    },
+    {
+      "word": "ERYEFRoRSDoVHC4eAA==",
+      "hint": "DK disease applicator"
+    },
+    {
+      "word": "ExsMAQpULAwACg==",
+      "hint": "DK pet summon"
+    },
+    {
+      "word": "BR8EBgdULxsIHg==",
+      "hint": "Death knight pull"
+    },
+    {
+      "word": "CRUSHgYaD0kjAiYGEQ==",
+      "hint": "Frost DK aoe"
+    },
+    {
+      "word": "ERMJHg4GSAYHTgEHCgAH",
+      "hint": "Frost DK cooldown"
+    },
+    {
+      "word": "EhYEHw==",
+      "hint": "Warrior physical filler"
+    },
+    {
+      "word": "DgwAAB8bHwwT",
+      "hint": "Arms warrior proc strike"
+    },
+    {
+      "word": "AxYEFgoHHAYTAw==",
+      "hint": "Warrior whirlwind cooldown"
+    },
+    {
+      "word": "AAwEBg4G",
+      "hint": "Warrior major cooldown"
+    },
+    {
+      "word": "Ex8LFg==",
+      "hint": "Warrior bleed dot"
+    },
+    {
+      "word": "FhIMAAMDAQcF",
+      "hint": "Warrior aoe spin"
+    },
+    {
+      "word": "EhIMFwMQSDoNDyo=",
+      "hint": "Prot warrior core ability"
+    },
+    {
+      "word": "BR8TExwACR0E",
+      "hint": "Prot warrior stack ability"
+    },
+    {
+      "word": "Ex8TFwETDQ==",
+      "hint": "Prot warrior proc"
+    },
+    {
+      "word": "FRIQHAsRGkkiAiYF",
+      "hint": "Prot warrior aoe slow"
+    },
+    {
+      "word": "CB0LHR0RSDkAByk=",
+      "hint": "Warrior defensive cooldown"
+    },
+    {
+      "word": "EgoAHgNUOgwHAiIWERocXA==",
+      "hint": "Warrior reflect magic"
+    },
+    {
+      "word": "DRsWBk8nHAgPCg==",
+      "hint": "Warrior survival cooldown"
+    },
+    {
+      "word": "CR8XHQYXSCUEDzc=",
+      "hint": "Warrior jump ability"
+    },
+    {
+      "word": "AhIEAAgR",
+      "hint": "Warrior engage stun"
+    },
+    {
+      "word": "AxsRBgMRSDoJATIB",
+      "hint": "Warrior attack power buff"
+    },
+    {
+      "word": "ExsJHhYdBg5BLTUM",
+      "hint": "Warrior raid hp cooldown"
+    },
+    {
+      "word": "Ex8GGQMRGxoPCzQG",
+      "hint": "Fury warrior cooldown"
+    },
+    {
+      "word": "ExsIAg4TDQ==",
+      "hint": "Fury warrior finisher"
+    },
+    {
+      "word": "AxYKHQsAAAATHTM=",
+      "hint": "Fury warrior lifesteal"
+    },
+    {
+      "word": "DhQWHg4BDwEV",
+      "hint": "Fury warrior charge attack"
+    },
+    {
+      "word": "EhMLGxwADRtBPTMHDBgW",
+      "hint": "Outlaw rogue builder"
+    },
+    {
+      "word": "ABcHBxwc",
+      "hint": "Subtlety rogue opener"
+    },
+    {
+      "word": "EhIEFgADGx0EHg==",
+      "hint": "Subtlety rogue gap close"
+    },
+    {
+      "word": "EhYMEQpUCQcFTgMcBhY=",
+      "hint": "Rogue haste finisher"
+    },
+    {
+      "word": "BhsXAAAADQ==",
+      "hint": "Assassination rogue silence dot"
+    },
+    {
+      "word": "Ew8VBhoGDQ==",
+      "hint": "Rogue bleed finisher"
+    },
+    {
+      "word": "BBQTFwEbBQ==",
+      "hint": "Assassination finisher"
+    },
+    {
+      "word": "Fx8LFgoAHAg=",
+      "hint": "Assassination target cooldown"
+    },
+    {
+      "word": "FQgMEQQHSAYHTjMdAFMnQFFWUQ==",
+      "hint": "Rogue threat utility"
+    },
+    {
+      "word": "FxsLGxwc",
+      "hint": "Rogue stealth cooldown"
+    },
+    {
+      "word": "AhIAEx9UOwEOGg==",
+      "hint": "Rogue stun opener"
+    },
+    {
+      "word": "CR8IHR0GAAgGCw==",
+      "hint": "Rogue bleed strike"
+    },
+    {
+      "word": "EhIEFgADSC0AACQQ",
+      "hint": "Subtlety cooldown"
+    },
+    {
+      "word": "ExUJHk8AAAxBLCgbAAA=",
+      "hint": "Outlaw rogue random buff"
+    },
+    {
+      "word": "Ax8RBQoRBkkVBiJVIAoWQQ==",
+      "hint": "Outlaw rogue finisher"
+    },
+    {
+      "word": "BxMXFw0VBAU=",
+      "hint": "Fire mage filler"
+    },
+    {
+      "word": "CBkAUi0YBwoK",
+      "hint": "Mage immunity spell"
+    },
+    {
+      "word": "ERUJCwIbGhkJ",
+      "hint": "Mage crowd control"
+    },
+    {
+      "word": "DBMXAAAGSCAMDyAQ",
+      "hint": "Mage distraction cooldown"
+    },
+    {
+      "word": "CBkAUi0VGhsICzU=",
+      "hint": "Mage absorb shield"
+    },
+    {
+      "word": "BwgKARsSARsETgUaCQc=",
+      "hint": "Hybrid mage spell"
+    },
+    {
+      "word": "DRMTGwETSCsOAyU=",
+      "hint": "Fire mage dot explosion"
+    },
+    {
+      "word": "AhUIEBoHHAAOAA==",
+      "hint": "Fire mage burn cooldown"
+    },
+    {
+      "word": "EhkKAAwc",
+      "hint": "Fire mage movement cast"
+    },
+    {
+      "word": "ERIKFwEdEEknAiYYAAA=",
+      "hint": "Fire mage charge"
+    },
+    {
+      "word": "BwgKCAoaSCYTDA==",
+      "hint": "Frost mage ability"
+    },
+    {
+      "word": "CBkAUiMVBgoE",
+      "hint": "Frost mage instant"
+    },
+    {
+      "word": "BhYEEQYVBEkyHi4eAA==",
+      "hint": "Frost mage talent"
+    },
+    {
+      "word": "AAgGEwERSCsNDzQB",
+      "hint": "Arcane mage builder"
+    },
+    {
+      "word": "AAgGEwERSCsAHDUUAhY=",
+      "hint": "Arcane mage spender"
+    },
+    {
+      "word": "BAwKEQ4AAQYP",
+      "hint": "Mage mana regen channel"
+    },
+    {
+      "word": "EgoAHgMHHAwAAg==",
+      "hint": "Mage steal buff"
+    },
+    {
+      "word": "AhUQHBsRGhoRCysZ",
+      "hint": "Mage interrupt"
+    },
+    {
+      "word": "CBQTGxwdCgANBzMM",
+      "hint": "Mage escape ability"
+    },
+    {
+      "word": "AxYMHAQ=",
+      "hint": "Mage short teleport"
+    },
+    {
+      "word": "FRMIF08jCRsR",
+      "hint": "Mage heroism buff"
+    },
+    {
+      "word": "ABYRFx1UPAAMCw==",
+      "hint": "Mage time reversal"
+    },
+    {
+      "word": "CBQGGwERGggVCw==",
+      "hint": "Destruction warlock filler"
+    },
+    {
+      "word": "AhULFAMVDxsAGiI=",
+      "hint": "Destruction warlock burst"
+    },
+    {
+      "word": "ExsMHE8bDkknBzUQ",
+      "hint": "Destruction warlock aoe"
+    },
+    {
+      "word": "CRsQHBs=",
+      "hint": "Affliction warlock dot boost"
+    },
+    {
+      "word": "AB0KHBY=",
+      "hint": "Affliction warlock ramping dot"
+    },
+    {
+      "word": "FBQWBg4WBAxBLyETCRoQRlldWg==",
+      "hint": "Affliction warlock dispel punisher"
+    },
+    {
+      "word": "AhUXABoEHAAOAA==",
+      "hint": "Warlock baseline dot"
+    },
+    {
+      "word": "Eh8AFk8bDkkiATUHEAMHW19c",
+      "hint": "Warlock aoe dot"
+    },
+    {
+      "word": "DBsJFwkdC0kzDzcBEAEW",
+      "hint": "Affliction warlock burst"
+    },
+    {
+      "word": "Eg8IHwAaSCAPCCIHCxIf",
+      "hint": "Destruction cooldown"
+    },
+    {
+      "word": "Bx8EAA==",
+      "hint": "Warlock crowd control"
+    },
+    {
+      "word": "AxsLGxwc",
+      "hint": "Warlock demon cc"
+    },
+    {
+      "word": "CR8EHhscGx0OACI=",
+      "hint": "Warlock utility item create"
+    },
+    {
+      "word": "EhUQHhwABwcE",
+      "hint": "Warlock battle rez item"
+    },
+    {
+      "word": "BR8IHQEdC0kmDzMQEhIK",
+      "hint": "Warlock portal ability"
+    },
+    {
+      "word": "BRsXGU8kCQoV",
+      "hint": "Warlock health defensive"
+    },
+    {
+      "word": "FBQAHAsdBg5BPCIGCh8FVw==",
+      "hint": "Warlock major defensive"
+    },
+    {
+      "word": "CRsIHwoGSAYHTg0AFgcaUVU=",
+      "hint": "Paladin stun utility"
+    },
+    {
+      "word": "BRMTGwERSDoJByIZAQ==",
+      "hint": "Paladin immunity bubble"
+    },
+    {
+      "word": "AAwAHAgdBg5BOTUUERs=",
+      "hint": "Paladin major cooldown"
+    },
+    {
+      "word": "BRMTGwERSDoVATUY",
+      "hint": "Retribution paladin aoe"
+    },
+    {
+      "word": "AggQAQ4QDRtBPTMHDBgW",
+      "hint": "Paladin holy power generator"
+    },
+    {
+      "word": "Cw8BFQIRBh0=",
+      "hint": "Paladin baseline debuff"
+    },
+    {
+      "word": "CRsIHwoGSAYHThAHBAcb",
+      "hint": "Paladin execute spell"
+    },
+    {
+      "word": "BAIKAAwdGwQ=",
+      "hint": "Paladin holy bolt"
+    },
+    {
+      "word": "FhsOF08bDkkgHS8QFg==",
+      "hint": "Retribution paladin aoe"
+    },
+    {
+      "word": "AxYEFgpUBw9BJDIGERoQVw==",
+      "hint": "Retribution paladin generator"
+    },
+    {
+      "word": "CRUJC08nAAYCBQ==",
+      "hint": "Holy paladin instant heal"
+    },
+    {
+      "word": "DRMCGhtUBw9BKiYCCw==",
+      "hint": "Holy paladin cone heal"
+    },
+    {
+      "word": "Ax8EEQAaSAYHTgscAhsH",
+      "hint": "Holy paladin passive heal"
+    },
+    {
+      "word": "FhUXFk8bDkkmAigHHA==",
+      "hint": "Paladin holy power heal"
+    },
+    {
+      "word": "CRsLFk8bDkkxHCgBABAHW19c",
+      "hint": "Paladin immunity on ally"
+    },
+    {
+      "word": "AxYAARwdBg5BASFVIwEWV1RdWQ==",
+      "hint": "Paladin snare removal"
+    },
+    {
+      "word": "BR8THRsdBwdBLzIHBA==",
+      "hint": "Paladin magic reduction aura"
+    },
+    {
+      "word": "AAwAHAgRGk4SThQdDBYfVg==",
+      "hint": "Protection paladin throw"
+    },
+    {
+      "word": "EhIMFwMQSAYHTjMdAFMhW1daQCQVEAE=",
+      "hint": "Prot paladin block ability"
+    },
+    {
+      "word": "AAgBFwEASC0ECCIbARYB",
+      "hint": "Prot paladin cheat death"
+    },
+    {
+      "word": "DRsTE082HRsSGg==",
+      "hint": "Elemental shaman spender"
+    },
+    {
+      "word": "BBsXBgdUOwEODSw=",
+      "hint": "Shaman filler interrupt"
+    },
+    {
+      "word": "BxYEHwpUOwEODSw=",
+      "hint": "Shaman dot enable"
+    },
+    {
+      "word": "DRMCGhsaAQcGTgUaCQc=",
+      "hint": "Shaman basic cast"
+    },
+    {
+      "word": "FRIQHAsRGhoVATUY",
+      "hint": "Elemental shaman knockback aoe"
+    },
+    {
+      "word": "Eg4KAAIfDQwRCzU=",
+      "hint": "Elemental shaman cooldown"
+    },
+    {
+      "word": "BBYAHwoaHAgNTgUZBAAH",
+      "hint": "Shaman talent ability"
+    },
+    {
+      "word": "CBkAFBoGEQ==",
+      "hint": "Elemental shaman talent"
+    },
+    {
+      "word": "AAkGFwEQCQcCCw==",
+      "hint": "Shaman major elemental cooldown"
+    },
+    {
+      "word": "Eg4KAAIHHBsIBSI=",
+      "hint": "Enhancement shaman main hand"
+    },
+    {
+      "word": "DRsTE084CRoJ",
+      "hint": "Enhancement shaman off-hand"
+    },
+    {
+      "word": "AggEAQdUJAAGBjMbDB0U",
+      "hint": "Enhancement aoe cleave"
+    },
+    {
+      "word": "Bx8XEwNUOxkIHC4B",
+      "hint": "Enhancement wolf cooldown"
+    },
+    {
+      "word": "CR8EHgYaD0kyGjUQBB5TZl9GUSw=",
+      "hint": "Shaman passive aoe heal"
+    },
+    {
+      "word": "CR8EHgYaD0kyGzUSAA==",
+      "hint": "Shaman fast heal"
+    },
+    {
+      "word": "AhIEGwFUIAwAAg==",
+      "hint": "Restoration shaman bouncing heal"
+    },
+    {
+      "word": "ExMVBgYQDQ==",
+      "hint": "Restoration shaman instant hot"
+    },
+    {
+      "word": "CR8EHgYaD0kzDy4b",
+      "hint": "Resto shaman aoe heal"
+    },
+    {
+      "word": "EgoMAAYASCUIACxVMRwHV10=",
+      "hint": "Shaman raid redistribute"
+    },
+    {
+      "word": "DBsLE08gAQ0EThMaERYe",
+      "hint": "Shaman mana cooldown"
+    },
+    {
+      "word": "CR8d",
+      "hint": "Shaman frog cc"
+    },
+    {
+      "word": "FhMLFk8mHRoJThMaERYe",
+      "hint": "Shaman speed totem"
+    },
+    {
+      "word": "AhsVEwwdHAYTThMaERYe",
+      "hint": "Shaman stun totem"
+    },
+    {
+      "word": "ABMIFwtUOwEOGg==",
+      "hint": "Marksmanship hunter focused shot"
+    },
+    {
+      "word": "ExsVGwtULgATCw==",
+      "hint": "MM hunter channeled barrage"
+    },
+    {
+      "word": "AAgGEwERSDoJATM=",
+      "hint": "Hunter baseline shot"
+    },
+    {
+      "word": "Eg4AEwsNSDoJATM=",
+      "hint": "Hunter focus regenerator"
+    },
+    {
+      "word": "ChMJHk8nAAYV",
+      "hint": "Hunter execute ability"
+    },
+    {
+      "word": "BAIVHgAHAR8EThQdCgc=",
+      "hint": "Survival hunter dot shot"
+    },
+    {
+      "word": "FhMJFgkdGgxBLCgYBw==",
+      "hint": "Survival hunter bomb throw"
+    },
+    {
+      "word": "ChMJHk83BwQMDykR",
+      "hint": "Beast Mastery pet ability"
+    },
+    {
+      "word": "Ax8WBgYVBEk2HCYBDQ==",
+      "hint": "BM hunter pet cooldown"
+    },
+    {
+      "word": "DA8JBgZZOwEOGg==",
+      "hint": "Hunter aoe spread shot"
+    },
+    {
+      "word": "AxsXAA4TDQ==",
+      "hint": "Hunter channeled aoe"
+    },
+    {
+      "word": "DBMWFgYGDQoVBygb",
+      "hint": "Hunter threat redirect"
+    },
+    {
+      "word": "BwgAFxUdBg5BOjUUFQ==",
+      "hint": "Hunter cc trap"
+    },
+    {
+      "word": "Bx8MFQFULAwAGi8=",
+      "hint": "Hunter threat drop"
+    },
+    {
+      "word": "BRMWFwETCQ4E",
+      "hint": "Hunter backflip escape"
+    },
+    {
+      "word": "EhEQHgNUKggSBg==",
+      "hint": "Druid interrupt ability"
+    },
+    {
+      "word": "EhsTEwgRSDsODzU=",
+      "hint": "Feral druid damage buff"
+    },
+    {
+      "word": "DBsQHg==",
+      "hint": "Guardian druid attack"
+    },
+    {
+      "word": "CBQGEx0aCR0IASk=",
+      "hint": "Druid tree or cat form cooldown"
+    },
+    {
+      "word": "CRUJC086Bx8A",
+      "hint": "Priest aoe heal spell"
+    },
+    {
+      "word": "Ex8LFxg=",
+      "hint": "Priest heal over time"
+    },
+    {
+      "word": "EhcMBgo=",
+      "hint": "Priest holy damage filler"
+    },
+    {
+      "word": "BRMWAgoYSCQACS4W",
+      "hint": "Priest debuff removal"
+    },
+    {
+      "word": "CRUJC08jBxsFThQQFxYdW0RL",
+      "hint": "Priest single target heal charge"
+    },
+    {
+      "word": "CBkcUjsbHQoJ",
+      "hint": "Death knight frost rune builder"
+    },
+    {
+      "word": "AAgGEwERSDoUHCAQ",
+      "hint": "Arcane mage burn cooldown"
+    },
+    {
+      "word": "BRsXGU8nBxwN",
+      "hint": "Warlock haste cooldown"
+    },
+    {
+      "word": "FR8IAgMVGk4SThEQFxcaUUQ=",
+      "hint": "Retribution paladin finisher"
+    },
+    {
+      "word": "FhMLFgkBGhBBOigBAB4=",
+      "hint": "Shaman group attack speed buff"
+    },
+    {
+      "word": "BBsXBgcWAQcFThMaERYe",
+      "hint": "Shaman slow aoe totem"
+    },
+    {
+      "word": "FxUJHgoN",
+      "hint": "Hunter ground aoe shot"
+    },
+    {
+      "word": "AAkVFwwASAYHTjMdAFMnR0JGWCQ=",
+      "hint": "Hunter defensive cooldown"
+    },
+    {
+      "word": "FQgQFxwcBx0=",
+      "hint": "MM hunter major cooldown"
+    },
+    {
+      "word": "AhsJHk8bDkkVBiJVMhofVg==",
+      "hint": "BM hunter group cooldown"
+    },
+    {
+      "word": "CRUJC084AQ4JGg==",
+      "hint": "Paladin major heal cast"
+    },
+    {
+      "word": "BxYEAQdUBw9BIi4SDQc=",
+      "hint": "Paladin fast small heal"
+    },
+    {
+      "word": "EhsGAAoQSDoJByIZAQ==",
+      "hint": "Holy paladin absorb hot"
+    },
+    {
+      "word": "FQ8XHE8xHgAN",
+      "hint": "Paladin undead repel"
+    },
+    {
+      "word": "BRMTGwERSDkUHDcaFhY=",
+      "hint": "Paladin proc free hp"
+    },
+    {
+      "word": "BAMAUgkbGkkAAGcwHBY=",
+      "hint": "Paladin damage reflect"
+    },
+    {
+      "word": "CBQUBwYHAR0IASk=",
+      "hint": "Retribution paladin buff"
+    },
+    {
+      "word": "EhIMFwMQSAYHTgYXFhwBQkRbWy8=",
+      "hint": "Prot paladin talent"
+    },
+    {
+      "word": "FxMXBhoRTxpBLCsUARY=",
+      "hint": "Holy paladin ability"
+    },
+    {
+      "word": "BA4AAAEVBEknAiYYAA==",
+      "hint": "Paladin hot finisher"
+    },
+    {
+      "word": "Eh8EHk8bDkk1HDIBDQ==",
+      "hint": "Ret paladin seal stacking dot"
+    },
+    {
+      "word": "Eh8EHk8bDkkzByAdERYcR0NcUTIJ",
+      "hint": "Paladin group seal"
+    },
+    {
+      "word": "Eh8EHk8bDkkrGzQBDBAW",
+      "hint": "Paladin speed seal"
+    },
+    {
+      "word": "Cw8BFQoZDQcVTigTRT8aVVhG",
+      "hint": "Paladin judgement heal passive"
+    },
+    {
+      "word": "DRMHAA4Z",
+      "hint": "Paladin off-hand relic"
+    },
+    {
+      "word": "FRURFwJUBw9BOTUUERs=",
+      "hint": "Shaman dps totem"
+    },
+    {
+      "word": "Eh8EAAYaD0k1ATMQCA==",
+      "hint": "Shaman small fire totem"
+    },
+    {
+      "word": "BxMXF086Bx8A",
+      "hint": "Shaman totem detonation aoe"
+    },
+    {
+      "word": "DBsCHw5UPAYVCyo=",
+      "hint": "Shaman damage totem"
+    },
+    {
+      "word": "Eg4KHAoXBAgWThMaERYe",
+      "hint": "Shaman taunt totem"
+    },
+    {
+      "word": "BggEEQpUBw9BLy4H",
+      "hint": "Classic shaman agility totem"
+    },
+    {
+      "word": "Eg4XFwETHAFBASFVIBIBRlg=",
+      "hint": "Classic shaman strength totem"
+    },
+    {
+      "word": "FggEBgdUBw9BLy4HRSccRlVf",
+      "hint": "Classic shaman spell power totem"
+    },
+    {
+      "word": "BxsXUjwdDwEV",
+      "hint": "Shaman remote vision"
+    },
+    {
+      "word": "FhsRFx1UPwgNBS4bAg==",
+      "hint": "Shaman water walk buff"
+    },
+    {
+      "word": "Ex8MHAwVGgcAGi4aCw==",
+      "hint": "Shaman self rez cooldown"
+    },
+    {
+      "word": "AAkRAA4YSDsEDSYZCQ==",
+      "hint": "Shaman hearthstone cooldown"
+    },
+    {
+      "word": "BhIKARtUPwYNCA==",
+      "hint": "Shaman wolf travel form"
+    },
+    {
+      "word": "EQ8XFQo=",
+      "hint": "Shaman buff removal"
+    },
+    {
+      "word": "FQgAHwAGSD0OGiIY",
+      "hint": "Shaman fear removal totem"
+    },
+    {
+      "word": "BggKBwEQAQcGThMaERYe",
+      "hint": "Shaman absorb one spell totem"
+    },
+    {
+      "word": "AhULERoHGwAXC2cmDRwH",
+      "hint": "Hunter slow shot"
+    },
+    {
+      "word": "FgMTFx0aSDoVBykS",
+      "hint": "Hunter sleep cc sting"
+    },
+    {
+      "word": "EhMJFwEXAQcGThQdCgc=",
+      "hint": "Marksmanship hunter interrupt"
+    },
+    {
+      "word": "DBsWBgoGTxpBLSYZCQ==",
+      "hint": "Hunter snare removal for pet"
+    },
+    {
+      "word": "AxMLFgYaD0kyBigB",
+      "hint": "Hunter stun tether"
+    },
+    {
+      "word": "AhUQHBsRGkkyBigB",
+      "hint": "Hunter cast interrupt"
+    },
+    {
+      "word": "BAINGwMVGggVBygb",
+      "hint": "Hunter self heal"
+    },
+    {
+      "word": "Eg8XBAYCCQVBASFVERsWEnZbQDUfFgY=",
+      "hint": "Hunter defensive talent"
+    },
+    {
+      "word": "CBQRGwIdDAgVBygb",
+      "hint": "Hunter pet stun ability"
+    },
+    {
+      "word": "EgoMAAYASCQEACM=",
+      "hint": "Hunter spirit beast heal"
+    },
+    {
+      "word": "DRsGFx0VHAw=",
+      "hint": "Bear druid bleed stack"
+    },
+    {
+      "word": "FRIXExwc",
+      "hint": "Bear druid aoe bleed"
+    },
+    {
+      "word": "DBsLFQMR",
+      "hint": "Druid melee attack bleed enable"
+    },
+    {
+      "word": "EhIXFws=",
+      "hint": "Feral druid combo builder"
+    },
+    {
+      "word": "ExsOFw==",
+      "hint": "Feral druid bleed opener"
+    },
+    {
+      "word": "ExMV",
+      "hint": "Feral druid bleed finisher"
+    },
+    {
+      "word": "Bx8XHQwdBxwSTgUcERY=",
+      "hint": "Feral druid execute finisher"
+    },
+    {
+      "word": "Eg4EAAkdGgw=",
+      "hint": "Balance druid arcane cast"
+    },
+    {
+      "word": "FggEBgc=",
+      "hint": "Balance druid nature cast"
+    },
+    {
+      "word": "Eg4EABwBGg4E",
+      "hint": "Balance druid proc spender"
+    },
+    {
+      "word": "Ah8JFxwAAQgNTgYZDBQdX1VcQA==",
+      "hint": "Balance druid cooldown"
+    },
+    {
+      "word": "BxUXEQpUBw9BICYBEAEW",
+      "hint": "Balance druid treant cooldown"
+    },
+    {
+      "word": "EhUJEx1UKgwAAw==",
+      "hint": "Balance druid silence ring"
+    },
+    {
+      "word": "AxsXGRwfAQc=",
+      "hint": "Druid damage reduction cooldown"
+    },
+    {
+      "word": "BwgAHBUdDQ1BPCISAB0WQFFGXS4U",
+      "hint": "Bear druid active heal"
+    },
+    {
+      "word": "Eg8XBAYCCQVBJykGERodUURB",
+      "hint": "Cat or bear defensive cooldown"
+    },
+    {
+      "word": "CAgKHAkBGg==",
+      "hint": "Bear druid armor buff"
+    },
+    {
+      "word": "Ax8XAQoGAw==",
+      "hint": "Druid major damage cooldown"
+    }
+  ],
+  "Lore": [
+    {
+      "word": "AAAAAAAAAA==",
+      "hint": "The world and planet"
+    },
+    {
+      "word": "FRMREwE=",
+      "hint": "Cosmic beings who shaped worlds"
+    },
+    {
+      "word": "DhYBUigbDBo=",
+      "hint": "Eldritch beings of corruption"
+    },
+    {
+      "word": "FhUXHgtUOwYUAg==",
+      "hint": "Sleeping titan within Azeroth"
+    },
+    {
+      "word": "BBcAAA4YDEklHCIUCA==",
+      "hint": "Nature spirit realm"
+    },
+    {
+      "word": "EhIEFgADBAgPCjQ=",
+      "hint": "Realm of death"
+    },
+    {
+      "word": "FQ0MARsdBg5BICIBDRYB",
+      "hint": "Chaotic realm between worlds"
+    },
+    {
+      "word": "BggAExtULAgTBWc3AAocXFQ=",
+      "hint": "The physical universe"
+    },
+    {
+      "word": "BQgEFQAaSCASAiIG",
+      "hint": "Ancient homeland of dragons"
+    },
+    {
+      "word": "DRMCGhs=",
+      "hint": "Holy cosmic force"
+    },
+    {
+      "word": "FxUMFg==",
+      "hint": "Dark cosmic force"
+    },
+    {
+      "word": "DRMDFw==",
+      "hint": "Green cosmic force"
+    },
+    {
+      "word": "BR8EBgc=",
+      "hint": "Blue cosmic force"
+    },
+    {
+      "word": "DggBFx0=",
+      "hint": "Titan cosmic force"
+    },
+    {
+      "word": "Bx8J",
+      "hint": "Demonic corruption energy"
+    },
+    {
+      "word": "AAgGEwER",
+      "hint": "Raw magical energy"
+    },
+    {
+      "word": "ABQMHw4=",
+      "hint": "Shadowlands soul energy"
+    },
+    {
+      "word": "AAAAAAYADQ==",
+      "hint": "Blood of Azeroth"
+    },
+    {
+      "word": "ERsLBgcRBwc=",
+      "hint": "Titan ruling council"
+    },
+    {
+      "word": "ABcEHEggABwN",
+      "hint": "Highfather of the Titans"
+    },
+    {
+      "word": "AB0CAA4ZCRs=",
+      "hint": "Titan champion of Sargeras"
+    },
+    {
+      "word": "BhUJFQ4aBgwVBg==",
+      "hint": "Titan of storms"
+    },
+    {
+      "word": "DxUXFQ4aBgYP",
+      "hint": "Titan of magic and knowledge"
+    },
+    {
+      "word": "BBULEx0=",
+      "hint": "Titan of life"
+    },
+    {
+      "word": "FxUMFk84BxsFHQ==",
+      "hint": "Masters of the Void cosmic"
+    },
+    {
+      "word": "Eg8LBQoYBA==",
+      "hint": "Blood elf holy power source"
+    },
+    {
+      "word": "BRsXGU8kBxsVDys=",
+      "hint": "Gateway to Outland"
+    },
+    {
+      "word": "AhsTFx0aG0kOCGchDB4W",
+      "hint": "Bronze dragonflight timelines"
+    },
+    {
+      "word": "BggAExtUOwwA",
+      "hint": "Sea between Kalimdor and EK"
+    },
+    {
+      "word": "FhUXHgsHBxwN",
+      "hint": "Titan sleeping inside a planet"
+    },
+    {
+      "word": "FhUXHgtUPBsECw==",
+      "hint": "Nordrassil or Teldrassil"
+    },
+    {
+      "word": "DxUXFh0VGxoIAg==",
+      "hint": "Original World Tree"
+    },
+    {
+      "word": "FBQBFx0ZAQcE",
+      "hint": "Goblin underground city"
+    },
+    {
+      "word": "FQ0MHgYTAB1BLS4BBBcWXg==",
+      "hint": "Bastion of Twilight location"
+    },
+    {
+      "word": "FxsJVQQNGg==",
+      "hint": "Undead angel servants"
+    },
+    {
+      "word": "BQgAEwsYBxsF",
+      "hint": "Nathrezim demon spy type"
+    },
+    {
+      "word": "BAgAFg4G",
+      "hint": "Demon race origin"
+    },
+    {
+      "word": "FRMREwFULgYTCSI=",
+      "hint": "Dragonflight upgrade system"
+    },
+    {
+      "word": "DAMRGgYXSDkNGzQ=",
+      "hint": "Dungeon difficulty scaling system"
+    },
+    {
+      "word": "Ch8cARsbBgw=",
+      "hint": "Mythic Plus access item"
+    },
+    {
+      "word": "AA8CBxwASCoEAiIGERoSXkM=",
+      "hint": "Pandaria demigods"
+    },
+    {
+      "word": "CxsBF08nDRsRCykB",
+      "hint": "Pandaria celestial"
+    },
+    {
+      "word": "FhIMBgpUPAAGCzU=",
+      "hint": "Pandaria celestial"
+    },
+    {
+      "word": "Ex8BUiwGCQcE",
+      "hint": "Pandaria celestial"
+    },
+    {
+      "word": "AxYEEQRUJxE=",
+      "hint": "Pandaria celestial"
+    },
+    {
+      "word": "DggBFx1UIAgNAg==",
+      "hint": "Legion class campaign hub"
+    },
+    {
+      "word": "AhYEARxUIAgNAg==",
+      "hint": "Legion player base"
+    },
+    {
+      "word": "AhUTFwEVBh0=",
+      "hint": "Shadowlands player faction choice"
+    },
+    {
+      "word": "DR8CFwEQCRsY",
+      "hint": "Rare powerful crafted item"
+    },
+    {
+      "word": "CR8EABtUBw9BLz0QFxwHWg==",
+      "hint": "BfA necklace artifact"
+    },
+    {
+      "word": "BggAExtUPggUAjM=",
+      "hint": "Weekly loot selection system"
+    },
+    {
+      "word": "AhULFhodHA==",
+      "hint": "Shadowlands soulbind socket"
+    },
+    {
+      "word": "EhUQHg0dBg0=",
+      "hint": "Shadowlands companion bond system"
+    },
+    {
+      "word": "Ex8LHRga",
+      "hint": "Shadowlands covenant progression"
+    },
+    {
+      "word": "EhsLERsBBQ==",
+      "hint": "Covenant campaign base"
+    },
+    {
+      "word": "Eg4cFQYV",
+      "hint": "The Maw currency"
+    },
+    {
+      "word": "EhUQHk83AQcFCzUG",
+      "hint": "Shadowlands currency"
+    },
+    {
+      "word": "AhUWHwYXSC8OHCQQFg==",
+      "hint": "Six powers of universe"
+    },
+    {
+      "word": "BwgEERsBGgwFTi4bRTIfRlVAVSJaMxMDGA0Q",
+      "hint": "Hearthstone WoW crossover"
+    },
+    {
+      "word": "DwNCEwMbHAEATjMdAFMkU1tbWiZaJhsbDQ==",
+      "hint": "BfA final raid"
+    },
+    {
+      "word": "AwgKHBURSC0TDyAaCxUfW1daQA==",
+      "hint": "Timekeepers of Azeroth"
+    },
+    {
+      "word": "Ex8BUisGCQ4OACEZDBQbRg==",
+      "hint": "Life-Binders dragons"
+    },
+    {
+      "word": "AxYQF08wGggGASkTCRoUWkQ=",
+      "hint": "Magic dragons of Malygos"
+    },
+    {
+      "word": "BggAFwFULBsACSgbAx8aVVhG",
+      "hint": "Dream guardians of Ysera"
+    },
+    {
+      "word": "AxYEEQRULBsACSgbAx8aVVhG",
+      "hint": "Neltharion earth warder"
+    },
+    {
+      "word": "CBQDGwEdHAxBKjUUAhwdVFxbUykO",
+      "hint": "Corrupted time dragons"
+    },
+    {
+      "word": "FQ0MHgYTAB1BKjUUAhwdVFxbUykO",
+      "hint": "Old god corrupted dragons"
+    },
+    {
+      "word": "Dx8RGgoGSC0TDywQ",
+      "hint": "Outland storm drake"
+    },
+    {
+      "word": "EQgKBgBZLBsABSI=",
+      "hint": "Ancient ancestor of dragons"
+    },
+    {
+      "word": "FhIAHh8=",
+      "hint": "Baby dragon form"
+    },
+    {
+      "word": "BQgEGQo=",
+      "hint": "Mid-size dragon form"
+    },
+    {
+      "word": "FgMXHw==",
+      "hint": "Old massive dragon form"
+    },
+    {
+      "word": "AhULAQAGHAAUAw==",
+      "hint": "Outland ethereal traders faction"
+    },
+    {
+      "word": "Ch8AAgoGG0kOCGchDB4W",
+      "hint": "Bronze drake guardians"
+    },
+    {
+      "word": "Dx8RGgoGHwAPCQ==",
+      "hint": "Outland enslaved nether drakes"
+    },
+    {
+      "word": "EgoKAAoTDwgT",
+      "hint": "Zangarmarsh spore folk"
+    },
+    {
+      "word": "Cg8XFwEVAQ==",
+      "hint": "Freed draenei Nagrand"
+    },
+    {
+      "word": "DBsCVQcVGg==",
+      "hint": "Brown uncorrupted orcs"
+    },
+    {
+      "word": "EhIEVRsVGg==",
+      "hint": "Shattrath naaru faction"
+    },
+    {
+      "word": "ABYBHR0=",
+      "hint": "Draenei Shattrath faction"
+    },
+    {
+      "word": "EhkXCwoG",
+      "hint": "Blood elf Shattrath faction"
+    },
+    {
+      "word": "FxMKHgoASCwYCw==",
+      "hint": "Karazhan investigation faction"
+    },
+    {
+      "word": "EhkEHgpUBw9BGi8QRSASXFRB",
+      "hint": "Hyjal summit faction"
+    },
+    {
+      "word": "AAkNBgAaDxwETgMQBAcbQUddRi8=",
+      "hint": "Broken draenei Black Temple"
+    },
+    {
+      "word": "EhIEBhsRGgwFThQAC1M8VFZXWjITExc=",
+      "hint": "Sunwell faction"
+    },
+    {
+      "word": "CRsLFk8bDkk3CykSABIdUVU=",
+      "hint": "Forsaken Northrend faction"
+    },
+    {
+      "word": "FhsXAQAaD0kuCCEQCwAaRFU=",
+      "hint": "Horde Northrend faction"
+    },
+    {
+      "word": "AAgCFwEASC0AGSk=",
+      "hint": "Anti-Scourge faction precursor"
+    },
+    {
+      "word": "AAgCFwEASD8AACAABAEX",
+      "hint": "Argent Crusade Northrend base"
+    },
+    {
+      "word": "Eg8LAAoVHgwTTggbFh8SR1daQA==",
+      "hint": "Horde Isle of Thunder"
+    },
+    {
+      "word": "ChMXGwFUPAYTTggTAxYdQVlEUQ==",
+      "hint": "Alliance Isle of Thunder"
+    },
+    {
+      "word": "DgoAAA4AAQYPThQdDBYfVkdTWC0=",
+      "hint": "Alliance Pandaria faction"
+    },
+    {
+      "word": "BRUIGwEVBgoETggTAxYdQVlEUQ==",
+      "hint": "Horde Pandaria faction"
+    },
+    {
+      "word": "FRMJHgoGGw==",
+      "hint": "Pandaria farmer faction"
+    },
+    {
+      "word": "ABQCHgoGGw==",
+      "hint": "Pandaria fishing faction"
+    },
+    {
+      "word": "BhUJFgoaSCUOGjIG",
+      "hint": "Pandaria vale guardians"
+    },
+    {
+      "word": "EhIEFgBZOAgP",
+      "hint": "Pandaria elite guardians"
+    },
+    {
+      "word": "DRUXFxgVBAIEHDQ=",
+      "hint": "Pandaria history keepers"
+    },
+    {
+      "word": "ChYEChcd",
+      "hint": "Pandaria mantid faction"
+    },
+    {
+      "word": "AAoACgYHSCoTFzQBBB8=",
+      "hint": "Arakkoa currency Draenor"
+    },
+    {
+      "word": "BhsXAAYHBwdBPCIGCgYBUVVB",
+      "hint": "Warlords of Draenor currency"
+    },
+    {
+      "word": "AAgRGwkVCx1BPigCAAE=",
+      "hint": "Legion weapon upgrade resource"
+    },
+    {
+      "word": "FhsOFwEdBg5BKzQGAB0QVw==",
+      "hint": "Legion artifact currency"
+    },
+    {
+      "word": "FhsXUj0RGwYUHCQQFg==",
+      "hint": "Battle for Azeroth currency"
+    },
+    {
+      "word": "EQgMAQIVHAACTgoUCxIDV1FAWA==",
+      "hint": "Nazjatar currency"
+    },
+    {
+      "word": "AhUEHgoHCwAPCWcjDAAaXV5B",
+      "hint": "BfA corruption currency"
+    },
+    {
+      "word": "BR8EBgdULwgVCw==",
+      "hint": "Death knight teleport ability"
+    },
+    {
+      "word": "CR8EABscGx0OACI=",
+      "hint": "Instant town teleport item"
+    },
+    {
+      "word": "ERsRGgkdBg0EHA==",
+      "hint": "Flying achievement unlock"
+    },
+    {
+      "word": "FQgEHBwZBw4TByEcBhIHW19c",
+      "hint": "Cosmetic gear system"
+    },
+    {
+      "word": "BQgAARwdBg5BPCgaCA==",
+      "hint": "In-game appearance preview"
+    },
+    {
+      "word": "DAMRGgYXSCIEFzQBCh0W",
+      "hint": "Mythic Plus dungeon key"
+    },
+    {
+      "word": "ExsMFgoGRiAu",
+      "hint": "Mythic Plus rating tracker"
+    },
+    {
+      "word": "FhUXHgtULgATHTNVNxIQVw==",
+      "hint": "Top guild raid competition"
+    },
+    {
+      "word": "DB8RGgAQ",
+      "hint": "Top raiding guild Europe"
+    },
+    {
+      "word": "DRMIGxs=",
+      "hint": "Top US raiding guild"
+    },
+    {
+      "word": "BBkNHU8zHQANCg==",
+      "hint": "Top world first raiding guild"
+    },
+    {
+      "word": "AAgAHA4=",
+      "hint": "PvP instanced combat mode"
+    },
+    {
+      "word": "ExsRFwtUKggVGisQAgEcR15W",
+      "hint": "Competitive battleground mode"
+    },
+    {
+      "word": "CRULHR1UOAYIADMG",
+      "hint": "PvP currency classic"
+    },
+    {
+      "word": "AhULAxoRGx1BPigcCwcA",
+      "hint": "PvP high end currency"
+    },
+    {
+      "word": "EQgAARsdDww=",
+      "hint": "PvP honor level system"
+    },
+    {
+      "word": "CR8XHQYXSC0ICCEcBgYfRkk=",
+      "hint": "Harder version of raids and dungeons"
+    },
+    {
+      "word": "DAMRGgYXSC0ICCEcBgYfRkk=",
+      "hint": "Hardest raid difficulty"
+    },
+    {
+      "word": "DxUXHw4YSC0ICCEcBgYfRkk=",
+      "hint": "Standard raid difficulty"
+    },
+    {
+      "word": "DRUKGQYaD0kHATVVNxIaVg==",
+      "hint": "LFR casual system"
+    },
+    {
+      "word": "BxYACg==",
+      "hint": "Scalable raid difficulty"
+    },
+    {
+      "word": "Bh8EAE8nCwYTCw==",
+      "hint": "Item level average"
+    },
+    {
+      "word": "CA4AH084DR8EAg==",
+      "hint": "Gear power measurement"
+    },
+    {
+      "word": "CBYTHg==",
+      "hint": "Item level abbreviation"
+    },
+    {
+      "word": "FRMAAE8nDR0=",
+      "hint": "Class armor set bonus"
+    },
+    {
+      "word": "FRMAAE9G",
+      "hint": "Classic raid set Molten Core/BWL"
+    },
+    {
+      "word": "FRMAAE9H",
+      "hint": "Naxxramas classic tier set"
+    },
+    {
+      "word": "FRMAAE9C",
+      "hint": "Black Temple raid tier set"
+    },
+    {
+      "word": "FRMAAE9D",
+      "hint": "Naxxramas Wrath tier set"
+    },
+    {
+      "word": "ABILVT4dGggL",
+      "hint": "Silithid fortress of the Old Gods"
+    },
+    {
+      "word": "DBUCB0gHAAgPThEUEB8HQQ==",
+      "hint": "Pandaria titan vaults"
+    }
+  ],
+  "Battleground": [
+    {
+      "word": "ABYRFx0VC0k3DysZAAo=",
+      "hint": "Classic 40v40 epic battleground"
+    },
+    {
+      "word": "FhsXAQAaD0kmGysWDQ==",
+      "hint": "Classic 10v10 flag capture"
+    },
+    {
+      "word": "AAgEBgcdSCsAHS4b",
+      "hint": "5 resource point capture"
+    },
+    {
+      "word": "BAMAUgASSB0JC2cmERwBXw==",
+      "hint": "Hybrid flag and point capture"
+    },
+    {
+      "word": "Eg4XEwEQSAYHTjMdAFMyXFNbUS8OFg==",
+      "hint": "Siege battleground"
+    },
+    {
+      "word": "CAkJF08bDkkiASkEEBYARg==",
+      "hint": "Large siege battleground"
+    },
+    {
+      "word": "AxsRBgMRSA8OHGcyDB8dV1FB",
+      "hint": "3 point capture battleground"
+    },
+    {
+      "word": "FQ0MHE8kDQgKHQ==",
+      "hint": "Flag capture battleground"
+    },
+    {
+      "word": "EhMJBAoGGwEAHCNVKBodV0M=",
+      "hint": "Cart delivery battleground"
+    },
+    {
+      "word": "FR8IAgMRSAYHTgwaER4cVUU=",
+      "hint": "Orb holding battleground"
+    },
+    {
+      "word": "BR8AAhgdBg1BKSgHAhY=",
+      "hint": "Pandaria mine resource battleground"
+    },
+    {
+      "word": "Eh8ABgcdBg5BPS8aFxY=",
+      "hint": "Azerite collection battleground"
+    },
+    {
+      "word": "FRUJUi0VGggF",
+      "hint": "Cataclysm outdoor battle"
+    },
+    {
+      "word": "AAkNAA4a",
+      "hint": "Draenor outdoor PvP zone"
+    }
+  ]
+}

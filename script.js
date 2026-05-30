@@ -5,15 +5,30 @@
    ============================================================ */
 
 // ── Word Data ───────────────────────────────────────────────
-// Loaded from words.js (must be included before this script).
-// See words.js to add, remove, or edit entries.
+// Loaded from words.json via fetch().
+// Words are XOR-obfuscated so answers aren't visible in DevTools.
+// Hints and categories are plain text for easy editing.
 
-// ── Decode ──────────────────────────────────────────────────
-const WORDS = WORD_DATA.map(entry => ({
-  word:     atob(entry.w).toUpperCase(),
-  category: entry.c,
-  hint:     entry.h
-}));
+let WORDS = [];
+
+// XOR deobfuscation
+const _K = 'AzerothianGuess2024';
+function _decode(encoded) {
+  const bytes = Uint8Array.from(atob(encoded), c => c.charCodeAt(0));
+  return Array.from(bytes).map((b, i) => String.fromCharCode(b ^ _K.charCodeAt(i % _K.length))).join('');
+}
+
+async function loadWords() {
+  const res = await fetch('words.json');
+  const data = await res.json();
+  WORDS = Object.entries(data).flatMap(([category, entries]) =>
+    entries.map(e => ({
+      word:     _decode(e.word).toUpperCase(),
+      category,
+      hint:     e.hint || ''
+    }))
+  );
+}
 
 // ── Constants ───────────────────────────────────────────────
 const MAX_WRONG  = 6;
@@ -459,7 +474,8 @@ function initPrivacyBanner() {
 }
 
 // ── Boot ─────────────────────────────────────────────────────
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
+  await loadWords();
   loadStats();
   renderStats();
   initPrivacyBanner();

@@ -68,24 +68,27 @@ Daily and Endless scores are tracked separately and never combined.
 
 ```
 index.html   — Game layout and modals
-words.js     — Word list only (1,187 entries, base64-encoded)
+words.json   — All words and hints, grouped by category (plain text, easy to edit)
 script.js    — All game logic
 styles.css   — All styling and responsive layout
 ```
 
-The word list is intentionally kept in its own file (`words.js`) so it can be updated — adding, removing, or correcting entries — without touching any game logic.
+The word list lives in `words.json` — a plain JSON file grouped by category. It is fetched at page load via `fetch()`. No build step required.
 
 ### Adding Words
 
-Each entry in `words.js` follows this format:
+Open `words.json` and add an entry to the relevant category array:
 
-```js
-{ w: btoa("WORD HERE"), c: "Category", h: "Hint text" }
+```json
+"Dungeon": [
+  { "word": "Deadmines", "hint": "Edwin VanCleef's Defias Brotherhood mine in Westfall" },
+  { "word": "Your New Dungeon", "hint": "A short description of what it is" }
+]
 ```
 
-- `w` — the word/phrase, base64-encoded (use `btoa("YOUR WORD")` in the browser console)
-- `c` — category string: `Zone`, `City`, `Dungeon`, `Raid`, `Character`, `Race`, `Artifact`, `Faction`, `Spell`, `Lore`, or `Battleground`
-- `h` — a short hint shown when the player uses the hint button (e.g. `"Classic raid"`, `"Old God of death"`)
+- `word` — plain text, any capitalisation (the game uppercases it internally)
+- `hint` — shown when the player uses the hint button after 3 wrong guesses
+- Category keys: `Zone`, `City`, `Dungeon`, `Raid`, `Character`, `Race`, `Artifact`, `Faction`, `Spell`, `Lore`, `Battleground`
 
 ---
 
