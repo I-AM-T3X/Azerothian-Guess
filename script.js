@@ -384,8 +384,9 @@ function showEndModal(won) {
     `https://i-am-t3x.github.io/Azerothian-Guess/`
   ].join('\n');
 
-  // Show "Next Word" button only in endless mode
-  document.getElementById('btn-next-word').style.display = mode === 'endless' ? 'block' : 'none';
+  // Endless mode: show "Next Word". Daily mode: show "Switch to Endless".
+  document.getElementById('btn-next-word').style.display    = mode === 'endless' ? 'block' : 'none';
+  document.getElementById('btn-play-endless').style.display = mode === 'daily'   ? 'block' : 'none';
 
   openModal('modal-endgame');
 }
@@ -402,6 +403,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('btn-next-word').addEventListener('click', nextEndless);
+  document.getElementById('btn-play-endless').addEventListener('click', () => {
+    closeModal('modal-endgame');
+    startEndless();
+  });
   document.getElementById('btn-start-daily').addEventListener('click', startDaily);
   document.getElementById('btn-start-endless').addEventListener('click', startEndless);
 

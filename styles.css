@@ -637,3 +637,21 @@ h1 { display: flex; flex-direction: column; line-height: 1; gap: .05em; }
   #privacy-inner { flex-direction: column; align-items: flex-start; }
   #privacy-ok { width: 100%; text-align: center; }
 }
+
+/* ── Switch to Endless button (daily end screen only) ── */
+#btn-play-endless {
+  /* Slightly muted vs a full win-action button — it's an invitation,
+     not the primary action. Uses the same .btn-primary base but
+     overrides the color to the endless mode's amber-blue feel. */
+  background: linear-gradient(180deg, rgba(94,130,207,.22) 0%, rgba(94,130,207,.08) 100%);
+  border-color: #4a6a9a;
+  color: #a8c4f0;
+  margin-top: 0.5rem;
+}
+#btn-play-endless:hover {
+  background: linear-gradient(180deg, rgba(94,130,207,.36) 0%, rgba(94,130,207,.16) 100%);
+  border-color: #6a8ac0;
+  color: #c8deff;
+  box-shadow: 0 0 20px rgba(94,130,207,.25);
+  transform: translateY(-1px);
+}
